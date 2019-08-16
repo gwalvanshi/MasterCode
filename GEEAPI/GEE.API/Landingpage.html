@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Landing page</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body style="padding-top:20px;">
+    <h3>Test me</h3>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+            <span id="loggedInUser" class="text-muted"></span>
+            <input id="btnProduct" type="button" class="btn btn-success" value="Product-a@a.com" />
+            <input id="btnEmployee" type="button" class="btn btn-success" value="Sec Group" />
+            <input id="btnLogoof" type="button" class="btn btn-success pull-right" value="Logoff" />
+            <div class="well hidden" id="divdata">
+                <table class="table table-bordered table-hover" id="tblData">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>FirstName</td>
+                            <td>LastName</td>
+                            <td>Email</td>
+                            <td>Phone</td>
+                            <td>Gender</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tblBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" tabindex="-1" id="errorModal" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Session expired</h4>
+                        <div class="modal-body">
+                            <h2 class="modal-title"> Please close browser</h2>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="divError" class="alert alert-danger collapse">
+            <a id="lnkClose" class="close" href="#">&times;</a>
+            <div id="divErrorText"></div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //
+            $('#loggedInUser').text('Hello ' + sessionStorage.getItem('userName'));
+            //
+           
+            if (sessionStorage.getItem('accessToken') == null) {
+
+                window.location.href = "login.html";
+            }
+            else {
+                alert('here');
+
+                $.ajax({
+                    url: 'http://localhost:58077/Token',
+                    method: 'POST',
+                    data: {
+                        username: sessionStorage.getItem('userName'),
+                        refresh_token: sessionStorage.getItem('refreshToken'),
+                        grant_type: 'refresh_token'
+                    },
+                    success: function (response) {
+                        //$('#successModal').modal('show');
+                        sessionStorage.setItem('accessToken', response.access_token)
+                        sessionStorage.setItem('refreshToken', response.refresh_token)
+                        sessionStorage.setItem('userName', response.userName)
+                        //window.location.href = "Landingpage.html";
+                        //alert('response1');
+                        //alert(response);
+                        //alert('response2');
+                        $('#divErrorText').text(JSON.stringify(response));
+                        $('#divError').show('fade');
+                    },
+                    error: function (jqXHR) {
+                        //$('#divErrorText').text(jqXHR.responseText);
+                        //$('#divError').show('fade');
+                    }
+                });
+            }
+            //
+            $('#btnLogoof').click(function () {
+                sessionStorage.removeItem('accessToken');
+                window.location.href = "login.html";
+            });
+            //
+            $('#errorModal').on('hidden.bs.modal',function() {
+                
+                window.location.href = "login.html";
+            });
+            //
+            $('#lnkClose').click(function () {
+                $('#divError').hide('fade');
+            });
+
+
+            $('#btnEmployee').click(function () {
+                $.ajax({
+                    url: 'http://localhost:58077/api/secgroup',
+                    method: 'GET',
+                    headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken')},
+                    data: {
+                        email: $('#txtEmail').val(),
+                        password: $('#txtPassword').val()                        
+                    },
+                    success: function (data) {
+                        $('#divdata').removeClass('hidden');
+                        $('#tblBody').empty();
+                        $.each(data, function (index, val) {
+                            var row = $('<tr><td>' + val.SecGroupId + '</td><td>'+
+                                val.SecGroupName +'</td><td>'+
+                                val.SecGroupName + '</td><td>' +
+                                val.SecGroupName + '</td><td>' +
+                                val.SecGroupName + '</td><td>' +
+                                val.SecGroupName + '</td><td>' +
+                                '</td></tr > ');
+                            $('#tblData').append(row);
+
+                        });
+
+                    },
+                    error: function (jqXHR) {
+                        if (jqXHR.status == "401") {
+                            $('#errorModal').modal('show');
+                        }
+                        else { 
+                        $('#divErrorText').text(jqXHR.responseText);
+                            $('#divError').show('fade');
+                        }
+                    }
+                });
+            });
+
+            $('#btnProduct').click(function () {
+                $.ajax({
+                    url: 'http://localhost:58077/api/enquiry',
+                    type: 'GET',
+                    headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken') },
+                    
+                    success: function (data) {
+                        $('#divdata').removeClass('hidden');
+                        $('#tblBody').empty();
+                        $.each(data, function (index, val) {
+                            var row = $('<tr><td>' + val.Enquiry_ID + '</td><td>' +
+                                val.EnquiryNo + '</td><td>' +
+                                val.EnquiryNo + '</td><td>' +
+                                val.EnquiryNo + '</td><td>' +
+                                val.EnquiryNo + '</td><td>' +
+                                val.EnquiryNo + '</td><td>' +
+                                '</td></tr > ');
+                            $('#tblData').append(row);
+
+                        });
+
+                    },
+                    error: function (jqXHR) {
+                        if (jqXHR.status == "401") {
+                            $('#errorModal').modal('show');
+                        }
+                        else {
+                            $('#divErrorText').text(jqXHR.responseText);
+                            $('#divError').show('fade');
+                        }
+                    }
+                });
+            });
+
+        });</script>
+</body>
+</html>

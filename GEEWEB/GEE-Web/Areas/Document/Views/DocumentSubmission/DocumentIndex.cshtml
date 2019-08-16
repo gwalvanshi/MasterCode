@@ -1,0 +1,572 @@
+﻿@{
+    @inherits System.Web.Mvc.WebViewPage
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    input[type="file"] {
+        display: none;
+    }
+</style>
+
+
+<div class="border-left p-3 bg-light">
+    <h5 class=" pb-2 text-center text-uppercase font-weight-bold">Upload Document</h5>
+     
+
+
+    <div class="mb-3">
+        <div class="mb-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="row bg-white mx-auto py-2 mb-2">
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-group-sm">
+                            <label class="control-label " for="select">
+                                Category
+                            </label>
+                            <select class="select form-control form-control-sm" onchange="LoadSecondDropdown()" id="ddlFirstCriteria" name="">
+                                <option value="First Choice">
+                                    First Choice
+                                </option>
+                                <option value="Second Choice">
+                                    Second Choice
+                                </option>
+                                <option value="Third Choice">
+                                    Third Choice
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-group-sm">
+                            <label class="control-label " for="select">
+                                Sub category
+                            </label>
+                            <select class="select form-control form-control-sm" onchange="GetDocumentSubmissionData()" id="ddlSecondCriteria" name="">
+                                <option value="First Choice">
+                                    First Choice
+                                </option>
+                                <option value="Second Choice">
+                                    Second Choice
+                                </option>
+                                <option value="Third Choice">
+                                    Third Choice
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-group-sm">
+                            <label class="control-label " for="select">
+                                Emp/Studend ID
+                            </label>
+                            <select class="select form-control form-control-sm" id="txtStudentId" name="">
+                                <option value="First Choice">
+                                    First Choice
+                                </option>
+                                <option value="Second Choice">
+                                    Second Choice
+                                </option>
+                                <option value="Third Choice">
+                                    Third Choice
+                                </option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-1 col-xs-12">
+                        <div class="form-group">
+                            <div>
+                                <button class="btn btn-primary btn-sm up-doc-search-btn" name="submit" onclick="GetDocumentSubmissionData()()">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <div class="form-group">
+                            <div>
+                                <button class="btn btn-primary btn-sm up-doc-search-btn" name="submit" type="button" onclick="saveDocumentRecord()">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"> </i> Update
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    <button class="btn btn-default btn-xs collapsed" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <div class="alert alert-info" role="alert">
+                            Student name, Father name
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="table-responsive">
+                    <table id="example" class="table table-striped table-bordered table-sm table-hover" style="width:100%">
+                        <thead class="bg-blue text-white">
+                            <tr>
+                                <th></th>
+                                <th>Document Name</th>
+                                <th>Mandatory</th>
+                                <th>Digital copy</th>
+                                <th>Physical copy</th>
+                                <th>Physical FileName</th>
+                                <th>Browse</th>
+                                <th>Upload</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input class="up-doc-checkbox" name="checkbox" type="checkbox" value="Third Choice" />
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm" id="name" name="name" type="text" />
+                                </td>
+                                <td class="text-center">
+                                    <input class="up-doc-checkbox" name="checkbox" type="checkbox" value="Third Choice" />
+                                </td>
+                                <td class="text-center">
+                                    <input class="up-doc-checkbox" name="checkbox" type="checkbox" value="Third Choice" />
+                                </td>
+                                <td class="text-center">
+                                    <input class="up-doc-checkbox" name="checkbox" type="checkbox" value="Third Choice" />
+                                </td>
+                                <td class="text-center">
+                                    <input class="form-control form-control-sm" id="name" name="name" type="text" />
+                                </td>
+                                <td class="text-center">
+                                    <button class="btn btn-primary btn-xs"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
+                                </td>
+                                <td class="text-center">
+                                    <button class="btn btn-primary btn-xs"><i class="fa fa-upload" aria-hidden="true"></i></button>
+                                </td>
+                                <td>
+                                    <input class="form-control form-control-sm" id="name" name="name" type="text" />
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script type="text/javascript">
+    var commonjsURL = '/Scripts/DevScripts/common/Common.js';
+    var indexComlunDetails = "";
+    var numberOfRecord = 0;
+    $(document).ready(function () {
+
+        $('#txtStudentId').select2();
+        //$.ajax({
+        //    type: 'GET',
+        //    url: '/CommonMethods/GetIndexScreenDetailByNavigation',
+        //    data: { MenuId: sessionStorage.getItem('MenuId') },
+        //    dataType: "json",
+        //    success: function (response) {
+        //        //BindDropdown(response);
+        //        //BindTable(response);
+        //        indexComlunDetails = response;
+        //    },
+        //    error: function () {
+        //        alert(" An error occurred.");
+        //    },
+        //});
+
+        $.ajax({
+            type: 'GET',
+            url: '/CommonMethods/GetIndexScreenDetailByNavigation',
+            data: { MenuId: sessionStorage.getItem('MenuId') },
+            dataType: "json",
+            success: function (response) {
+                //BindDropdown(response);
+                //BindTable(response);
+                indexComlunDetails = response;
+            },
+            error: function () {
+                alert(" An error occurred.on load");
+            },
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentSubmission/GetDocumentCategoryForDD',
+            data: { menuType: 1006 },
+            dataType: "json",
+            success: function (response) {
+
+                BindFirstDropdown(response);
+                LoadSecondDropdown();
+            },
+            error: function () {
+                alert(" An error occurred. on load 2");
+            },
+        })
+
+        $('#txtStudentId').on("keyup", function () {
+
+        });
+    });
+
+    function LoadSecondDropdown() {
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentSubmission/GetDocumentCategoryForDD',
+            data: { menuType: 1007, categoryId: $("#ddlFirstCriteria").val() },
+            dataType: "json",
+            success: function (response) {
+                $("#txtStudentId").val('')
+                BindSecondDropdown(response);
+                GetDocumentSubmissionData();
+                LoadThirdDropDown();
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        })
+    }
+
+    function LoadThirdDropDown() {
+      
+        if ($("#ddlFirstCriteria option:selected").text() == "Student") {
+            $.ajax({
+                type: 'GET',
+                url: '/CandidateDetail/GetAllRecordsForFilter',
+                data: { categoryId: $("#ddlFirstCriteria option:selected").text() },
+                dataType: "json",
+                success: function (response) {
+                   
+                    var option = '<option value=""></option>';;
+                    $.each(response, function (ii, val) {
+                        option += '<option value="' + val.Enquiry_ID + '">' + val.FirstName + ' ' + val.Lastname + ' (' + val.Enquiry_ID + ')</option>';
+                    });
+                    console.log(response);
+                    $('#txtStudentId').html(option);
+                    $('#txtStudentId').select2();
+                },
+                error: function () {
+                    alert(" An error occurred.");
+                },
+            })
+        }
+        if ($("#ddlFirstCriteria option:selected").text() == "Staff") {
+            $.ajax({
+                type: 'GET',
+                url: '/CandidateDetail/GetAllRecordsForFilter',
+                data: { categoryId: $("#ddlFirstCriteria option:selected").text() },
+                dataType: "json",
+                success: function (response) {
+                    var option = '<option value=""></option>';;
+                    $.each(response, function (ii, val) {
+                        option += '<option value="' + val.Enquiry_ID + '">' + val.FirstName + ' ' + val.Lastname + ' (' + val.Enquiry_ID + ')</option>';
+                    });
+                    console.log(response);
+                    $('#txtStudentId').html(option);
+                    $('#txtStudentId').select2();
+                },
+                error: function () {
+                    alert(" An error occurred.");
+                },
+            })
+        }
+
+    }
+
+    function SearchData() {
+
+        var jsonObj = [];
+
+        if (document.getElementById("ddlFirstCriteria").selectedIndex > 0) {
+            var item1 = {}
+            item1["SearchParameter"] = document.getElementById("ddlFirstCriteria").value;
+            item1["SearchParameterValue"] = document.getElementById("txtFirstCriteria").value;
+            item1["SearchParameterDataType"] = "string";
+            jsonObj.push(item1);
+        }
+
+
+        if (document.getElementById("ddlSecondCriteria").selectedIndex > 0) {
+            var item2 = {}
+            item2["SearchParameter"] = document.getElementById("ddlSecondCriteria").value;
+            item2["SearchParameterValue"] = document.getElementById("txtSecondCriteria").value;
+            item2["SearchParameterDataType"] = "string";
+            jsonObj.push(item2);
+        }
+
+        BindTable(indexComlunDetails, jsonObj);
+    }
+
+    function BindFirstDropdown(data) {
+        var $ele = $('#ddlFirstCriteria');
+        $ele.empty();
+        //$ele.append($('<option/>').val('0').text('Select Frist Criteria'));
+        $.each(data, function (ii, vall) {
+            if (vall.IsDefault)
+                $ele.append($('<option/>').val(vall.MasterTable_id).text(vall.Name).attr("selected", "selected"));
+            else
+                $ele.append($('<option/>').val(vall.MasterTable_id).text(vall.Name));
+        })
+    }
+
+    function BindSecondDropdown(data) {
+        var $ele = $('#ddlSecondCriteria');
+        $ele.empty();
+        $ele.append($('<option/>').val('0').text('Select Second Criteria'));
+        $.each(data, function (ii, vall) {
+            if (vall.IsDefault)
+                $ele.append($('<option/>').val(vall.MasterTable_id).text(vall.Name).attr("selected", "selected"));
+            else
+                $ele.append($('<option/>').val(vall.MasterTable_id).text(vall.Name));
+        })
+    }
+
+    function GetDocumentSubmissionData() {
+        var studentEmpId = $("#txtStudentId").val();
+        var Category = $("#ddlFirstCriteria").val();
+        var subCategory = $("#ddlSecondCriteria").val();
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentSubmission/GetDocumentSubmissionData',
+            data: { category: Category, subCategory: subCategory, studentEmpId: studentEmpId },
+            dataType: "json",
+            success: function (response) {
+                BindTable(response)
+
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        })
+    }
+
+
+    function BindTable(data, searchData) {
+
+
+        var selectColumn = "";
+        var SortColumn = "";
+        var SortOrder = "";
+        var selectColumnToGrid = "";
+
+        selectColumnToGrid = "Document Name,Mandatory,Digital copy,Physical copy,Physical FileName,Browse,Upload,Status,"
+        var Postdata =
+        {
+            "PageNo": 1,
+            "PageSize": 10,
+            "SortColumn": SortColumn,
+            "SortOrder": SortOrder,
+            "IndexScreenSelectParameterModelCommaSeparate": selectColumn,
+            "IndexScreenSearchParameterModel": searchData,
+            "SelectColumnToGrid": selectColumnToGrid
+        }
+
+
+        var tmpHTML = "";
+        var theadStart = "<thead class=\"bg-primary text-white\">";
+        var tHeadClose = "</thead>";
+        var res = selectColumnToGrid.split(",");
+        tmpHTML += theadStart;
+        for (var j = 0; j < res.length - 1; j++) {
+            tmpHTML += "<th>" + res[j] + "</th>";
+        }
+
+        tmpHTML += tHeadClose;
+        numberOfRecord = 0;
+        tmpHTML += '<tbody>                                                                                                          ';
+        $.each(data, function (ii, vall) {
+            numberOfRecord += 1;
+            tmpHTML += '    <tr>                                                                                                         ';
+            //tmpHTML += '        <td class="text-center">                                                                                 ';
+            //tmpHTML += '            <input class="up-doc-checkbox" name="checkbox" type="checkbox" value="Third Choice" />               ';
+            //tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td>     ';
+            tmpHTML += '        <input type="hidden" id="record' + ii + '" value="' + vall.DocumentTypeID + '"> ';
+            tmpHTML += '        <input type="hidden" id="submission' + ii + '" value="' + vall.DocumentSubmission_ID + '" >';
+            tmpHTML += '        <input type="hidden" id="digitalFilePath' + ii + '" value="' + vall.DigitalPathofDocument + '" >';
+            tmpHTML += '            <input class="form-control form-control-sm" id="name' + ii + '" name="name" disabled="disabled" value="' + vall.DocumentType.DocumentTypeName + '" type="text" />                     ';
+            tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">                                                                                 ';
+            tmpHTML += '            <input class="up-doc-checkbox" name="checkbox" id="isMandatory' + ii + '" type="checkbox" disabled="disabled" value="' + vall.DocumentType.IsMandatory + '" />               ';
+            tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">                                                                                 ';
+            if (vall.DigitalPathofDocument == null || vall.DigitalPathofDocument == "null")
+                tmpHTML += '            <input class="up-doc-checkbox" name="checkbox" onclick="isDigitalClicked(' + ii + ')" id="isDigital' + ii + '" type="checkbox" value="' + vall.DocumentType.Digitalallowed + '" />               ';
+            else
+                tmpHTML += '            <input class="up-doc-checkbox" name="checkbox" onclick="isDigitalClicked(' + ii + ')" id="isDigital' + ii + '" checked type="checkbox" value="' + vall.DocumentType.Digitalallowed + '" />               ';
+            tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">                                                                                 ';
+            if (vall.PhysicalFileLocaiton == null || vall.PhysicalFileLocaiton == "null") {
+                vall.PhysicalFileLocaiton = "";
+                tmpHTML += '            <input class="up-doc-checkbox" name="checkbox" onclick="isPhysicalClicked(' + ii + ')" id="isPhysical' + ii + '" type="checkbox" value="' + vall.isPhysical + '" />               ';
+            }
+            else
+                tmpHTML += '            <input class="up-doc-checkbox" name="checkbox" onclick="isPhysicalClicked(' + ii + ')" id="isPhysical' + ii + '" checked type="checkbox" value="' + vall.isPhysical + '" />               ';
+            tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">                                                                                 ';
+            tmpHTML += '            <input class="form-control form-control-sm" id="physicalPath' + ii + '" name="name" type="text" value="' + vall.PhysicalFileLocaiton + '" />                     ';
+            tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">                                                                                 ';
+            tmpHTML += '            <button onclick="selectFile(' + ii + ')" id="selectFile' + ii + '" class="btn btn-primary btn-xs"><i class="fa fa-paperclip" aria-hidden="true"></i></button> <input type="file" style="display:none;" id="file-upload' + ii + '" />   ';
+            tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">                                                                                 ';
+            tmpHTML += '            <button class="btn btn-primary btn-xs" id="uploadFile' + ii + '" onclick="Uploadocument(' + ii + ')"><i class="fa fa-upload" aria-hidden="true"></i></button>      ';
+            tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td>                                                                                                     ';
+            if (vall.onlinesubmitted == true || vall.PhysicalFileLocaiton == null || vall.PhysicalFileLocaiton == "null")
+                tmpHTML += '            <input class="form-control form-control-sm" id="status' + ii + '" name="name" type="text" value="Saved" />                     ';
+            else
+                tmpHTML += '            <input class="form-control form-control-sm" id="status' + ii + '" name="name" type="text" value="Not Saved" />                     ';
+            tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '    </tr>                                                                                                        ';
+        })
+        tmpHTML += '</tbody>                                                                                                         ';
+        $("#example").html(tmpHTML);
+
+    }
+
+    function isPhysicalClicked(index) {
+        if (!$("#isPhysical" + index).is(":checked")) {
+            $("#isDigital" + index).prop(true);
+            $("#isDigital" + index).removeAttr("disabled");
+            $("#selectFile" + index).removeAttr("disabled");
+            $("#uploadFile" + index).removeAttr("disabled");
+        }
+        else {
+            $("#isDigital" + index).prop(false);
+            $("#isDigital" + index).attr("disabled", true);
+            $("#selectFile" + index).attr("disabled", true);
+            $("#uploadFile" + index).attr("disabled", true);
+        }
+    }
+
+    function isDigitalClicked(index) {
+        if (!$("#isDigital" + index).is(":checked")) {
+            $("#isPhysical" + index).prop(true);
+            $("#isPhysical" + index).removeAttr("disabled");
+            $("#physicalPath" + index).removeAttr("disabled");
+        }
+        else {
+            $("#isPhysical" + index).prop(false);
+            $("#isPhysical" + index).attr("disabled", true);
+            $("#physicalPath" + index).attr("disabled", true);
+        }
+    }
+
+    function Uploadocument(index) {
+        var fileUpload = $("#file-upload" + index).get(0);
+        var submissionid = $('#submission' + index).val();
+        var files = fileUpload.files;
+
+        // Create FormData object
+        var fileData = new FormData();
+
+        // Looping over all files and add it to FormData object
+        for (var i = 0; i < files.length; i++) {
+            fileData.append(files[i].name, files[i]);
+        }
+
+        $.ajax({
+            url: '/DocumentSubmission/UploadDocument?id=' + submissionid + '&userType=' + $("#ddlFirstCriteria :selected").text(),
+            type: "POST",
+            contentType: false, // Not to set any content header
+            processData: false, // Not to process data
+            data: fileData,//{ 'fileData': fileData, 'id': submissionid},
+            success: function (result) {
+                if (result.onlinesubmitted)
+                    $("#status" + index).val("Uploaded but not saved.");
+                $("#digitalFilePath" + index).val(result.DigitalPathofDocument);
+            },
+            error: function (err) {
+                alert(err.statusText);
+            }
+        });
+    }
+
+    function saveDocumentRecord() {
+        var record = [];
+        var obj = {};
+        for (var index = 0; index < numberOfRecord; index++) {
+            obj = {};
+            obj.DocumentTypeID = $("#record" + index).val();
+            obj.DocumentSubmission_ID = $("#submission" + index).val();
+            obj.PhysicalFileLocaiton = $("#PhysicalFileLocaiton" + index).val();
+            obj.Enquiry_ID = $("#txtStudentId").val();
+            obj.DigitalPathofDocument = $("#digitalFilePath" + index).val();
+            //if ($("#isDigital" + index).is(":ischecked")) {
+            //    obj.DigitalPathofDocument = true;
+            //}
+            //else {
+            //    obj.DigitalPathofDocument = false;
+            //}
+            //if ($("#isPhysical" + index).is(":ischecked")) {
+            //    obj.DigitalPathofDocument = true;
+            //}
+            //else {
+            //    obj.DigitalPathofDocument = false;
+            //}
+            //if ($("#isMandatory" + index).is(":ischecked")) {
+            //    obj.DigitalPathofDocument = true;
+            //}
+            //else {
+            //    obj.DigitalPathofDocument = false;
+            //}
+            //obj.DigitalPathofDocument = $("#isDigital" + index).val();
+            //obj.DigitalPathofDocument = $("#isPhysical" + index).val();
+            //obj.DigitalPathofDocument = $("#status" + index).val();
+            //obj.DigitalPathofDocument = $("#status" + index).val();
+            record.push(obj);
+        }
+        $.ajax({
+            type: 'POST',
+            url: '/Document/DocumentSubmission/UpdateRecord',
+            data: JSON.stringify(record),
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data) {
+                    alert("Record has been updated!");
+                    GetDocumentSubmissionData();
+                }
+                else {
+                    alert("Something Went Wrong!");
+                }
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        })
+    }
+
+    function selectFile(index) {
+        $('#file-upload' + index).click();
+    }
+</script>
+
+
+
+
+
+

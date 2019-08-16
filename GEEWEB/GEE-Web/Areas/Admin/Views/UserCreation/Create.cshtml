@@ -1,0 +1,187 @@
+﻿@model GEE.Web.ViewModel.Admin.AspNetUserViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <style type="text/css">
+        .form-control-sm {
+            height: 30px !important;
+        }
+
+        input[type=text]:disabled {
+            background: #dddddd;
+        }
+    </style>
+
+
+
+    <title>IMS</title>
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container-fluid border ">
+        <div class="row">
+
+            <div id="toastmsg"><p class="yellow">Fill all mandatory feilds (*)..</p></div>
+
+            <div class="col-md-12 border-left p-3 bg-light">
+                <h5 class="pb-2 text-center text-uppercase font-weight-bold"> USER MANAGEMENT </h5>
+
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#">@Resource.Enquiry1002lblLibrary</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">@Resource.Enquiry1002lblData</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+
+                    <div class="pb-2">
+                        <h6 class="py-1"><i class="fas fa-user-circle mr-2"></i>@Resource.UserGroup1401lblheaderaccountInformation</h6>
+                        <div class="row bg-white border mx-auto py-2 mb-2">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.UserGroup1401lblUserType </label>
+                                <select class="form-control form-control-sm input-value" id="UserGroup1401lmdUserType" title="@Resource.UserGroup1401lttUserType">
+                                    <option>Select</option>
+
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.UserGroup1401lblStaff_ID_OR_Student_ID</label>
+                                <input class="input-value float-left" type="text" placeholder="@Resource.UserGroup1401lblStaff_ID_OR_Student_ID" id="UserGroup1401lmdStaff_ID_OR_Student_ID" title="@Resource.UserGroup1401lttStaff_ID_OR_StudentID">
+
+                                <a href="javascript:void(0);" class="iconbtn float-right bg-info" id="anchorDetail" onclick="Popup()"><i class="fas fa-search"></i></a>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.UserGroup1401lblFirstName </label>
+                                <input class="input-value" type="text" placeholder="@Resource.UserGroup1401lblFirstName" id="UserGroup1401lmdFirstName" title="@Resource.UserGroup1401lttFirstName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.UserGroup1401lblLastName </label>
+                                <input class="input-value" type="text" placeholder="@Resource.UserGroup1401lblLastName" id="UserGroup1401lmdLastName" title="@Resource.UserGroup1401lttLastName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.UserGroup1401lblEmailID </label>
+                                <input class="input-value" type="text" placeholder="@Resource.UserGroup1401lblEmailID" id="UserGroup1401lmdEmailID" name="email" title="@Resource.UserGroup1401lttEmailID">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.UserGroup1401lblPhoneNumber </label>
+                                <input class="input-value" type="text" placeholder="@Resource.UserGroup1401lblPhoneNumber" id="UserGroup1401lmdPhoneNumber" title="@Resource.UserGroup1401lttPhoneNumber">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pb-2">
+                        <h6 class="py-1"><i class="fas fa-sign-in-alt mr-2"></i>@Resource.UserGroup1401lblheaderLoginInformation</h6>
+                        <div class="row bg-white border mx-auto py-2 mb-2">
+                            <div class="input-div">
+                                <label class="input-header"><i class="fas fa-user-tie mr-2"></i>@Resource.UserGroup1401lblLoginID </label>
+                                <input class="input-value" type="text" placeholder="@Resource.UserGroup1401lblLoginID" id="UserGroup1401lmdLoginID" title="@Resource.UserGroup1401lttLoginID">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header"><i class="fas fa-user-tie mr-2"></i>@Resource.UserGroup1401lblPassword </label>
+                                <input class="input-value" type="Password" placeholder="@Resource.UserGroup1401lblPassword" id="UserGroup1401lmdPassword" title="@Resource.UserGroup1401lttPassword">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header"><i class="fas fa-user-tie mr-2"></i>@Resource.UserGroup1401lblconfirmpassword </label>
+                                <input class="input-value" type="Password" placeholder="@Resource.UserGroup1401lblconfirmpassword" id="UserGroup1401lblconfirmpassword" title="@Resource.UserGroup1401lttPassword">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pb-2">
+                        <h6 class="py-1"><i class="fas fa-user-lock mr-2"></i>@Resource.UserGroup1401lblheaderPermission</h6>
+                        <div class="row bg-white border mx-auto py-2 mb-2">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.UserGroup1401lblGroup </label>
+                                <select class="form-control form-control-sm input-value" id="UserGroup1401lmdGroup" title="@Resource.UserGroup1401lttGroup">
+                                    <option>Select</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="float-left mb-2">
+
+                            <button class="mybtndark" type="button" id="submit"><i class="far fa-save mr-2"></i>@Resource.UserGroup1410btnSave</button>
+                            <button class="mybtndark" type="button" onclick="FormControlValueClear(true);"><i class="far fa-close mr-2"></i>@Resource.UserGroup1410btnCancel</button>
+                            <a href="/Admin/UserCreation/Index">
+                                <button class="mybtndark" type="button">
+                                    <i class="far fa-list mr-2"></i>Back To List
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div id='myModal' class='modal'>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class=" pb-2 text-center text-uppercase font-weight-bold">User Lookup</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id='myModalContent'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+}
+
+<style>
+    .modal-dialog {
+        position: relative;
+        display: table; /* <-- This makes the trick */
+        overflow-y: auto;
+        overflow-x: auto;
+        width: auto;
+        min-width: 800px;
+    }
+    /*Css to target the dropdownbox*/
+    ul.ui-autocomplete {
+        color: black !important;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+    }
+</style>
+
+<script type="text/javascript">
+   // $(document).tooltip();
+    //Resource Variable Declaration Start
+    var ValidEmail = "@Resource.IsValidEmail";
+    var ValidContactNumber = "@Resource.IsValidContactNumber";
+    var PwdCompare = "@Resource.UserGroup1401MsgPassword";
+
+    //End
+</script>
+<script src="~/Scripts/DevScripts/Common/Common.js"></script>
+<script src="~/Scripts/DevScripts/Common/CommonValidations.js"></script>
+<script src="~/Scripts/DevScripts/AdminUser/UserCreate.js"></script>
+
+
+

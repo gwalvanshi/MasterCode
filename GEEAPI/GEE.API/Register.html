@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Register</title>
+</head>
+<body>
+    <div class="col-md-10 col-md-offset-1">
+        <div class="well">
+            <table class="table table-bordered table-hover">
+                <tr class="success"><td colspan="2">New User Registration</td></tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="Email" id="txtEmail" placeholder="User Email" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="txtPassword" id="txtPassword" placeholder="Password" /></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td><input type="password" name="txtCPassword" id="txtCPassword" placeholder="Confirm Password" /></td>
+                </tr>
+                <tr class="success">
+                    <td colspan="2">
+                        <button class="btn btn-success" id="btnRegister" value="Register">Register</button>
+                    </td>
+                </tr>
+            </table>
+            <div class="modal fade" tabindex="-1" id="successModal" data-keyboard="false" data-backdrop="static">
+                <div class="modal-footer modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Registration Successful</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-success">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="divError" class="alert alert-danger collapse">
+                <a id="lnkClose" class="close" href="#">&times;</a>
+                <div id="divErrorText"></div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#lnkClose').click(function () {
+                $('#divError').hide('fade');
+            });
+
+            $('#btnRegister').click(function () {
+                $.ajax({
+                    url: 'api/account/register',
+                    method: 'POST',
+                    data: {
+                        email: $('#txtEmail').val(),
+                        password: $('#txtPassword').val(),
+                        confirmPassword: $('#txtCPassword').val()
+                    },
+                    success: function () {
+                        $('#successModal').modal('show');
+                    },
+                    error: function (jqXHR) {
+                        $('#divErrorText').text(jqXHR.responseText);
+                        $('#divError').show('fade');
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

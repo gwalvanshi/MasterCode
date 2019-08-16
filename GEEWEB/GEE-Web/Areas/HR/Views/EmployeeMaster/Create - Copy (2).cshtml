@@ -1,0 +1,917 @@
+﻿@model GEE.Web.ViewModel.HR.EmployeeMasterModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <style type="text/css">
+        .form-control-sm {
+            height: 30px !important;
+        }
+
+        input[type=text]:disabled {
+            background: #dddddd;
+        }
+        /* card header color */
+        .card-header {
+            padding: 0.50rem 1.25rem;
+            background-color: #B4C6E7;
+            border-bottom: 1px solid rgba(0,123,255,.25);
+        }
+    </style>
+
+    <title>IMS</title>
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container-fluid border ">
+        <div class="row">
+
+            <div id="toastmsg"><p class="yellow">Fill all mandatory feilds (*)..</p></div>
+
+            <div class="col-md-12 border-left p-3 bg-light">
+                <h5 class="pb-2 text-center text-uppercase font-weight-bold"> EMPLOYEE MANAGEMENT </h5>
+
+                <div class="mb-3">
+                    <div class="mb-3">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#">@Resource.Enquiry1002lblLibrary</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">@Resource.Enquiry1002lblData</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <!-- row start -->
+                    <div class="row bg-white mx-auto py-4 collapse_group">
+                        <div class="col-md-12 mb-3">
+                            <a href="#" class="float-right btn btn-info openclosebutton" id="openall"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#employee-block" aria-expanded="true" aria-controls="employee-block">
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i> @Resource.GEE1910GRphdrEmployeeInfo
+                                    </a>
+                                </div>
+                                <div id="employee-block" class="collapse">
+                                    <div class="input-div">
+                                        <label class="input-header"> @Resource.GEE1910LBLEmployeeCode</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLEmployeeCode" id="GEE1910mdEmployee_Code" title="@Resource.GEE1910ttEmployee_Code">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLEmployeeCategoryID </label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdEmployee_Category_ID" title="@Resource.GEE1910ttEmployee_Category_ID">
+                                            <option value="">Select</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLStaffDesignationID </label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdStaffDesignationID" title="@Resource.GEE1910ttStaffDesignationID">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLVendorID </label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdVendorID" title="@Resource.GEE1910ttVendorID">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLDepartmentID </label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdDepartment_ID" title="@Resource.GEE1910ttDepartment_ID">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-user" aria-hidden="true"></i> @Resource.GEE1910LBLFirstName</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLFirstName" id="GEE1910mdFirstName" title="@Resource.GEE1910ttFirstName">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-user" aria-hidden="true"></i> @Resource.GEE1910LBLMIDdleName</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLMIDdleName" id="GEE1910mdMiddleName" title="@Resource.GEE1910ttMiddleName">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-user" aria-hidden="true"></i>@Resource.GEE1910LBLLastname</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLLastname" id="GEE1910mdLastname" title="@Resource.GEE1910ttLastname">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#contact-block" aria-expanded="true" aria-controls="contact-block">
+                                        <i class="fa fa-phone-square" aria-hidden="true"></i> @Resource.GEE1910GRphdrContactInfo
+                                    </a>
+                                </div>
+                                <div id="contact-block" class="collapse">
+                                    <div class="input-div">
+                                        <label class="input-header">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i> @Resource.GEE1910LBLEmail/label>
+                                            <input class="input-value" type="email" placeholder="@Resource.GEE1910LBLEmail" id="GEE1910mdEmail" title="@Resource.GEE1910ttEmail">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-mobile" aria-hidden="true"></i> @Resource.GEE1910LBLMobileno_</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLMobileno_" id="GEE1910mdMobile_no_" title="@Resource.GEE1910ttMobile_no_">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-phone" aria-hidden="true"></i> @Resource.GEE1910LBLHomePhone</label>
+                                        <input class="input-value" type="text" placeholder=" @Resource.GEE1910LBLHomePhone" id="GEE1910mdHomePhone" title=" @Resource.GEE1910ttHomePhone">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-address-card-o" aria-hidden="true"></i>  @Resource.GEE1910LBLCurrentAddress</label>
+                                        <input class="input-value" type="text" placeholder=" @Resource.GEE1910LBLCurrentAddress" id="GEE1910mdCurrentAddress" title=" @Resource.GEE1910ttCurrentAddress">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"> @Resource.GEE1910LBLCity</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdCity" title="@Resource.GEE1910ttCity">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"> @Resource.GEE1910LBLCurrentState</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdCurrentState" title="@Resource.GEE1910ttCurrentState">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLCurrentCountry</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdCurrentCountry" title="@Resource.GEE1910ttCurrentCountry">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLCurrentPinCode</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLCurrentPinCode" id="GEE1910mdCurrentPinCode" title="@Resource.GEE1910ttCurrentPinCode">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-map-marker" aria-hidden="true"></i> @Resource.GEE1910LBLCurrentLandmark</label>
+                                        <input class="input-value" type="text" placeholder=" @Resource.GEE1910LBLCurrentLandmark" id="GEE1910mdCurrentLandmark" title="@Resource.GEE1910ttCurrentLandmark">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"> @Resource.GEE1910LBLIsalsoPermanent</label>
+                                        <input class="" type="checkbox" id="GEE1910mdIsalsoPermanent" value="option1" title="@Resource.GEE1910ttIsalsoPermanent">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#permanent-address-block" aria-expanded="true" aria-controls="permanent-address-block">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i> @Resource.GEE1910GRphdrPermanentAddress
+                                    </a>
+                                </div>
+                                <div id="permanent-address-block" class="collapse">
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-address-card-o" aria-hidden="true"></i>  @Resource.GEE1910LBLPermenantAddress</label>
+                                        <input class="input-value" type="text" placeholder=" @Resource.GEE1910LBLPermenantAddress" id="GEE1910mdPermenantAddress" title="@Resource.GEE1910ttPermenantAddress">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLPermenantCity</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdPermenantCity" title=">@Resource.GEE1910ttPermenantCity">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLPermenantState</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdPermenantState" title="@Resource.GEE1910ttPermenantState">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLPermenantCountry</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdPermenantCountry" title="@Resource.GEE1910ttPermenantCountry">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLPermenantPinCode</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLPermenantPinCode" id="GEE1910mdPermenantPinCode" title="@Resource.GEE1910ttPermenantPinCode">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-map-marker" aria-hidden="true"></i> @Resource.GEE1910LBLPermenantLandmark</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLPermenantLandmark" id="GEE1910mdPermenantLandmark" title="@Resource.GEE1910ttPermenantLandmark">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#personal-block" aria-expanded="true" aria-controls="personal-block">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i> @Resource.GEE1910GRphdrPersonal
+                                    </a>
+                                </div>
+                                <div id="personal-block" class="collapse">
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLDOB</label>
+                                        <input class="input-value datepicker" type="text" placeholder=" @Resource.GEE1910LBLDOB" id="GEE1910mdDOB" title=" @Resource.GEE1910ttDOB">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"> @Resource.GEE1910LBLGenderID</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdGenderID" title="@Resource.GEE1910ttGenderID">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLNationality</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdNationality" title="@Resource.GEE1910ttNationality">
+                                            <option value="">Select</option>
+                                            <option value="Option1">Option1</option>
+                                            <option value="Option2">Option2</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLMarried</label>
+                                        <input class="" type="checkbox" id="GEE1910mdMarried" value="yes" title="@Resource.GEE1910ttMarried">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-sticky-note" aria-hidden="true"></i> @Resource.GEE1910LBLRemarks</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLRemarks" id="GEE1910mdRemarks" title="@Resource.GEE1910ttRemarks">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#parent-info-block" aria-expanded="true" aria-controls="parent-info-block">
+                                        <i class="fa fa-users" aria-hidden="true"></i> @Resource.GEE1910GRphdrPersonal
+                                    </a>
+                                </div>
+                                <div id="parent-info-block" class="collapse">
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLFatheFirstName</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLFatheFirstName" id="GEE1910mdFatheFirstName" title="@Resource.GEE1910ttFatheFirstName">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLFatherMIDdleName</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLFatherMIDdleName" id="GEE1910mdFatherMIDdleName" title="@Resource.GEE1910ttFatherMiddleName">
+                                    </div>
+
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLFatherLasttName</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLFatherLasttName" id="GEE1910mdFatherLasttName" title="@Resource.GEE1910ttFatherLasttName">
+                                    </div>
+
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLMotherFirstName</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLMotherFirstName" id="GEE1910mdMothereFirstName" title="@Resource.GEE1910ttMotherFirstName">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLMotherMIDdleName</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLMotherMIDdleName" id="GEE1910mdMotherMIDdleName" title="@Resource.GEE1910ttMotherMiddleName">
+                                    </div>
+
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLMotherLastName</label>
+                                        <input class="input-value" type="text" placeholder="@Resource.GEE1910LBLMotherLastName" id="GEE1910mdMotherLastName" title="@Resource.GEE1910ttMotherLastName">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#religion-block" aria-expanded="true" aria-controls="religion-block">
+                                        <i class="fa fa-child" aria-hidden="true"></i> @Resource.GEE1910GRphdrReligion
+                                    </a>
+                                </div>
+                                <div id="religion-block" class="collapse">
+                                    <div class="input-div">
+                                        <label class="input-header"> @Resource.GEE1910LBLCaste</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdCaste" title="@Resource.GEE1910ttCaste">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header">@Resource.GEE1910LBLReligon</label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdReligon" title="@Resource.GEE1910ttReligon">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#identity-detail-block" aria-expanded="true" aria-controls="identity-detail-block">
+                                        <i class="fa fa-address-card" aria-hidden="true"></i> @Resource.GEE1910GRphdrIDentityDetail
+                                    </a>
+                                </div>
+                                <div id="identity-detail-block" class="collapse container-fluid">
+                                    <div class="field_wrapper">
+                                        <div class="row" id="divIndentityGroup">
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-id-card" aria-hidden="true"></i> @Resource.GEE1910LBLIDcardType</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLIDcardType" id="GEE1910mdIDcardType" title="@Resource.GEE1910ttIDcardType">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-list-ol" aria-hidden="true"></i> @Resource.GEE1910LBLIDNumber</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLIDNumber" id="GEE1910mdID_Number" title="@Resource.GEE1910ttID_Number">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLvalIDFrom</label>
+                                                    <input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLvalIDFrom" id="GEE1910mdvalidFrom" title="@Resource.GEE1910ttvalidFrom">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLValIDTo</label>
+                                                    <input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLValIDTo" id="GEE1910mdValid_To" title="@Resource.GEE1910ttValid_To">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLIssueCityID</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLIssueCityID" id="GEE1910mdIssue_CityI_D" title="@Resource.GEE1910ttIssue_CityI_D">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <button class="mybtndark add_button" name="submit" type="button">
+                                                    <i class="fa fa-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#education-detail-block" aria-expanded="true" aria-controls="education-detail-block">
+                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>  @Resource.GEE1910GRphdrEducationDetail
+                                    </a>
+                                </div>
+                                <div id="education-detail-block" class="collapse container-fluid">
+                                    <div class="education_detail_wrapper">
+                                        <div class="row" id="diveduGroup">
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-graduation-cap" aria-hidden="true"></i> @Resource.GEE1910LBLDegreeID</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLDegreeID" id="GEE1910mdDegree_ID" title="@Resource.GEE1910ttDegree_ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLSubjects</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLSubjects" id="GEE1910mdSubjects" title="@Resource.GEE1910ttSubjects">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLFromDate</label>
+                                                    <input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLFromDate" id="GEE1910mdFrom_Date" title="@Resource.GEE1910ttFrom_Date">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLToDate</label>
+                                                    <input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLToDate" id="GEE1910mdTo_Date" title="@Resource.GEE1910ttTo_Date">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-university" aria-hidden="true"></i>@Resource.GEE1910LBLInstituteName</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLInstituteName" id="GEE1910mdInstitute_Name" title="@Resource.GEE1910ttInstitute_Name">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLCity</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="City" id="City">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLDegreeMode</label>
+                                                    <select class="form-control form-control-sm" id="GEE1910mdDegree_Mode" title="@Resource.GEE1910ttDegree_Mode">
+                                                        <option value="">Select</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLPercentMarks</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLPercentMarks" id="GEE1910mdPercent_Marks" title="@Resource.GEE1910ttPercent_Marks">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLDivision</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLDivision" id="GEE1910mdDivision" title="@Resource.GEE1910ttDivision">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <button class="mybtndark ed_add_button" name="submit" type="button">
+                                                    <i class="fa fa-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#experience-detail-block" aria-expanded="true" aria-controls="experience-detail-block">
+                                        <i class="fa fa-briefcase" aria-hidden="true"></i>  @Resource.GEE1910GRphdrExperienceDetail
+                                    </a>
+                                </div>
+                                <div id="experience-detail-block" class="collapse container-fluid">
+                                    <div class="experience_detail_wrapper">
+                                        <div class="row" id="divexpGroup">
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-building" aria-hidden="true"></i>@Resource.GEE1910LBLCompanyName</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLCompanyName" id="GEE1910mdCompany_Name" title="@Resource.GEE1910ttCompany_Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLWorkCity</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLWorkCity" id="GEE1910mdWork_City" title="@Resource.GEE1910ttWork_City">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLFromDate1</label>
+                                                    <input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLFromDate1" id="GEE1910mdFrom_Date1" title="@Resource.GEE1910ttFrom_Date1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i>  @Resource.GEE1910LBLToDate1</label>
+                                                    <input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLToDate1" id="GEE1910mdTo_Date1" title="@Resource.GEE1910ttTo_Date1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLLastsalary</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLLastsalary" id="GEE1910mdLast_salary" title="@Resource.GEE1910ttLast_salary">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLjoiningDesignation</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLjoiningDesignation" id="GEE1910mdjoining_Designation" title="@Resource.GEE1910ttjoining_Designation">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLLastDesignation</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLLastDesignation" id="GEE1910mdLast_Designation" title="@Resource.GEE1910ttLast_Designation">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 col-sm-2 col-xs-3">
+                                                <div class="form-group form-group-sm">
+                                                    <label class="input-header">@Resource.GEE1910LBLReasontoleave</label>
+                                                    <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLReasontoleave" id="GEE1910mdReason_to_leave" title="@Resource.GEE1910ttReason_to_leave">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <button class="mybtndark exd_add_button" name="submit" type="button">
+                                                    <i class="fa fa-plus-circle"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <a data-toggle="collapse" href="#security-block" aria-expanded="true" aria-controls="security-block">
+                                        <i class="fa fa-user-secret" aria-hidden="true"></i>  @Resource.GEE1910GRphdrSecurity
+                                    </a>
+                                </div>
+                                <div id="security-block" class="collapse">
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-lock" aria-hidden="true"></i> @Resource.GEE1910LBLCreateLogin</label>
+                                        <input class="" type="checkbox" id="GEE1910LBLCreateLogin" value="yes" title="@Resource.GEE1910ttCreateLogin">
+                                    </div>
+                                    <div class="input-div">
+                                        <label class="input-header"><i class="fa fa-users" aria-hidden="true"></i> @Resource.GEE1910LBLSelectUserGroup </label>
+                                        <select class="form-control form-control-sm input-value" id="GEE1910mdSelectUserGroup" title="@Resource.GEE1910ttSelectUserGroup">
+                                            <option value="">Select</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 mt-2">
+                            <div class="form-group">
+                                <div>
+                                    <button class="mybtndark" type="submit" id="submit"><i class="far fa-save mr-2"></i>Save</button>
+                                    <button class="mybtndark" type="submit" id="Update"><i class="fa fa-save mr-2"></i>Add New</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /row end -->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+}
+<link href="~/AdminLTE/bootstrap/css/bootstrap-datepicker.css" rel="stylesheet" />
+<script src="~/Scripts/DevScripts/Common/Common.js"></script>
+<script src="~/Scripts/DevScripts/Common/CommonValidations.js"></script>
+
+<script src="~/Scripts/DevScripts/HR/EmployeeMasterCreate.js"></script>
+<script>
+
+$(document).ready(function(e)
+{
+    $.getScript(commonjsURL, function myfunction() {
+        GetKeyForValidation(sessionStorage.getItem('MenuCode'));
+        // GetPermission(sessionStorage.getItem('groupId'), sessionStorage.getItem('MenuId'), ctrlArray);
+
+    });
+    $.getScript(combojsURL, function myfunction()
+    {
+        LoadMasterDropdown('GEE1910mdEmployee_Category_ID', null, MasterTypeEnum.UserType, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdStaffDesignationID', null, MasterTypeEnum.Designation, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdVendorID', null, MasterTypeEnum.Designation, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdDepartment_ID', null, MasterTypeEnum.Designation, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdCity', null, MasterTypeEnum.City, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdCurrentState', null, MasterTypeEnum.State, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdCurrentCountry', null, MasterTypeEnum.Country, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdPermenantCity', null, MasterTypeEnum.City, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdPermenantState', null, MasterTypeEnum.State, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdPermenantCountry', null, MasterTypeEnum.Country, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdGenderID', null, MasterTypeEnum.Gender, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdCaste', null, MasterTypeEnum.CastCategory, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdReligon', null, MasterTypeEnum.Religion, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdDegree_Mode', null, MasterTypeEnum.Designation, null, null, null, false);
+        LoadMasterDropdown('GEE1910mdSelectUserGroup', null, MasterTypeEnum.UserType, null, null, null, false);
+    });
+
+
+
+  $('.datepicker').datepicker();
+
+	/* open close all collapse */
+	$('.openclosebutton').on('click', function(e) {
+		var idcheck=$(this).attr('id');
+		if(idcheck=='openall'){
+			$('.collapse_group .collapse').collapse('show');
+	        $(this).html('<i class="fa fa-angle-double-down" aria-hidden="true"></i>');
+	        $(this).attr('id','closeall');
+		}else if(idcheck=='closeall'){
+			$('.collapse_group .collapse').collapse('hide');
+        	$(this).html('<i class="fa fa-angle-double-right" aria-hidden="true"></i>');
+        	$(this).attr('id','openall');
+		}
+    });
+
+	@*/*
+	|----------------------------------------------------------
+	|	@
+	|	Input incriment for Identity Detail
+	|---------------------------------------------------------
+	*/*@
+
+   // var idenityData = $("#divIndentityGroup").html();
+
+	var maxField = 500; //Input fields increment limitation
+    var addButton = $('.add_button'); //Add button selector
+    var wrapper = $('.field_wrapper'); //Input field wrapper
+    var fieldHTML = IndenityReturnString();
+	var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(addButton).click(function(){
+        //Check maximum number of input fields
+        if(x < maxField){
+            x++; //Increment field counter
+            $(wrapper).append(fieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(wrapper).on('click', '.remove_button', function(e){
+        e.preventDefault();
+        $(this).parent('div').parent('div').parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+
+    @*/*
+	|----------------------------------------------------------
+	|	@
+	|	Input incriment for Education Detail
+	|---------------------------------------------------------
+	*/*@
+
+
+	var edmaxField = 500; //Input fields increment limitation
+    var edaddButton = $('.ed_add_button'); //Add button selector
+    var edwrapper = $('.education_detail_wrapper'); //Input field wrapper
+   // var edfieldHTML = EducationReturnString();
+	var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(edaddButton).click(function(){
+        //Check maximum number of input fields
+        if (x < edmaxField)
+        {
+            x++; //Increment field counter
+            $.ajax({
+                type: "GET",
+                url: '/Lookups/GetMasterDropdownData',
+                data: { masterTableId: null, masterTypeId: MasterTypeEnum.UserType, schoolId: null, groupId: null, sessionYear: null, isDeleted: false },
+                dataType: "json",
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('Authorization', sessionStorage.getItem('accessToken'));
+                },
+                success: function (data)
+                {
+                    var strData = "";
+
+                    $.each(data, function (ii, vall) {
+
+                        strData = strData+ '<option value="' + vall.MasterTable_id + '">' + vall.Name + '</option>';
+                    })
+
+                    $(edwrapper).append(EducationReturnString(strData));
+                }
+            })
+            //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(edwrapper).on('click', '.ed_remove_button', function(e){
+        e.preventDefault();
+        $(this).parent('div').parent('div').parent('div').parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+
+    @*/*
+	|----------------------------------------------------------
+	|	@
+	|	Input incriment for Experience Detail
+	|---------------------------------------------------------
+	*/*@
+
+	var exdmaxField = 500; //Input fields increment limitation
+    var exdaddButton = $('.exd_add_button'); //Add button selector
+    var exdwrapper = $('.experience_detail_wrapper'); //Input field wrapper
+    var exdfieldHTML = ExperinceReturnString();
+	var x = 1; //Initial field counter is 1
+
+    //Once add button is clicked
+    $(exdaddButton).click(function(){
+        //Check maximum number of input fields
+        if(x < exdmaxField){
+            x++; //Increment field counter
+            $(exdwrapper).append(exdfieldHTML); //Add field html
+        }
+    });
+
+    //Once remove button is clicked
+    $(exdwrapper).on('click', '.exd_remove_button', function(e){
+        e.preventDefault();
+        $(this).parent('div').parent('div').parent('div').remove(); //Remove field html
+        x--; //Decrement field counter
+    });
+
+});
+        function ExperinceReturnString() {
+            return '<div class="row border-hr-line">'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header"><i class="fa fa-building" aria-hidden="true"></i> @Resource.GEE1910LBLCompanyName</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLCompanyName" id="GEE1910mdCompany_Name" title="@Resource.GEE1910ttCompany_Name">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLWorkCity</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLWorkCity" id="GEE1910mdWork_City" title="@Resource.GEE1910ttWork_City">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLFromDate1</label>'
+                + '<input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLFromDate1" id="GEE1910mdFrom_Date1" title="@Resource.GEE1910ttFrom_Date1">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLToDate1</label>'
+                + '<input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLToDate1" id="GEE1910mdTo_Date1" title="@Resource.GEE1910ttTo_Date1">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLLastsalary</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLLastsalary" id="GEE1910mdLast_salary" title="@Resource.GEE1910ttLast_salary">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLjoiningDesignation</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLjoiningDesignation" id="GEE1910mdjoining_Designation" title="@Resource.GEE1910ttjoining_Designation">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLLastDesignation</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLLastDesignation" id="GEE1910mdLast_Designation" title="@Resource.GEE1910ttLast_Designation">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLReasontoleave</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLReasontoleave" id="GEE1910mdReason_to_leave" title="@Resource.GEE1910ttReason_to_leave">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group">'
+                + '<button class="btn btn-danger btn-sm exd_remove_button mt-4" name="submit" type="button">'
+                + '<i class="fa fa-minus-circle" aria-hidden="true"></i>'
+                + '</button>'
+                + '</div>'
+                + '</div>'
+                + '</div>';
+        }
+
+        function EducationReturnString(strDataDropdown) {
+
+
+            return '<div class="ed-row-class"><div class="row border-hr-line">'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header"><i class="fa fa-graduation-cap" aria-hidden="true"></i> @Resource.GEE1910LBLDegreeID</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLDegreeID" id="GEE1910mdDegree_ID" title="@Resource.GEE1910ttDegree_ID">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLSubjects</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLSubjects" id="GEE1910mdSubjects" title="@Resource.GEE1910ttSubjects">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i>  @Resource.GEE1910LBLFromDate</label>'
+                + '<input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLFromDate" id="GEE1910mdFrom_Date" title="@Resource.GEE1910ttFrom_Date">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLToDate</label>'
+                + '<input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLToDate" id="GEE1910mdTo_Date" title="@Resource.GEE1910ttTo_Date">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header"><i class="fa fa-university" aria-hidden="true"></i> @Resource.GEE1910LBLInstituteName</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLInstituteName" id="GEE1910mdInstitute_Name" title="@Resource.GEE1910ttInstitute_Name">'
+                + '</div>'
+                + '</div>'
+
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLCity</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="City" id="City">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLDegreeMode</label>'
+                + '<select class="form-control form-control-sm" id="GEE1910mdDegree_Mode" title="@Resource.GEE1910ttDegree_Mode">'
+                + '<option value="">Select</option>'
+                + strDataDropdown
+                + '</select>'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLPercentMarks</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLPercentMarks" id="GEE1910mdPercent_Marks" title="@Resource.GEE1910ttPercent_Marks">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group form-group-sm">'
+                + '<label class="input-header">@Resource.GEE1910LBLDivision</label>'
+                + '<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLDivision" id="GEE1910mdDivision" title="@Resource.GEE1910ttDivision">'
+                + '</div>'
+                + '</div>'
+                + '<div class="col-md-2 col-sm-2 col-xs-3">'
+                + '<div class="form-group">'
+                + '<button class="btn btn-danger btn-sm ed_remove_button mt-4" name="submit" type="button">'
+                + '<i class="fa fa-minus-circle" aria-hidden="true"></i>'
+                + '</button>'
+                + '</div>'
+                + '</div>'
+                + '</div></div>';
+        }
+        function IndenityReturnString()
+        {
+          return  '<div class="row border-hr-line">'
+	         			+'<div class="col-md-2 col-sm-2 col-xs-3">'
+	                  		+'<div class="form-group form-group-sm">'
+	                            +'<label class="input-header"><i class="fa fa-id-card" aria-hidden="true"></i> @Resource.GEE1910LBLIDcardType</label>'
+	                            +'<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLIDcardType" id="GEE1910mdIDcardType" title="@Resource.GEE1910ttIDcardType">'
+	                        +'</div>'
+	                    +'</div>'
+	                    +'<div class="col-md-2 col-sm-2 col-xs-3">'
+	                        +'<div class="form-group form-group-sm">'
+	                            +'<label class="input-header"><i class="fa fa-list-ol" aria-hidden="true"></i> @Resource.GEE1910LBLIDNumber</label>'
+	                            +'<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLIDNumber" id="GEE1910mdID_Number" title="@Resource.GEE1910ttID_Number">'
+	                        +'</div>'
+	                    +'</div>'
+	                    +'<div class="col-md-2 col-sm-2 col-xs-3">'
+	                        +'<div class="form-group form-group-sm">'
+	                            +'<label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i>@Resource.GEE1910LBLvalIDFrom</label>'
+	                            +'<input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLvalIDFrom" id="GEE1910mdvalidFrom" title="@Resource.GEE1910ttvalidFrom">'
+	                        +'</div>'
+	                    +'</div>'
+	                    +'<div class="col-md-2 col-sm-2 col-xs-3">'
+	                        +'<div class="form-group form-group-sm">'
+	                            +'<label class="input-header"><i class="fa fa-calendar" aria-hidden="true"></i> @Resource.GEE1910LBLValIDTo</label>'
+	                            +'<input class="form-control form-control-sm datepicker" type="text" placeholder="@Resource.GEE1910LBLValIDTo" id="GEE1910mdValid_To" title="@Resource.GEE1910ttValid_To">'
+	                        +'</div>'
+	                    +'</div>'
+	                    +'<div class="col-md-2 col-sm-2 col-xs-3">'
+	                      +'<div class="form-group form-group-sm">'
+	                            +'<label class="input-header">@Resource.GEE1910LBLIssueCityID</label>'
+	                            +'<input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1910LBLIssueCityID" id="GEE1910mdIssue_CityI_D" title="@Resource.GEE1910ttIssue_CityI_D">'
+	                        +'</div>'
+	                    +'</div>'
+	                    +'<div class="col-md-2 col-sm-2 col-xs-3">'
+                            +'<div class="form-group">'
+                                +'<button class="btn btn-danger btn-sm remove_button mt-4" name="submit" type="button">'
+					            	+'<i class="fa fa-minus-circle" aria-hidden="true"></i>'
+					           +'</button>'
+                            +'</div>'
+                        +'</div>'
+	                +'</div>';
+        }
+</script>
+
+
+
+

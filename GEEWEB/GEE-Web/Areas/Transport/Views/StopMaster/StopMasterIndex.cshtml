@@ -1,0 +1,102 @@
+﻿@using GEE_Web
+@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid border">
+    <div class="row">
+        <div id="toastmsg"><p class="yellow">fill all mandatory feilds (*)..</p></div>
+
+        <div class="col-md-12 border-left p-3 bg-light">
+            <h5 class=" pb-2 text-center text-uppercase font-weight-bold">@Resource.GEE1720SCRhdrStopMaster</h5>
+            <div class="mb-3">
+                <div class="mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">@Resource.Enquiry1002lblLibrary</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">@Resource.Enquiry1002lblData</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row bg-white mx-auto py-2 mb-2">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                       @* <h4 class="master-table-title"><i class="fa fa-plus-circle" aria-hidden="true"> </i> Add Subject Master data</h4>*@
+                        <hr />
+                        <label hidden="hidden" id="StopMaster_ID"></label>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">
+                                @Resource.GEE1720LBLStopCode
+                            </label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1720LBLStopCode" id="GEE1720mdStopCode" title="@Resource.GEE1720ttStopCode">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">
+                                @Resource.GEE1720LBLStopName
+                            </label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1720LBLStopName" id="GEE1720mdStopName" title="@Resource.GEE1720ttStopName">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1720LBLLocality</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1720LBLLocality" id="GEE1720mdLocality" title="@Resource.GEE1720ttLocality">
+
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1720LBLStopAddress</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1720LBLStopAddress" id="GEE1720mdStopAddress" title="@Resource.GEE1720ttStopAddress">
+                            
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1720LBLPinCode</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1720LBLPinCode" id="GEE1720mdPinCode" title="@Resource.GEE1720ttPinCode" maxlength="10">
+                                
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1720LBLGeoCoordinates</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1720LBLGeoCoordinates" id="GEE1720mdGeoCoordinates" title="@Resource.GEE1720ttGeoCoordinates">
+                        </div>
+
+                        <div class="form-group">
+                            <div>
+                                <button class="mybtndark" id="Add"><i class="far fa-plus-circle mr-2"></i>@Resource.GEE1720LBLbtnAdd</button>
+                                <button class="mybtndark" id="Save"><i class="far fa-save mr-2"></i>@Resource.GEE1720LBLbtnSave</button>
+                                <button class="mybtndark" id="Update" hidden="hidden"><i class="fas fa-check mr-2"></i></i>@Resource.GEE1720LBLbtnEdit</button>
+                                <button class="mybtndark" id="Delete" hidden="hidden"><i class="fas fa-check mr-2"></i></i>@Resource.GEE1720LBLbtnDelete</button>
+                                <button class="mybtndark" id="Graph" hidden="hidden"><i class="fas fa-check mr-2"></i></i>@Resource.GEE1720LBLbtnGraph</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        @*<div class="row">
+                            <div class="col-lg-4 col-sm-12 col-xs-12">
+                                <div class="form-group form-group-sm">
+                                    <select class="form-control form-control-sm" placeholder="">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                <button class="btn btn-primary btn-sm"><i class="fa fa-refresh" aria-hidden="true" id="btnsearch"></i></button>
+                            </div>
+                        </div>*@
+                        <hr />
+
+                        <div class="table-responsive">
+                            <table id="tblStopMasterdetails" class="table table-striped table-bordered table-sm table-hover" style="width:100%"></table>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/DevScripts/Transport/StopMaster.js"></script>
+<script src="~/Scripts/DevScripts/Common/Common.js"></script>
+

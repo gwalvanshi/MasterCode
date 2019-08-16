@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E945334B-BB32-4B33-8C7C-58EFD754C6AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEE.Business.Manager</RootNamespace>
+    <AssemblyName>GEE.Business.Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="GEE.Business.Model">
+      <HintPath>..\GEE.Business.Models\bin\Debug\GEE.Business.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AspNetUserManager.cs" />
+    <Compile Include="Admin\ClassMasterManager.cs" />
+    <Compile Include="Admission\AssessmentTypeManager.cs" />
+    <Compile Include="Admission\EnquiryManager.cs" />
+    <Compile Include="Admission\SellAndSubmitManagercs.cs" />
+    <Compile Include="Admission\StartAdmissionManager.cs" />
+    <Compile Include="HR\EmployeeEducationDetailManager.cs" />
+    <Compile Include="HR\EmployeeExperienceManager.cs" />
+    <Compile Include="HR\EmployeeIDdetailManager.cs" />
+    <Compile Include="HR\EmployeeMasterManager.cs" />
+    <Compile Include="SchoolSetup\AssessmentStructureAssessmentTypeMappingManager.cs" />
+    <Compile Include="SchoolSetup\BookMasterManager.cs" />
+    <Compile Include="Admin\GetMenuManager.cs" />
+    <Compile Include="Admin\LoginTrackManager.cs" />
+    <Compile Include="Admin\MasterTableManager.cs" />
+    <Compile Include="Admin\NavigationMenuManager.cs" />
+    <Compile Include="Admin\NavigationTypeManager.cs" />
+    <Compile Include="Admin\SecGroupDetailManager.cs" />
+    <Compile Include="Admin\SecGroupManager.cs" />
+    <Compile Include="Admin\UserGroupAspUserMappingManager.cs" />
+    <Compile Include="Admin\UserGroupManager.cs" />
+    <Compile Include="Admin\UserGroupNavigationMenuMappingManager.cs" />
+    <Compile Include="Admission\AcademicYearManager.cs" />
+    <Compile Include="Admission\ApplicationManager.cs" />
+    <Compile Include="Admission\ClassesManager.cs" />
+    <Compile Include="Admission\CandidateManager.cs" />
+    <Compile Include="Admission\LookupsManager.cs" />
+    <Compile Include="Configuration\IndexScreenDetailManager.cs" />
+    <Compile Include="Configuration\SchoolConfigManager.cs" />
+    <Compile Include="AutoMapperConfig.cs" />
+    <Compile Include="DocumentLibrary\DocumentSubmissionManager.cs" />
+    <Compile Include="DocumentLibrary\DocumentTypeManager.cs" />
+    <Compile Include="EmailLibrary\CommunicationTemplateManager.cs" />
+    <Compile Include="EmailLibrary\EmailLogManager.cs" />
+    <Compile Include="EmailLibrary\MailMergeManager.cs" />
+    <Compile Include="EmailLibrary\SMSLogManager.cs" />
+    <Compile Include="PopupLookup\CandidateDetailPopup.cs" />
+    <Compile Include="PopupLookup\CommonPopupLookupManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolSetup\CourseMasterManager.cs" />
+    <Compile Include="SchoolSetup\RoomManager.cs" />
+    <Compile Include="SchoolSetup\SubjectMasterManager.cs" />
+    <Compile Include="Security\NavigationPermissionManager.cs" />
+    <Compile Include="Transport\StopMasterManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dashboard\" />
+    <Folder Include="Masters\" />
+    <Folder Include="Payment\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GEE.Business.Interface\GEE.Business.Interface.csproj">
+      <Project>{e16d22e9-fba1-4734-bd99-b9e76d15da84}</Project>
+      <Name>GEE.Business.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GEE.Common\GEE.Common.csproj">
+      <Project>{3e9751dd-9e6c-47f5-ba29-81f52b9cde0b}</Project>
+      <Name>GEE.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GEE.DataAccess\GEE.DataAccess.csproj">
+      <Project>{1b1f14c5-4ca2-4a98-968e-a0f84fc2dd85}</Project>
+      <Name>GEE.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

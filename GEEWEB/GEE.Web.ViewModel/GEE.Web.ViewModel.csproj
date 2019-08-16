@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{211F2471-00B5-4049-B1C2-AAF35E335D83}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEE.Web.ViewModel</RootNamespace>
+    <AssemblyName>GEE.Web.ViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AspNetRoleViewModel.cs" />
+    <Compile Include="Admin\AspNetUserClaimViewModel.cs" />
+    <Compile Include="Admin\AspNetUserLoginViewModel.cs" />
+    <Compile Include="Admin\AspNetUserViewModel.cs" />
+    <Compile Include="Admin\AspNetUserRoleViewModel.cs" />
+    <Compile Include="Admin\ClassMasterViewModel.cs" />
+    <Compile Include="Admin\MasterTableTypeViewModel.cs" />
+    <Compile Include="Admin\MasterTableViewModel.cs" />
+    <Compile Include="Admin\UserGroupViewModel.cs" />
+    <Compile Include="Admission\ApplicationViewModel.cs" />
+    <Compile Include="Admission\AssessmentTypeModel.cs" />
+    <Compile Include="Admission\CandidateDetailViewModel.cs" />
+    <Compile Include="Admission\CityStateCountryModel.cs" />
+    <Compile Include="Admission\DdlViewModel.cs" />
+    <Compile Include="Admission\DocumentSubmissionViewModel.cs" />
+    <Compile Include="Admission\EnquiryTypeViewModel.cs" />
+    <Compile Include="Admission\QualificationViewModel.cs" />
+    <Compile Include="Admission\EnquiryViewModel.cs" />
+    <Compile Include="Admission\MarketingSourceViewModel.cs" />
+    <Compile Include="Admission\RegistrationViewModel.cs" />
+    <Compile Include="Admission\SellSubmitViewModel.cs" />
+    <Compile Include="Admission\StartAdmissionViewModel.cs" />
+    <Compile Include="BaseViewModel.cs" />
+    <Compile Include="Common\MenuViewModel.cs" />
+    <Compile Include="Common\PopupCollection.cs" />
+    <Compile Include="Common\PopupLookUpClass.cs" />
+    <Compile Include="Common\PopupLookupRequestModel.cs" />
+    <Compile Include="Common\PopupLookupResponseModel.cs" />
+    <Compile Include="Configuration\IndexScreenDetailViewModel.cs" />
+    <Compile Include="Configuration\IndexScreenParameterModel.cs" />
+    <Compile Include="Configuration\SchoolConfigViewModel.cs" />
+    <Compile Include="DocumentLibrary\DocumentCategoryViewModel.cs" />
+    <Compile Include="DocumentLibrary\DocumentPermissionModel.cs" />
+    <Compile Include="DocumentLibrary\DocumentPortalViewModel.cs" />
+    <Compile Include="DocumentLibrary\DocumentPortalModel.cs" />
+    <Compile Include="DocumentLibrary\DocumentSubmissionViewModel.cs" />
+    <Compile Include="DocumentLibrary\DocumentTypeViewModel.cs" />
+    <Compile Include="HR\EmployeeDetailsSaveSchemaModel.cs" />
+    <Compile Include="HR\EmployeeDetailsSchemaModel.cs" />
+    <Compile Include="HR\EmployeeEducationDetailModel.cs" />
+    <Compile Include="HR\EmployeeExperienceModel.cs" />
+    <Compile Include="HR\EmployeeIDdetailModel.cs" />
+    <Compile Include="HR\EmployeeMasterEditViewModel.cs" />
+    <Compile Include="HR\EmployeeMasterModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolSetup\AssessmentStructureAssessmentTypeMappingModel.cs" />
+    <Compile Include="SchoolSetup\BookMasterViewModel.cs" />
+    <Compile Include="SchoolSetup\CourseMasterModel.cs" />
+    <Compile Include="SchoolSetup\RoomViewModel.cs" />
+    <Compile Include="SchoolSetup\SubjectMasterViewModel.cs" />
+    <Compile Include="Security\LoginTrackViewModel.cs" />
+    <Compile Include="Security\NavigationMenuViewModel.cs" />
+    <Compile Include="Security\NavigationPermissionViewModel.cs" />
+    <Compile Include="Security\PermissionMappingViewModel.cs" />
+    <Compile Include="Security\PermissionParentViewModel.cs" />
+    <Compile Include="Security\TokenViewModel.cs" />
+    <Compile Include="Transport\StopMasterViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

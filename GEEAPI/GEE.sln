@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.Common", "GEE.Common\GEE.Common.csproj", "{3E9751DD-9E6C-47F5-BA29-81F52B9CDE0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.Business.Interface", "GEE.Business.Interface\GEE.Business.Interface.csproj", "{E16D22E9-FBA1-4734-BD99-B9E76D15DA84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.Business.Manager", "GEE.Business.Manager\GEE.Business.Manager.csproj", "{E945334B-BB32-4B33-8C7C-58EFD754C6AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.DataAccess", "GEE.DataAccess\GEE.DataAccess.csproj", "{1B1F14C5-4CA2-4A98-968E-A0F84FC2DD85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.Business.Model", "GEE.Business.Models\GEE.Business.Model.csproj", "{A3C322E9-B7BD-4404-A0DE-DD9E444AEC36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.API", "GEE.API\GEE.API.csproj", "{1EC7632E-8334-4FB5-BDFF-91CD27AB4ED2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.Communication", "GEE.Communication\GEE.Communication.csproj", "{7C0E9919-6562-4812-8F3E-6D64AF0E7093}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E9751DD-9E6C-47F5-BA29-81F52B9CDE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9751DD-9E6C-47F5-BA29-81F52B9CDE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9751DD-9E6C-47F5-BA29-81F52B9CDE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9751DD-9E6C-47F5-BA29-81F52B9CDE0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16D22E9-FBA1-4734-BD99-B9E76D15DA84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16D22E9-FBA1-4734-BD99-B9E76D15DA84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16D22E9-FBA1-4734-BD99-B9E76D15DA84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16D22E9-FBA1-4734-BD99-B9E76D15DA84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E945334B-BB32-4B33-8C7C-58EFD754C6AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E945334B-BB32-4B33-8C7C-58EFD754C6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E945334B-BB32-4B33-8C7C-58EFD754C6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E945334B-BB32-4B33-8C7C-58EFD754C6AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1F14C5-4CA2-4A98-968E-A0F84FC2DD85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1F14C5-4CA2-4A98-968E-A0F84FC2DD85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1F14C5-4CA2-4A98-968E-A0F84FC2DD85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1F14C5-4CA2-4A98-968E-A0F84FC2DD85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3C322E9-B7BD-4404-A0DE-DD9E444AEC36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3C322E9-B7BD-4404-A0DE-DD9E444AEC36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3C322E9-B7BD-4404-A0DE-DD9E444AEC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3C322E9-B7BD-4404-A0DE-DD9E444AEC36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC7632E-8334-4FB5-BDFF-91CD27AB4ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC7632E-8334-4FB5-BDFF-91CD27AB4ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC7632E-8334-4FB5-BDFF-91CD27AB4ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC7632E-8334-4FB5-BDFF-91CD27AB4ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0E9919-6562-4812-8F3E-6D64AF0E7093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0E9919-6562-4812-8F3E-6D64AF0E7093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0E9919-6562-4812-8F3E-6D64AF0E7093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0E9919-6562-4812-8F3E-6D64AF0E7093}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B932893-653A-4481-AA10-34055AE47FBA}
+		VisualSVNWorkingCopyRoot = ..
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

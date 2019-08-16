@@ -1,0 +1,359 @@
+﻿@model IEnumerable<GEE.Web.ViewModel.CandidateDetailViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Candidate Details";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container-fluid border ">
+        <div class="row">
+            <div id="toastmsg"><p class="yellow">Fill all mandatory feilds (*)..</p></div>
+
+            <div class="col-md-12 border-left p-3 bg-light">
+                <h5 class="pb-2 text-center text-uppercase font-weight-bold">Fill Candidate Screen</h5>
+
+                <div class="mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">@Resource.Enquiry1001lblLibrary</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">@Resource.Enquiry1001lblData</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="bg-white border mb-3">
+                    <div class="form-header" data-toggle="collapse" href="#candidatedetails" role="button" aria-expanded="false" aria-controls="candidatedetails">
+                        <span class="">@Resource.GEE1010GRPhdr1</span>
+                    </div>
+                    <label hidden="hidden" id="CandidateId"></label>
+
+                    <div class="pb-3 collapse show" id="candidatedetails">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLhasSibiling</label>
+                                <input class="form-check-input ml-2" type="checkbox" id="GEE1010mdhasSibiling" value="option1">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLSiblingAdmNumber_ID</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLSiblingAdmNumber_ID" id="GEE1010mdSiblingAdmNumber_ID" title="@Resource.GEE1010ttSiblingAdmNumber_ID">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border mb-3">
+                    <div class="form-header" data-toggle="collapse" href="#personalinfo" role="button" aria-expanded="false" aria-controls="personalinfo">
+                        <span class="">@Resource.GEE1010GRPhdr2</span>
+                    </div>
+
+                    <div class="pb-3 collapse show" id="personalinfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLEnquiry_ID</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdEnquiry_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLAdmissionClass_id</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdAdmissionClass_id">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLSubjectId</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdSubjectId">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLLastPassClass_ID</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdLastPassClass_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFirstName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFirstName" id="GEE1010mdFirstName" title="@Resource.GEE1010ttFirstName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMiddleName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMiddleName" id="GEE1010mdMiddleName" title="@Resource.GEE1010ttFirstName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLLastname</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLLastname" id="GEE1010mdLastname" title="@Resource.GEE1010ttLastname">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLDOB</label>
+                                <form action="/action_page.php">
+                                    <input type="date" name="bday" class="input-value" id="GEE1010mdDOB">
+                                </form>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLEmail</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLEmail" id="GEE1010mdEmail" title="@Resource.GEE1010ttEmail">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLStudentType_ID</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdStudentType_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLContactMobileNo</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLContactMobileNo" id="GEE1010mdContactMobileNo" title="@Resource.GEE1010ttContactMobileNo">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLHomePhone</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLHomePhone" id="GEE1010mdHomePhone" title="@Resource.GEE1010ttHomePhone">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLGender</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdGender">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLNationality</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLNationality" id="GEE1010mdNationality" title="@Resource.GEE1010ttNationality">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border mb-3">
+                    <div class="form-header" data-toggle="collapse" href="#addressinfo" role="button" aria-expanded="false" aria-controls="addressinfo">
+                        <span class="">@Resource.GEE1010GRPhdr3</span>
+                    </div>
+
+                    <div class="pb-3 collapse show" id="addressinfo">
+                        <div class="input-div">
+                            <label class="input-header">@Resource.GEE1010LBLAddress1</label>
+                            <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLAddress1" id="GEE1010mdAddress1" title="@Resource.GEE1010ttAddress1">
+                        </div>
+                        <div class="input-div">
+                            <label class="input-header">@Resource.GEE1010LBLAddress2</label>
+                            <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLAddress2" id="GEE1010mdAddress2" title="@Resource.GEE1010ttAddress2">
+                        </div>
+                        <div class="input-div">
+                            <label class="input-header">@Resource.GEE1010LBLCity_ID</label>
+                            <select class="form-control-sm input-value" id="GEE1010mdCity_ID">
+                                <option>@Resource.Enquiry1001lblSelect</option>
+                            </select>
+                        </div>
+                        <div class="input-div">
+                            <label class="input-header">@Resource.GEE1010LBLState_ID</label>
+                            <select class="form-control-sm input-value" id="GEE1010mdState_ID">
+                                <option>@Resource.Enquiry1001lblSelect</option>
+                            </select>
+                        </div>
+                        <div class="input-div">
+                            <label class="input-header">@Resource.GEE1010LBLCountry_ID</label>
+                            <select class="form-control-sm input-value" id="GEE1010mdCountry_ID">
+                                <option>@Resource.Enquiry1001lblSelect</option>
+                            </select>
+                        </div>
+                        <div class="input-div">
+                            <label class="input-header">@Resource.GEE1010LBLPinCode</label>
+                            <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLPinCode" id="GEE1010mdPinCode" title="@Resource.GEE1010ttPinCode">
+                        </div>
+                        <div class="input-div">
+                            <label class="input-header">@Resource.GEE1010LBLLandmark</label>
+                            <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLLandmark" id="GEE1010mdLandmark" title="@Resource.GEE1010ttLandmark">
+                        </div>
+                        <div class="input-div">
+                            <label class="input-header">@Resource.GEE1010LBLDistanceFromSchool</label>
+                            <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLDistanceFromSchool" id="GEE1010mdDistanceFromSchool" title="@Resource.GEE1010ttDistanceFromSchool">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-white border mb-3">
+                    <div class="form-header" data-toggle="collapse" href="#fatherinfo" role="button" aria-expanded="false" aria-controls="fatherinfo">
+                        <span class="">@Resource.GEE1010GRPhdr4</span>
+                    </div>
+                    <div class="pb-3 collapse" id="fatherinfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatheFirstName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatheFirstName" id="GEE1010mdFatheFirstName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherMiddleName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherMiddleName" id="GEE1010mdFatherMiddleName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherLasttName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherLasttName" id="GEE1010mdFatherLasttName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherPhoneNumber</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherPhoneNumber" id="GEE1010mdFatherPhoneNumber">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherQualificaiton_ID</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdFatherQualificaiton_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherQualificaitonText</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherQualificaitonText" title="@Resource.GEE1010ttFatherQualificaitonText" id="GEE1010mdFatherQualificaitonText">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherOccupation</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherOccupation" id="GEE1010mdFatherOccupation" title="@Resource.GEE1010ttFatherOccupation">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherOfficeAddres</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherOfficeAddres" title="@Resource.GEE1010ttFatherOfficeAddres" id="GEE1010mdFatherOfficeAddres">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherPhoneNumber</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherPhoneNumber" title="@Resource.GEE1010ttFatherPhoneNumber" id="GEE1010mdFatherPhoneNumber">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherOrgnisation</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherOrgnisation" title="@Resource.GEE1010ttFatherOrgnisation" id="GEE1010mdFatherOrgnisation">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLFatherDesignation</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLFatherDesignation" id="GEE1010mdFatherDesignation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bg-white border mb-3">
+                    <div class="form-header" data-toggle="collapse" href="#Motherinfo" role="button" aria-expanded="false" aria-controls="Motherinfo">
+                        <span class="">@Resource.GEE1010GRPhdr5</span>
+                    </div>
+                    <div class="pb-3 collapse" id="Motherinfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherFirstName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherFirstName" id="GEE1010mdMotherFirstName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherMiddleName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherMiddleName" id="GEE1010mdMotherMiddleName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherLasttName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherLasttName" id="GEE1010mdMotherLasttName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherPhoneNumber</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherPhoneNumber" id="GEE1010mdMotherPhoneNumber">
+                            </div>
+
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherQualificaiton_Id</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdMotherQualificaiton_Id">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherQualificaitonText</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherQualificaitonText" title="@Resource.GEE1010ttMotherQualificaitonText" id="GEE1010mdMotherQualificaitonText">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherOccupation</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherOccupation" id="GEE1010mdMotherOccupation" title="@Resource.GEE1010ttMotherOccupation">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherOfficeAddres</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherOfficeAddres" title="@Resource.GEE1010ttMotherOfficeAddres" id="GEE1010mdMotherOfficeAddres">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherPhoneNumber</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherPhoneNumber" title="@Resource.GEE1010ttMotherPhoneNumber" id="GEE1010mdMotherPhoneNumber">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherOrgnisation</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherOrgnisation" title="@Resource.GEE1010ttMotherOrgnisation" id="GEE1010mdMotherOrgnisation">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLMotherDesignation</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLMotherDesignation" id="GEE1010mdMotherDesignation">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bg-white border mb-3">
+                    <div class="form-header" data-toggle="collapse" href="#religioninfo" role="button" aria-expanded="false" aria-controls="religioninfo">
+                        <span class="">@Resource.GEE1010GRPhdr6</span>
+                    </div>
+                    <div class="pb-3 collapse" id="religioninfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLCaste_ID</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdCaste_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLReligon_ID</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdReligon_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bg-white border mb-3">
+                    <div class="form-header" data-toggle="collapse" href="#otherinfo" role="button" aria-expanded="false" aria-controls="otherinfo">
+                        <span class="">@Resource.GEE1010GRPhdr7</span>
+                    </div>
+                    <div class="pb-3 collapse" id="otherinfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLCurrentSchool</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLCurrentSchool" id="GEE1010mdCurrentSchool" title="@Resource.GEE1010ttCurrentSchool">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLCurrentSchoolCity</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLCurrentSchoolCity" id="GEE1010mdCurrentSchoolCity" title="@Resource.GEE1010ttCurrentSchoolCity">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLIsGovtTransfer</label>
+                                <select class="form-control-sm input-value" id="GEE1010mdIsGovtTransfer">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLRemarks</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLRemarks" id="GEE1010mdRemarks" title="@Resource.GEE1010ttRemarks">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.GEE1010LBLCommunicationMode</label>
+                                <input class="input-value" type="text" placeholder="@Resource.GEE1010LBLCommunicationMode" id="GEE1010mdCommunicationMode" title="@Resource.GEE1010ttCommunicationMode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-dark mr-3" type="button" id="submit">@Resource.GEE1010LBLbtnSave</button>
+
+            </div>
+               </div>
+        </div>
+
+}
+                <script src="~/Scripts/DevScripts/Transactions/CandidateDetail.js"></script>
+                <script src="~/Scripts/DevScripts/Common/Common.js"></script>

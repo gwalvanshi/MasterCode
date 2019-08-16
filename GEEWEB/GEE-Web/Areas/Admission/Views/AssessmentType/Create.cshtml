@@ -1,0 +1,100 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid border">
+    <div class="row">
+        <div id="toastmsg"><p class="yellow">Fill all mandatory feilds (*)..</p></div>
+
+        <div class="col-md-12 border-left p-3 bg-light">
+            <h5 class=" pb-2 text-center text-uppercase font-weight-bold">@Resource.GEE1605GRPHDRAssessmentType</h5>
+            <div class="mb-3">
+                <div class="mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">@Resource.Enquiry1002lblLibrary</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">@Resource.Enquiry1002lblData</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row bg-white mx-auto py-2 mb-2">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="master-table-title"><i class="fa fa-plus-circle" aria-hidden="true"> </i> Add Assessment Type data</h4>
+                        <hr />
+                        <label hidden="hidden" id="AssessmentType_Id"></label>
+                        <input hidden="hidden" id="hdnCreatedDate"></input>
+
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1605LBLAssessmentTypeCode</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1605LBLAssessmentTypeCode" id="GEE1605MDAssessmentTypeCode">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1605LBLAssessmentTypeName</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1605LBLAssessmentTypeName" id="GEE1605MDAssessmentTypeName">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1605LBLMaxMarks</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1605LBLMaxMarks" id="GEE1605MDMaxMarks">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1605LBLMinMarks</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1605LBLMinMarks" id="GEE1605MDMinMarks">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1605LBLPassingMarks</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1605LBLPassingMarks" id="GEE1605MDPassingMarks">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1605LBLWeightage</label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1605LBLWeightage" id="GEE1605MDWeightage">
+                        </div>
+                        
+
+                        <div class="form-group">
+                            <div>
+                                <button class="mybtndark" id="Add"><i class="far fa-plus-circle mr-2"></i>@Resource.GEE1605btnAdd</button>
+                                <button class="mybtndark" id="Save"><i class="far fa-save mr-2"></i>@Resource.GEE1605btnSave</button>
+                                <button class="mybtndark" id="Update" hidden="hidden"><i class="fas fa-check mr-2"></i></i>@Resource.GEE1605btnUpdate</button>
+                                <button class="mybtndark" id="Delete" hidden="hidden"><i class="fas fa-check mr-2"></i></i>@Resource.GEE1605btnDelete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="row" style="visibility:hidden;">
+                            <div class="col-lg-4 col-sm-12 col-xs-12">
+                                <div class="form-group form-group-sm">
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                <button class="btn btn-primary btn-sm" id="btnSearch"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <hr />
+
+                        <div class="table-responsive">
+                            <div id="divMasterTableDetails"></div>
+                            <div class="table-responsive">
+                                <table id="tblassessmenttypedatadetails" class="table table-striped table-bordered table-sm table-hover" style="width:100%"></table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var header1= "@Resource.Collegename";
+</script>
+<script src="~/Scripts/DevScripts/Common/Common.js"></script>
+<script src="~/Scripts/DevScripts/Admission/AssessmentType.js"></script>
+@*<script src="~/Scripts/DevScripts/Common/SetSession.js"></script>
+    <script src="~/Scripts/DevScripts/Common/Navigation.js"></script>
+    <script src="~/Scripts/DevScripts/Common/Headerinfo.js"></script>*@
+

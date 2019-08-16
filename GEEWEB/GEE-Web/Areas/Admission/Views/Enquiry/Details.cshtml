@@ -1,0 +1,66 @@
+﻿@model GEE.Web.ViewModel.EnquiryViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>View</h2>
+
+<div>
+    <h4>EnquiryViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Enquiry_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Enquiry_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnquiryNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnquiryNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketSource_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarketSource_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnquiryType_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnquiryType_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sessionyear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sessionyear)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Enquiry_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

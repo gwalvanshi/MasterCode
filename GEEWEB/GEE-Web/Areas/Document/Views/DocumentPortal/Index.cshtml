@@ -1,0 +1,444 @@
+﻿@using GEE_Web;
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    input[type="file"] {
+        display: none;
+    }
+</style>
+
+
+<div class="border-left p-3 bg-light">
+    <h5 class=" pb-2 text-center text-uppercase font-weight-bold">Document Portal</h5>
+    <div class="mb-3">
+        <div class="mb-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item"><a href="#">@Resource.GEE1520SCRHDRDocumentPortal</a></li>                    
+                </ol>
+            </nav>
+        </div>
+        
+        <div class="row bg-white mx-auto py-2 mb-2">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-group-sm">
+                            <label class="control-label " for="select">
+                                @Resource.GEE1520GRDCategory
+                            </label>
+                            <select class="select form-control form-control-sm" onchange="LoadSecondDropdown()" id="ddlFirstCriteria"  name=""></select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-group-sm">
+                            <label class="control-label " for="select">
+                                @Resource.GEE1520LBLSubCategory
+                            </label>
+                            <select class="select form-control form-control-sm" onchange="LoadThirdDropDown()" id="ddlSecondCriteria"  name=""></select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12 col-xs-12">
+                        <div class="form-group form-group-sm">
+                            <label class="control-label " for="select">
+                                @Resource.GEE1520LBLType
+                            </label>
+                            <select class="select form-control form-control-sm" id="ddlDocumentType"  name=""></select>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <div class="form-group">
+                            <div>
+                                <button class="btn btn-primary btn-sm up-doc-search-btn" name="submit" type="button" onclick="GetDocuments()">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"> </i> @Resource.GEE1520btnSearch
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <label class="input-header">@Resource.GEE1520LBLID</label>
+                            <input class="input-value float-left" type="text" placeholder="Student and Staff ID" id="UserGroup1401lmdStaff_ID_OR_Student_ID" title="Student and Staff ID">
+                            <input type="hidden" id="selectedUser" />
+                            <a href="javascript:void(0);" class="iconbtn float-right bg-info" id="anchorDetail" onclick="Popup()"><i class="fas fa-search"></i></a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-1 col-xs-12">
+                        <input type="checkbox" id="chkViewAll" /> View All
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                            <div class="" id="basicInformation">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="table-responsive">
+                    <table id="example" class="table table-striped table-bordered table-sm table-hover" style="width:100%">
+                        <thead class="bg-blue text-white">
+                            <tr>
+
+                                <th>@Resource.GEE1520GRDCategory</th>
+                                <th>@Resource.GEE1520GRDSubCategory</th>
+                                <th>@Resource.GEE1520GRDType</th>
+                                <th>@Resource.GEE1520GRDDownload</th>
+                                <th>@Resource.GEE1520GRDView</th>
+                                <th>@Resource.GEE1520GRDReportCorrect</th>
+                                <th>@Resource.GEE1520GRDReportIncorrect</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div id='myModal' class='modal'>
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class=" pb-2 text-center text-uppercase font-weight-bold">User Lookup</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id='myModalContent'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="~/Scripts/DevScripts/AdminUser/UserCreate.js"></script>
+<script src="~/Scripts/DevScripts/Common/Common.js"></script>
+<script type="text/javascript">
+    var commonjsURL = '/Scripts/DevScripts/common/Common.js';
+    var indexComlunDetails = "";
+    var numberOfRecord = 0;
+    var subcategoryList = [], documentTypeList = [];
+    var isOwn = false;
+
+    $(document).ready(function () {
+
+        $('#txtStudentId').select2();
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentPortal/GetDocumentPermission',
+            data: { UserId: sessionStorage.getItem('CUserId') },
+            dataType: "json",
+            success: function (response) {
+                if (response.permission.length == 0) {
+                    FetchOwnDocument();
+                    isOwn = true;
+                }
+                else {
+                    //FetchPermittedDocument();
+                    $('#ddlFirstCriteria').removeAttr("disabled");
+                    if (response.Category.length > 0) {
+                        BindFirstDropdown(response.Category);
+                    }
+                    if (response.SubCategory.length > 0) {
+                        $('#ddlSecondCriteria').removeAttr("disabled");
+                        subcategoryList = response.SubCategory;
+                        BindSecondDropdown(response.SubCategory);
+                    }
+                    if (response.Type.length > 0) {
+                        $('#ddlDocumentType').removeAttr("disabled");
+                        documentTypeList = response.Type;
+                        BindDocumentType(response.Type);
+                    }
+                }
+
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        });
+
+        //$.ajax({
+        //    type: 'GET',
+        //    url: '/CommonMethods/GetIndexScreenDetailByNavigation',
+        //    data: { MenuId: sessionStorage.getItem('MenuId') },
+        //    dataType: "json",
+        //    success: function (response) {
+        //        //BindDropdown(response);
+        //        //BindTableData(response);
+        //        indexComlunDetails = response;
+        //    },
+        //    error: function () {
+        //        alert(" An error occurred.on load");
+        //    },
+        //});
+
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentSubmission/GetDocumentCategoryForDD',
+            data: { menuType: 1006 },
+            dataType: "json",
+            success: function (response) {
+
+                BindFirstDropdown(response);
+                //LoadSecondDropdown();
+            },
+            error: function () {
+                // alert(" An error occurred. on load 2");
+            },
+        })
+
+        //FetchOwnDocument();
+    });
+
+    function FetchOwnDocument() {
+        var userId = sessionStorage.getItem('CUserId');
+        $("#selectedUser").val(userId);
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentPortal/FetchOwnDocument',
+            data: { UserId: userId },
+            dataType: "json",
+            success: function (response) {
+                BindTableData(response);
+            },
+            error: function () {
+                alert(" An error occurred. on load 2");
+            },
+        })
+    }
+
+    function FetchPermittedDocument() {
+        var userId = sessionStorage.getItem('CUserId');
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentPortal/FetchPermittedDocument',
+            data: { UserId: userId },
+            dataType: "json",
+            success: function (response) {
+                BindTableData(response);
+            },
+            error: function () {
+                alert(" An error occurred. on load 2");
+            },
+        })
+    }
+
+    function LoadSecondDropdown() {
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentSubmission/GetDocumentCategoryForDD',
+            data: { menuType: 1007, categoryId: $("#ddlFirstCriteria").val() },
+            dataType: "json",
+            success: function (response) {
+                $("#txtStudentId").val('')
+                BindSecondDropdown(response);
+                //GetDocumentSubmissionData();
+                LoadThirdDropDown();
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        })
+    }
+
+    function LoadThirdDropDown() {
+
+        $('#ddlDocumentType').removeAttr("disabled");
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentPortal/GetDocumentTypeByCategory',
+            data: { subCategory: $("#ddlSecondCriteria").val() },
+            dataType: "json",
+            success: function (response) {
+                BindDocumentType(response);
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        })
+
+    }
+
+    function updateUserInformation(userInformation) {
+        $("#UserGroup1401lmdStaff_ID_OR_Student_ID").val(userInformation.FirstName + " " + userInformation.Lastname + "(" + userInformation.CandidateDetail_ID + ")");
+        $("#selectedUser").val(userInformation.CandidateDetail_ID);
+        $("#basicInformation").text(userInformation.FirstName + " " + userInformation.Lastname + ", " + userInformation.FatheFirstName + " " + userInformation.FatherLasttName);
+    }
+
+    function SearchData() {
+
+        var jsonObj = [];
+
+        if (document.getElementById("ddlFirstCriteria").selectedIndex > 0) {
+            var item1 = {}
+            item1["SearchParameter"] = document.getElementById("ddlFirstCriteria").value;
+            item1["SearchParameterValue"] = document.getElementById("txtFirstCriteria").value;
+            item1["SearchParameterDataType"] = "string";
+            jsonObj.push(item1);
+        }
+
+
+        if (document.getElementById("ddlSecondCriteria").selectedIndex > 0) {
+            var item2 = {}
+            item2["SearchParameter"] = document.getElementById("ddlSecondCriteria").value;
+            item2["SearchParameterValue"] = document.getElementById("txtSecondCriteria").value;
+            item2["SearchParameterDataType"] = "string";
+            jsonObj.push(item2);
+        }
+
+        BindTableData(indexComlunDetails, jsonObj);
+    }
+
+    function BindFirstDropdown(data) {
+        var $ele = $('#ddlFirstCriteria');
+        $ele.empty();
+        $ele.append($('<option/>').val('0').text('Select Category'));
+
+        //$ele.append($('<option/>').val('0').text('Select Frist Criteria'));
+        $.each(data, function (ii, vall) {
+
+            $ele.append($('<option/>').val(vall.MasterTable_id).text(vall.Name));
+        })
+    }
+
+    function BindSecondDropdown(data) {
+        var $ele = $('#ddlSecondCriteria');
+        $ele.empty();
+        $ele.append($('<option/>').val('0').text('Select Sub-Category'));
+        $.each(data, function (ii, vall) {
+            var sub = subcategoryList.find(sc => sc.MasterTable_id == vall.MasterTable_id);
+            if ((sub != null && sub != undefined) || isOwn )
+                $ele.append($('<option/>').val(vall.MasterTable_id).text(vall.Name));
+        })
+    }
+
+    function BindDocumentType(data) {
+        var $ele = $('#ddlDocumentType');
+        $ele.empty();
+        $ele.append($('<option/>').val('0').text('Select Document Type'));
+        $.each(data, function (ii, vall) {
+            var sub = documentTypeList.find(sc => sc.DocumentTypeID == vall.DocumentTypeID);
+            if ((sub != null && sub != undefined) || isOwn)
+                $ele.append($('<option/>').val(vall.DocumentTypeID).text(vall.DocumentTypeName));
+        })
+    }
+
+    function GetDocuments() {
+        var documentType = $("#ddlDocumentType").val();
+        var Category = $("#ddlFirstCriteria").val();
+        var subCategory = $("#ddlSecondCriteria").val();
+        var selectedUser = $("#selectedUser").val();
+        var IsForAll = $("#chkViewAll").prop("checked");
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentPortal/GetDocuments',
+            data: { category: Category, subCategory: subCategory, documentType: documentType, userId: selectedUser, IsForAll: IsForAll },
+            dataType: "json",
+            success: function (response) {
+                BindTableData(response)
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        })
+    }
+
+    function BindTableData(data, searchData) {
+
+
+        var selectColumn = "";
+        var SortColumn = "";
+        var SortOrder = "";
+        var selectColumnToGrid = "";
+
+        selectColumnToGrid = "@Resource.GEE1520GRDCategory,@Resource.GEE1520GRDSubCategory,@Resource.GEE1520GRDType,@Resource.GEE1520GRDDownload,@Resource.GEE1520GRDView,@Resource.GEE1520GRDReportCorrect,@Resource.GEE1520GRDReportIncorrect,"
+        var Postdata =
+        {
+            "PageNo": 1,
+            "PageSize": 10,
+            "SortColumn": SortColumn,
+            "SortOrder": SortOrder,
+            "IndexScreenSelectParameterModelCommaSeparate": selectColumn,
+            "IndexScreenSearchParameterModel": searchData,
+            "SelectColumnToGrid": selectColumnToGrid
+        }
+
+
+        var tmpHTML = "";
+        var theadStart = "<thead class=\"bg-primary text-white\">";
+        var tHeadClose = "</thead>";
+        var res = selectColumnToGrid.split(",");
+        tmpHTML += theadStart;
+        for (var j = 0; j < res.length - 1; j++) {
+            tmpHTML += "<th>" + res[j] + "</th>";
+        }
+
+        tmpHTML += tHeadClose;
+        numberOfRecord = 0;
+        tmpHTML += '<tbody>                                                                                                          ';
+        $.each(data, function (ii, vall) {
+            numberOfRecord += 1;
+            tmpHTML += '    <tr>                                                                                                         ';
+            //tmpHTML += '        <td class="text-center">                                                                                 ';
+            //tmpHTML += '            <input class="up-doc-checkbox" name="checkbox" type="checkbox" value="Third Choice" />               ';
+            //tmpHTML += '        </td>                                                                                                    ';
+            tmpHTML += '        <td>   ' + vall.Category + '  </td>                                                                                                    ';
+            tmpHTML += '        <td>   ' + vall.Subcategory + '  </td>                                                                                                    ';
+            tmpHTML += '        <td>   ' + vall.DocumentType + '  </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">   <a  href="' + vall.DigitalPath.replace('~', '') + '" ><i class="fa fa-download"></i></a> </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">   <a target="_blank" href="' + vall.DigitalPath.replace('~', '') + '"><i class="fa fa-eye"></i></a> </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">   <button id="btnCorrect' + vall.Id + '" onclick="onReportCorrect(true,' + vall.Id + ')" ><i class="fa fa-thumbs-up"></i></button> </td>                                                                                                    ';
+            tmpHTML += '        <td class="text-center">   <button id="btnInCorrect' + vall.Id + '" onclick="onReportCorrect(false,' + vall.Id + ')"><i class="fa fa-thumbs-down"></i></button> </td>                                                                                                    ';
+
+            tmpHTML += '    </tr>                                                                                                        ';
+        })
+        tmpHTML += '</tbody>                                                                                                         ';
+        $("#example").html(tmpHTML);
+
+    }
+
+    function onReportCorrect(isCorrect, submissionId) {
+        $.ajax({
+            type: 'GET',
+            url: '/DocumentPortal/ReportCorrect',
+            data: { isCorrect: isCorrect, submissionId: submissionId },
+            dataType: "json",
+            success: function (response) {
+                if (isCorrect)
+                    $("#btnCorrect" + submissionId).css("background", "green");
+                else
+                    $("#btnInCorrect" + submissionId).css("background", "red");
+
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        })
+    }
+
+    function selectFile(index) {
+        $('#file-upload' + index).click();
+    }
+</script>
+
+
+
+
+
+

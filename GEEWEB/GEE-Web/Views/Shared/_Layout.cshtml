@@ -1,0 +1,238 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="~/styles/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE/bootstrap/css/maincss.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+    <script src="~/AdminLTE/plugins/jquery-ui/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/styles/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/styles/js/script.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="~/AdminLTE/plugins/jquery-ui/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="styles/js/bootstrap-datepicker.js"></script>
+    <link href="styles/css/bootstrap-datepicker.css" rel="stylesheet">
+
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+
+
+    @RenderSection("Menu", required: false)
+    @RenderSection("Scripts", required: false)
+    @RenderSection("styles", required: false)
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+
+    <title>IMS</title>
+</head>
+<body>
+
+
+    <div class="">
+        <div id="mySidebar" class="sidebar" onmouseover="openNav()">
+
+
+
+        </div>
+    </div>
+
+    <div id="main">
+
+        <!--Main Menu-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand text-warning font-weight-bold nav-header-logo" href="#"><img src="~/img/oislogo.png"></a>
+            <a class="navbar-brand text-white text-uppercase" href="#">Oberoi International School</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto"></ul>
+                <div class="mr-2">
+                    <div class="text-light pb-2 row">
+                        <div class="mr-3"><span id="loggedInUser" class="mr-3">@Resource.lblWelcomeMsz</span></div>
+                        <div>
+                            <select class="form-control form-control-sm select-lang" id="ddlweblanguage" onchange="ChangeLangu(this)">
+                                @{
+                                    foreach (var i in GEE_Web.WebLibrary.LanguageAvailable.AvailableLanguages)
+                                    {
+                                        <option value=@i.LanguageCultureName>@i.LanguageFullName</option>
+
+                                    }
+
+                                }
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row float-right">
+                        <a class="nav-link text-light py-0" href="#"><i class="fas fa-home"></i></a>
+                        <a class="nav-link text-light py-0" href="#"><i class="far fa-envelope-open"></i><span class="badge badge-pill badge-danger ml-1">2</span></a>
+                        <a class="nav-link text-light py-0 accordion" href="#collapsequicklinks" data-toggle="collapse"></a>
+                        <!--<a class="nav-link text-light py-0 coll-menu" href="#collapsequicklinks" data-toggle="collapse"></a>  -->
+                        <div class="btn-group">
+                            <a class="nav-link text-light py-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right mt-3 text-center px-3" style="min-width: 480px;">
+                                <a href=""><i class="fas fa-unlock-alt mr-2"></i>Change Password</a>
+                                <a href=""><i class="fas fa-sign-out-alt mr-2"></i>Logout</a>
+                                <a href="" id="UserLastLoginTime"><i class="far fa-clock mr-2"></i>Last Login: 23 Hrs</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <div class="row top-collapse-menu mr-auto collapse " id="collapsequicklinks">
+
+            <div class="collapse-list">
+                <a href="" class="group-label"><i class="far fa-address-card mr-2"></i>Admission</a>
+                <a href="">Add Enquiry</a>
+                <a href="">Sell & Submit Forms</a>
+                <a href="">Fill Candidate Details</a>
+                <a href="">Submit Documents</a>
+                <a href="">Index</a>
+                <a href="">Dashboard</a>
+                <a href=""><i class="fas fa-plus-circle mr-1"></i>More</a>
+            </div>
+            <div class="collapse-list">
+                <a href="" class="group-label"><i class="fas fa-sliders-h mr-2"></i>SchoolSetup</a>
+                <a href="">Add Master</a>
+                <a href="">Master Data</a>
+                <a href="">Class Setup</a>
+                <a href="">Rooms</a>
+                <a href="">Class Room Mapping</a>
+                <a href="">Subject Setup</a>
+                <a href=""><i class="fas fa-plus-circle mr-1"></i>More</a>
+            </div>
+            <div class="collapse-list">
+                <a href="" class="group-label"><i class="fas fa-users mr-2"></i>Fee Module</a>
+                <a href="">Fee & Discount</a>
+                <a href="">Frequency</a>
+                <a href="">Fee & Discount</a>
+                <a href="">Fee Posting</a>
+                <a href="">Fees Receiving</a>
+            </div>
+            <div class="collapse-list">
+                <a href="" class="group-label"><i class="fas fa-user mr-2"></i>UserMangement</a>
+                <a href="">Create User</a>
+                <a href="">Create Bulk User</a>
+                <a href="">Create Group</a>
+                <a href="">Assign Permession</a>
+                <a href="">Reset Password</a>
+            </div>
+
+
+        </div>
+        <div id="overrideAlert"></div>
+
+        <!--<div class="border">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+    </div>-->
+        @RenderBody()
+    </div>
+
+
+
+    <script src="~/Scripts/DevScripts/Common/Navigation.js"></script>
+    <script src="~/Scripts/DevScripts/Common/Common.js"></script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "40px";
+            document.getElementById("main").style.marginLeft = "40px";
+
+        }
+    </script>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+            });
+        }
+
+
+        var acc = document.getElementsByClassName("coll-menu");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("open");
+            });
+        }
+    </script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("toastmsg");
+            x.className = "show";
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+
+    <script>
+        function SaveMenuID(menuId, MenuCode) {
+
+            sessionStorage.setItem('MenuId', menuId);
+            sessionStorage.setItem('MenuCode', MenuCode);
+        }
+        function ChangeLangu(ddlLangu) {           
+            var lang = ddlLangu.value;
+            window.location.href = "/Home/ChangeLanguage?lang=" + lang;
+
+        }
+    </script>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    @*<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+</body>
+</html>

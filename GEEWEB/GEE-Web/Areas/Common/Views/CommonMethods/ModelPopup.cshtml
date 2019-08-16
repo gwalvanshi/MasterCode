@@ -1,0 +1,174 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ModelPopup</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="~/styles/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE/bootstrap/css/maincss.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js">
+    </script>
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="~/styles/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/styles/js/script.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    @*<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- datatable -->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+</head>
+<body>
+    <div class="border-left p-3 bg-light">
+       
+        <div class="mb-3">          
+
+            <div class="row bg-white border mx-auto py-2 mb-2"style="text-align:center;">
+
+
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <div class="form-group form-group-sm">
+                        <input class="form-control form-control-sm" id="txtSearch" name="name" placeholder="Search Data" type="text" />
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <div class="form-group form-group-sm">
+                        <button class="mybtn" type="button" onclick="SearchData()"><i class="fas fa-search mr-2"></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid bg-white pt-3 pb-3">
+
+                <div class="table-responsive">
+                    <table id="tblPopup" class="table table-striped table-bordered table-sm table-hover" style="width:100%"></table>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+        <script type="text/javascript">
+            $(document).ready(function ()
+            {              
+                BindTable(GridColumnDetails, LookUpType, ResxColumnDetails);
+            });
+            function SearchData()
+            {
+                oTable = $('#tblmasterdatadetails').DataTable();
+                oTable.draw();
+               
+                BindTable(GridColumnDetails, LookUpType, ResxColumnDetails)
+            }
+            function BindTable(columnDetails, PopupType, ResxColumnDetails) {
+
+               
+                var objData = {
+                    "PopupType": PopupType, "SearchValue": $("#txtSearch").val()
+                };
+                var selectColumnToGrid = columnDetails;
+
+                var rColumn = ResxColumnDetails;
+
+                var tmpHTML = "";
+                var theadStart = "<thead class=\"bg-primary text-white\">";
+                var tHeadClose = "</thead>";
+                var res = rColumn.split(",");
+                tmpHTML += theadStart;
+
+                tmpHTML += "<th>Select</th>";
+
+                for (var j = 0; j < res.length; j++) {
+                    tmpHTML += "<th>" + res[j] + "</th>";
+                }
+
+                tmpHTML += tHeadClose;
+
+                $("#tblPopup").html(tmpHTML);
+                $("#tblPopup").DataTable({
+                   "responsive": true,
+                    "processing": true, // for show progress bar
+                    "serverSide": true, // for process server side
+                    "filter": false, // this is for disable filter (search box)
+                    "orderMulti": false, // for disable multiple column at once
+                    "destroy": true,
+                    //"language": {
+                    //    "lengthMenu": "Display _MENU_ records per page",
+                    //    "zeroRecords": "Nothing found - sorry",
+                    //    "info": "Showing page _PAGE_ of _PAGES_",
+                    //    "infoEmpty": "No records available",
+                    //    "infoFiltered": "(filtered from _MAX_ total records)"
+
+                    //},
+                    "ajax": {
+                        "url": "/CommonMethods/PupupLookupData",
+                        "type": "POST",
+                        "datatype": "json",
+                        "data": objData
+
+                    },
+                    "order": [[1, 'asc']],
+                    "columnDefs":
+                        [{
+                            "targets": [1],
+                            "visible": false
+
+                        }],
+                    "columns": Returnobj(selectColumnToGrid)
+
+                });
+            }
+            function Returnobj(selectColumnToGrid) {
+                var jObj = [
+                ];
+                var column = selectColumnToGrid.split(",");
+               
+                var objRadio = { 
+                    "orderable": false,
+                    "render": function (data, type, full, meta) { return '<input type="radio"  data-dismiss="modal" aria-hidden="true" name="id" onclick=LoadDataToParent("' + getMapValue(full, GridColumnForRadioButton) + '")  value="' + getMapValue(full, GridColumnForRadioButton) + '">'; }
+                };
+
+                jObj.push(objRadio);
+
+                for (var j = 0; j < column.length; j++) {
+                    // tmpHTML += "<th>" + res[j] + "</th>";
+                    var newObj = { "data": column[j], "name": column[j], "autoWidth": true };
+                    jObj.push(newObj);
+                }
+                return jObj;
+            }
+
+            function getMapValue(obj, key) {
+                if (obj.hasOwnProperty(key))
+                    return obj[key];
+                throw new Error("Invalid map key.");
+            }
+            function LoadDataToParent(id) {              
+                parent.LoadLookupData(id);
+               
+            }
+        </script>
+</body>
+
+</html>

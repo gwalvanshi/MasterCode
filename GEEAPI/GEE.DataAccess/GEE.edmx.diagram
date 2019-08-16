@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9f2ecece2ba8456a81c5042ce66ec964" Name="Diagram1" ZoomLevel="10" ShowGrid="false">
+        <EntityTypeShape EntityType="GEEModel.DropDownDetail" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="GEEModel.FK_UserGroup_NavigationMenu" />
+        <AssociationConnector Association="GEEModel.FK__Candidate__Stude__51A50FA1" />
+        <AssociationConnector Association="GEEModel.FK__Candidate__Subje__529933DA" />
+        <EntityTypeShape EntityType="GEEModel.AcademicYear" Width="1.5" PointX="19.75" PointY="17.875" />
+        <EntityTypeShape EntityType="GEEModel.AdmissionDetail" Width="1.5" PointX="17" PointY="24.875" />
+        <EntityTypeShape EntityType="GEEModel.AdmissionStatu" Width="1.5" PointX="22" PointY="12.25" />
+        <EntityTypeShape EntityType="GEEModel.Application" Width="1.5" PointX="12" PointY="31.125" />
+        <EntityTypeShape EntityType="GEEModel.AspNetRole" Width="1.5" PointX="17.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GEEModel.AspNetUserClaim" Width="1.5" PointX="17" PointY="13.75" />
+        <EntityTypeShape EntityType="GEEModel.AspNetUserLogin" Width="1.5" PointX="17" PointY="5.625" />
+        <EntityTypeShape EntityType="GEEModel.AspNetUserRole" Width="1.5" PointX="20" PointY="7.75" />
+        <EntityTypeShape EntityType="GEEModel.AspNetUser" Width="1.5" PointX="14.75" PointY="6.25" />
+        <EntityTypeShape EntityType="GEEModel.AssessmentStructureAssessmentTypeMapping" Width="1.5" PointX="19.75" PointY="2.875" />
+        <EntityTypeShape EntityType="GEEModel.AssessmentTYPE" Width="1.5" PointX="19.75" PointY="22.875" />
+        <EntityTypeShape EntityType="GEEModel.BatchClassTeacherMonitorMapping" Width="1.5" PointX="21.75" PointY="2.875" />
+        <EntityTypeShape EntityType="GEEModel.BatchMaster" Width="1.5" PointX="0.75" PointY="23.875" />
+        <EntityTypeShape EntityType="GEEModel.BatchStudentMapping" Width="1.5" PointX="21.75" PointY="17.875" />
+        <EntityTypeShape EntityType="GEEModel.BookCourseMapping" Width="1.5" PointX="21.75" PointY="22.875" />
+        <EntityTypeShape EntityType="GEEModel.BookMaster" Width="1.5" PointX="2.75" PointY="24.875" />
+        <EntityTypeShape EntityType="GEEModel.CandidateDetail" Width="1.5" PointX="12" PointY="13.125" />
+        <EntityTypeShape EntityType="GEEModel.ClassMaster" Width="1.5" PointX="19.75" PointY="12.75" />
+        <EntityTypeShape EntityType="GEEModel.CommunicationTemplate" Width="1.5" PointX="4.75" PointY="24.875" />
+        <EntityTypeShape EntityType="GEEModel.CourseBatchMapping" Width="1.5" PointX="22.75" PointY="7.875" />
+        <EntityTypeShape EntityType="GEEModel.CourseMaster" Width="1.5" PointX="6.75" PointY="25.875" />
+        <EntityTypeShape EntityType="GEEModel.Doccategory_IDmapping" Width="1.5" PointX="23.75" PointY="2.875" />
+        <EntityTypeShape EntityType="GEEModel.DocumentAuditlog" Width="1.5" PointX="23.75" PointY="17.875" />
+        <EntityTypeShape EntityType="GEEModel.DocumentdownloadHistory" Width="1.5" PointX="23.75" PointY="22.875" />
+        <EntityTypeShape EntityType="GEEModel.DocumentPermission" Width="1.5" PointX="24.75" PointY="7.875" />
+        <EntityTypeShape EntityType="GEEModel.DocumentSubmissionDetail" Width="1.5" PointX="21.75" PointY="26.875" />
+        <EntityTypeShape EntityType="GEEModel.DocumentType" Width="1.5" PointX="7.5" PointY="19.625" />
+        <EntityTypeShape EntityType="GEEModel.EducationDetail" Width="1.5" PointX="23.75" PointY="26.875" />
+        <EntityTypeShape EntityType="GEEModel.EmailLog" Width="1.5" PointX="8.75" PointY="27.875" />
+        <EntityTypeShape EntityType="GEEModel.EmployeeEducationDetail" Width="1.5" PointX="25.75" PointY="12.875" />
+        <EntityTypeShape EntityType="GEEModel.EmployeeExperience" Width="1.5" PointX="25.75" PointY="18.875" />
+        <EntityTypeShape EntityType="GEEModel.EmployeeIDdetail" Width="1.5" PointX="25.75" PointY="2.875" />
+        <EntityTypeShape EntityType="GEEModel.EmployeeMaster" Width="1.5" PointX="25.75" PointY="24.875" />
+        <EntityTypeShape EntityType="GEEModel.Enquiry" Width="1.5" PointX="9.75" PointY="22.125" />
+        <EntityTypeShape EntityType="GEEModel.GradeDetail" Width="1.5" PointX="26.75" PointY="7.875" />
+        <EntityTypeShape EntityType="GEEModel.GroupMaster" Width="1.5" PointX="0.75" PointY="29.875" />
+        <EntityTypeShape EntityType="GEEModel.HouseDesignationMemersMapping" Width="1.5" PointX="27.75" PointY="2.875" />
+        <EntityTypeShape EntityType="GEEModel.HouseMembersMapping" Width="1.5" PointX="2.75" PointY="29.875" />
+        <EntityTypeShape EntityType="GEEModel.IndexScreenDetail" Width="1.5" PointX="7.75" PointY="12.875" />
+        <EntityTypeShape EntityType="GEEModel.LoginTrack" Width="1.5" PointX="17" PointY="19.5" />
+        <EntityTypeShape EntityType="GEEModel.MailMerge" Width="1.5" PointX="27.75" PointY="12.875" />
+        <EntityTypeShape EntityType="GEEModel.MasterTable" Width="1.5" PointX="5.25" PointY="18.75" />
+        <EntityTypeShape EntityType="GEEModel.MasterTabletype" Width="1.5" PointX="3" PointY="19.25" />
+        <EntityTypeShape EntityType="GEEModel.NavigationMenu" Width="1.5" PointX="3" PointY="12.75" />
+        <EntityTypeShape EntityType="GEEModel.NavigationMenu1" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="GEEModel.NavigationType" Width="1.5" PointX="0.75" PointY="10" />
+        <EntityTypeShape EntityType="GEEModel.Navmenu_asprole_permisison_mapping" Width="1.5" PointX="14.75" PointY="29.875" />
+        <EntityTypeShape EntityType="GEEModel.Navmenu_asprole_permisison_UserGroup_mapping" Width="1.5" PointX="10.25" PointY="2.25" />
+        <EntityTypeShape EntityType="GEEModel.NumberGenScheme" Width="1.5" PointX="7.5" PointY="6" />
+        <EntityTypeShape EntityType="GEEModel.Registration" Width="1.5" PointX="12" PointY="26.625" />
+        <EntityTypeShape EntityType="GEEModel.RoomMaster" Width="1.5" PointX="27.75" PointY="17.875" />
+        <EntityTypeShape EntityType="GEEModel.Route_Vech_Driver_Mapping" Width="1.5" PointX="16.75" PointY="29.875" />
+        <EntityTypeShape EntityType="GEEModel.RouteDetail" Width="1.5" PointX="18.75" PointY="29.875" />
+        <EntityTypeShape EntityType="GEEModel.RouteMaster" Width="1.5" PointX="27.75" PointY="22.875" />
+        <EntityTypeShape EntityType="GEEModel.SchoolConfig" Width="1.5" PointX="5.25" PointY="6.5" />
+        <EntityTypeShape EntityType="GEEModel.SchoolMaster" Width="1.5" PointX="27.75" PointY="28.875" />
+        <EntityTypeShape EntityType="GEEModel.ShiftMaster" Width="1.5" PointX="28.75" PointY="7.875" />
+        <EntityTypeShape EntityType="GEEModel.SMSLog" Width="1.5" PointX="29.75" PointY="2.875" />
+        <EntityTypeShape EntityType="GEEModel.StopMaster" Width="1.5" PointX="4.75" PointY="31.875" />
+        <EntityTypeShape EntityType="GEEModel.Subject" Width="1.5" PointX="29.75" PointY="12.875" />
+        <EntityTypeShape EntityType="GEEModel.SubjectMaster" Width="1.5" PointX="29.75" PointY="17.875" />
+        <EntityTypeShape EntityType="GEEModel.SubjectTypeMaster" Width="1.5" PointX="29.75" PointY="23.875" />
+        <EntityTypeShape EntityType="GEEModel.sysdiagram" Width="1.5" PointX="0.75" PointY="2.875" />
+        <EntityTypeShape EntityType="GEEModel.TeacherCourseMapping" Width="1.5" PointX="29.75" PointY="28.875" />
+        <EntityTypeShape EntityType="GEEModel.TransportAllocation" Width="1.5" PointX="30.75" PointY="7.875" />
+        <EntityTypeShape EntityType="GEEModel.TransportFee" Width="1.5" PointX="16.75" PointY="9.875" />
+        <EntityTypeShape EntityType="GEEModel.UserGroup" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="GEEModel.UserGroupAspUserMapping" Width="1.5" PointX="12.5" PointY="7.125" />
+        <EntityTypeShape EntityType="GEEModel.UserGroupNavigationMenuMapping" Width="1.5" PointX="10.25" PointY="7.125" />
+        <EntityTypeShape EntityType="GEEModel.UserMaster" Width="1.5" PointX="14.75" PointY="21.875" />
+        <EntityTypeShape EntityType="GEEModel.VechicleMaster" Width="1.5" PointX="20.75" PointY="32.875" />
+        <EntityTypeShape EntityType="GEEModel.VechicleStaffMapping" Width="1.5" PointX="22.75" PointY="32.875" />
+        <EntityTypeShape EntityType="GEEModel.AspNetUserRolesHistory" Width="1.5" PointX="29.75" PointY="32.875" />
+        <AssociationConnector Association="GEEModel.FK_AdmissionStatus_AcademicYear" />
+        <AssociationConnector Association="GEEModel.FK_AdmissionDetail_Enquiry" />
+        <AssociationConnector Association="GEEModel.FK_AdmissionStatus_ClassMaster" />
+        <AssociationConnector Association="GEEModel.FK_Application_Enquiry" />
+        <AssociationConnector Association="GEEModel.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" />
+        <AssociationConnector Association="GEEModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="GEEModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="GEEModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="GEEModel.FK__Candidate__Enqui__50B0EB68" />
+        <AssociationConnector Association="GEEModel.FK_DocumentType_MasterTable" />
+        <AssociationConnector Association="GEEModel.FK_Registration_Enquiry" />
+        <AssociationConnector Association="GEEModel.FK_IndexScreenDetails_IndexScreenDetails" />
+        <AssociationConnector Association="GEEModel.FK_LoginTrack_UserMaster" />
+        <AssociationConnector Association="GEEModel.FK_MasterTable_MasterTableType" />
+        <AssociationConnector Association="GEEModel.FK_NumberGenScheme_MasterTable" />
+        <AssociationConnector Association="GEEModel.FK_NavigationMenu_NavigationType" />
+        <AssociationConnector Association="GEEModel.FK_NavigationMenu1_NavigationType" />
+        <AssociationConnector Association="GEEModel.FK_SchoolConfig_NavigationMenu" />
+        <AssociationConnector Association="GEEModel.FK_UserGroupNavigationMenuMapping_NavigationMenu" />
+        <AssociationConnector Association="GEEModel.FK_Navmenu_asprole_permisison_UserGroup_mapping_UserGroup" />
+        <AssociationConnector Association="GEEModel.FK__NumberGen__Schoo__2A363CC5" />
+        <AssociationConnector Association="GEEModel.FK__NumberGen__Schoo__4F87BD05" />
+        <AssociationConnector Association="GEEModel.FK__NumberGen__Schoo__507BE13E" />
+        <AssociationConnector Association="GEEModel.FK__NumberGen__Schoo__538D5813" />
+        <AssociationConnector Association="GEEModel.FK_UserGroupAspUserMapping_UserGroup" />
+        <AssociationConnector Association="GEEModel.FK_UserGroupNavigationMenuMapping_UserGroup" />
+        <AssociationConnector Association="GEEModel.FK_UserGroupAspUserMapping_UserGroupNavigationMenuMapping" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

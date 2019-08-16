@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+
+@Resource.Collegename@Resource.Collegename@Resource.Collegename@Resource.Collegename@Resource.Collegename@Resource.Collegename
+<div style="padding:5px">
+
+    @{
+        foreach (var i in GEE_Web.WebLibrary.LanguageAvailable.AvailableLanguages)
+        {
+            @Html.ActionLink(i.LanguageFullName, "ChangeLanguage", "Home", new { lang = i.LanguageCultureName, area = "" }, null) <text> </text>
+        }
+    }
+</div>

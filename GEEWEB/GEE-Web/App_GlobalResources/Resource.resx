@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Enquiry10002lblAdmissionClass" xml:space="preserve">
+    <value>Admission Class</value>
+  </data>
+  <data name="Enquiry10002lblDateofBirth" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="Enquiry1002lblAddress1" xml:space="preserve">
+    <value>Address1</value>
+  </data>
+  <data name="Enquiry1002lblAddress2" xml:space="preserve">
+    <value>Address2</value>
+  </data>
+  <data name="Enquiry1002lblAdmissionClass_id" xml:space="preserve">
+    <value>Student Type</value>
+  </data>
+  <data name="Enquiry1002lblApplicaitonNo" xml:space="preserve">
+    <value>Applcaiton Number</value>
+  </data>
+  <data name="Enquiry1002LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Enquiry1002LBLBTNSendemail" xml:space="preserve">
+    <value>Send Mail</value>
+  </data>
+  <data name="Enquiry1002LBLbtnsendSMS" xml:space="preserve">
+    <value>Send SMS</value>
+  </data>
+  <data name="Enquiry1002lblCandidateInformation" xml:space="preserve">
+    <value>Candidate Information</value>
+  </data>
+  <data name="Enquiry1002lblCity_ID" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Enquiry1002lblCommonInformation" xml:space="preserve">
+    <value>Common Information</value>
+  </data>
+  <data name="Enquiry1002lblContactMobileNo" xml:space="preserve">
+    <value>Phone Number
+</value>
+  </data>
+  <data name="Enquiry1002lblCountry_ID" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Enquiry1002lblData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Enquiry1002lblDOB" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="Enquiry1002lblEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Enquiry1002lblEnquiryInformation" xml:space="preserve">
+    <value>Enquiry Information</value>
+  </data>
+  <data name="Enquiry1002lblEnquiryType_ID" xml:space="preserve">
+    <value>Enquiry Type</value>
+  </data>
+  <data name="Enquiry1002lblFatheFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1002lblFatherInformation" xml:space="preserve">
+    <value>Father Information</value>
+  </data>
+  <data name="Enquiry1002lblFatherLasttName" xml:space="preserve">
+    <value>Last Name
+</value>
+  </data>
+  <data name="Enquiry1002lblFatherMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1002lblFatherPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1002lblFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1002lblHasSibiling" xml:space="preserve">
+    <value>Has Sibiling</value>
+  </data>
+  <data name="Enquiry1002lblLastname" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Enquiry1002lblLibrary" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Enquiry1002lblMarketSource_ID" xml:space="preserve">
+    <value>Marketing Source</value>
+  </data>
+  <data name="Enquiry1002lblMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1002lblMotherFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1002lblMotherInformation" xml:space="preserve">
+    <value>Mother Information</value>
+  </data>
+  <data name="Enquiry1002lblMotherLasttName" xml:space="preserve">
+    <value>Last Name
+</value>
+  </data>
+  <data name="Enquiry1002lblMotherMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1002lblMotherPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1002lblPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1002LBlScreenTitle" xml:space="preserve">
+    <value>Enquiry Information</value>
+  </data>
+  <data name="Enquiry1002lblSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Enquiry1002lblSellApplication" xml:space="preserve">
+    <value>Sell Application</value>
+  </data>
+  <data name="Enquiry1002lblSiblingAdmNumber_ID" xml:space="preserve">
+    <value>Sibling Adm. No</value>
+  </data>
+  <data name="Enquiry1002lblState_ID" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Enquiry1002lblStudentType" xml:space="preserve">
+    <value>Student Type</value>
+  </data>
+  <data name="Enquiry1002lblSubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Enquiry1002lbStream" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Enquiry1002mbStream" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002mdAddress1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdAddress2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdAdmissionClass_id" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdApplicaitonNo" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdCity_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdContactMobileNo" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdCountry_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdDOB" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdDOB1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdEmail" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdEmail1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdEnquiryType_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdFatheFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdFatherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdFatherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdFatherPhoneNumber" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdLastname" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMarketSource_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMotherFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdMotherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMotherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMotherPhoneNumber" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdSellApplication" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdSiblingAdmNumber_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdState_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002ttAddress1" xml:space="preserve">
+    <value>Current Address</value>
+  </data>
+  <data name="Enquiry1002ttAddress2" xml:space="preserve">
+    <value>Current Address</value>
+  </data>
+  <data name="Enquiry1002ttAdmissionClass_id" xml:space="preserve">
+    <value>admission for  which class</value>
+  </data>
+  <data name="Enquiry1002ttApplicaitonNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttCity_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttContactMobileNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttCountry_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttDOB" xml:space="preserve">
+    <value>Enter Student Date of Birth</value>
+  </data>
+  <data name="Enquiry1002ttEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttEnquiryType_ID" xml:space="preserve">
+    <value>Type of Enquiry id</value>
+  </data>
+  <data name="Enquiry1002ttFatheFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttFatherLas1002ttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttFatherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttFirstName" xml:space="preserve">
+    <value>student First Name </value>
+  </data>
+  <data name="Enquiry1002ttLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMarketSource_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMotherFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMotherLas1002ttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMotherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttSell Application" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttSiblingAdmNumber_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttState_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttStream" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKAddress1" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKAddress2" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKAdmissionClass_id" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKApplicaitonNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKCity_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKContactMobileNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKCountry_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKDOB" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKEnquiryType_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKFatheFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKFatherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKFatherPhoneNumber" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMarketSource_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMotherFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKMotherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMotherPhoneNumber" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKSellApplication" xml:space="preserve">
+    <value>this is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKSiblingAdmNumber_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKState_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKSubject" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWelcomeMsz" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+</root>

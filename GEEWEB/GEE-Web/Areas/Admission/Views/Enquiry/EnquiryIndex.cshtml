@@ -1,0 +1,291 @@
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="border-left p-3 bg-light">
+    <h5 class=" pb-2 text-center text-uppercase font-weight-bold">ENQUIRY</h5>
+
+    <div class="mb-3">
+        <div class="mb-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="row bg-white border mx-auto py-2 mb-2">
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group form-group-sm">
+                    <select class="select form-control form-control-sm" id="ddlFirstCriteria" name="Criteria1">
+                        <option>Select First Criteria</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group form-group-sm">
+                    <input class="form-control form-control-sm" id="txtFirstCriteria" name="name" placeholder="sub option" type="text" />
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group form-group-sm">
+                    <select class="select form-control form-control-sm" id="ddlSecondCriteria" name="Criteria1">
+                        <option>Select Second Criteria</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group form-group-sm">
+                    <input class="form-control form-control-sm" id="txtSecondCriteria" name="name" placeholder="sub option" type="text" />
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+
+                <div class="form-group form-group-sm">
+                    <select class="select form-control form-control-sm" id="ddlThirdCriteria" name="Criteria1">
+                        <option>Select Third Criteria</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="form-group form-group-sm">
+                    <input class="form-control form-control-sm" id="txtThirdCriteria" name="name" placeholder="sub option" type="text" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid text-right mb-2"><button class="mybtn" type="button" onclick="SearchData()"><i class="fas fa-search mr-2"></i>Update Search</button></div>
+
+        <!-- datatable -->
+        <div class="container-fluid bg-white pt-3 pb-3">
+            <div class="float-left mb-2">
+                <a href="/Admission/Enquiry/Create">
+                    <button class="mybtndark" type="submit" id="AddNewUser" Permission="Add"><i class="far fa-save mr-2"></i>Add New Enquiry</button>
+                </a>
+                @*<button class="mybtndark" type="submit"><i class="far fa-save mr-2"></i>Save</button>
+        <button class="mybtndark" type="submit"><i class="fas fa-print mr-2"></i>Print Receipt</button>
+        <button class="mybtndark" type="submit"><i class="far fa-comment-alt mr-2"></i>Send SMS</button>
+        <button class="mybtndark" type="submit"><i class="far fa-envelope mr-2"></i>Send Mail</button>*@
+            </div>
+            <div class="table-responsive">
+                <table id="example" class="table table-striped table-bordered table-sm table-hover" style="width:100%"></table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    var commonjsURL = '/Scripts/DevScripts/common/Common.js';
+    var indexComlunDetails = "";
+    $(document).ready(function () {
+
+
+        $.ajax({
+            type: 'GET',
+            url: '/CommonMethods/GetIndexScreenDetailByNavigation',
+            data: { MenuId: sessionStorage.getItem('MenuId') },
+            dataType: "json",
+            success: function (response) {
+                BindDropdown(response);
+                BindTable(response);
+                indexComlunDetails = response;
+            },
+            error: function () {
+                alert(" An error occurred.");
+            },
+        })
+
+    });
+    //This method is used to  search data and bind the same with table.
+    //Added by jiya
+    //Date 07 April 2019
+    function SearchData() {
+
+        var jsonObj = [];
+
+        if (document.getElementById("ddlFirstCriteria").selectedIndex > 0) {
+            var item1 = {}
+            item1["SearchParameter"] = document.getElementById("ddlFirstCriteria").value;
+            item1["SearchParameterValue"] = document.getElementById("txtFirstCriteria").value;
+            item1["SearchParameterDataType"] = "string";
+            jsonObj.push(item1);
+        }
+
+
+        if (document.getElementById("ddlSecondCriteria").selectedIndex > 0) {
+            var item2 = {}
+            item2["SearchParameter"] = document.getElementById("ddlSecondCriteria").value;
+            item2["SearchParameterValue"] = document.getElementById("txtSecondCriteria").value;
+            item2["SearchParameterDataType"] = "string";
+            jsonObj.push(item2);
+        }
+
+        BindTable(indexComlunDetails, jsonObj);
+    }
+
+    //This method is used to  bind data into dropdowns
+    //Added by jiya
+    //Date 07 April 2019
+    function BindDropdown(data) {
+
+        var $ele = $('#ddlFirstCriteria');
+        $ele.empty();
+        $ele.append($('<option/>').val('0').text('Select Frist Criteria'));
+        $.each(data, function (ii, vall) {
+            if (vall.Search_visible == true)
+                $ele.append($('<option/>').val(vall.TableName + '.' + vall.ColName).text(vall.ColName));
+        })
+
+        var $ele = $('#ddlSecondCriteria');
+        $ele.empty();
+        $ele.append($('<option/>').val('0').text('Select Second Criteria'));
+        $.each(data, function (ii, vall) {
+            if (vall.Search_visible == true)
+                $ele.append($('<option/>').val(vall.TableName + '.' + vall.ColName).text(vall.ColName));
+        })
+
+        var $ele = $('#ddlThirdCriteria');
+        $ele.empty();
+        $ele.append($('<option/>').val('0').text('Select Third Criteria'));
+        $.each(data, function (ii, vall) {
+            if (vall.Search_visible == true)
+                $ele.append($('<option/>').val(vall.TableName + '.' + vall.ColName).text(vall.ColName));
+        })
+    }
+    //This method is used to call  get method of controller and bind data into table
+    //Added by jiya
+    //Date 07 April 2019
+    function BindTable(data, searchData)
+    {
+       
+
+        var selectColumn = "";
+        var SortColumn = "";
+        var SortOrder = "";
+        var selectColumnToGrid = "";
+        $.each(data, function (ii, vall) {
+            selectColumn += vall.TableName + '.' + vall.ColName + ",";
+            selectColumnToGrid += vall.ColName + ",";
+            if (vall.DefaultSorting == true) {
+                SortColumn = vall.TableName + '.' + vall.ColName;
+                SortOrder = vall.DefaultSortOrder;
+
+            }
+        })
+        var Postdata =
+        {
+            "PageNo": 1,
+            "PageSize": 10,
+            "SortColumn": SortColumn,
+            "SortOrder": SortOrder,
+            "IndexScreenSelectParameterModelCommaSeparate": selectColumn,
+            "IndexScreenSearchParameterModel": searchData,
+            "SelectColumnToGrid": selectColumnToGrid
+        }
+
+       
+        var tmpHTML = "";
+        var theadStart = "<thead class=\"bg-primary text-white\">";
+        var tHeadClose = "</thead>";
+        var res = selectColumnToGrid.split(",");
+        tmpHTML += theadStart;
+        for (var j = 0; j < res.length - 1; j++)
+        {
+            tmpHTML += "<th>" + res[j] + "</th>";
+        }
+        tmpHTML +="<th>Edit</th><th>Delete</th>";
+        tmpHTML += tHeadClose;
+       
+        $("#example").html(tmpHTML);
+        $("#example").DataTable({
+            "processing": true, // for show progress bar
+            "serverSide": true, // for process server side
+            "filter": false, // this is for disable filter (search box)
+            "orderMulti": false, // for disable multiple column at once
+            "destroy": true,
+            "ajax": {
+                "url": "/Enquiry/GetIndexDataOnLoad",
+                "type": "POST",
+                "datatype": "json",
+                "data": Postdata
+            },
+            "columnDefs":
+                [{
+                    "targets": [0],
+                    "visible": false
+                    //"searchable": false
+                }],
+            "columns": Returnobj(selectColumnToGrid)
+
+        });
+    }
+    function DeleteData(Enquiry_ID)
+        {
+            if (confirm("Are you sure you want to delete ...?"))
+            {
+                Delete(Enquiry_ID);
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+    function Delete(Enquiry_ID)
+    {
+            var url = '@Url.Content("~/")' + "Enquiry/Delete";
+           
+
+            $.post(url, { ID: Enquiry_ID }, function (data)
+                {
+                    if (data)
+                    {
+                        oTable = $('#example').DataTable();
+                        oTable.draw();
+                    }
+                    else
+                    {
+                        alert("Something Went Wrong!");
+                    }
+                });
+    }
+
+
+    function Returnobj(selectColumnToGrid) {
+       
+        var jObj = [
+
+        ];
+        var res = selectColumnToGrid.split(",");
+       
+        for (var j = 0; j < res.length - 1; j++)
+        {
+           // tmpHTML += "<th>" + res[j] + "</th>";
+            var newObj = { "data": res[j], "name": res[j], "autoWidth": true };
+            jObj.push(newObj);
+        }      
+        var objEdit = {
+            "render": function (data, type, full, meta) { return '<a class="btn btn-info" href="Edit/' + full.Enquiry_ID + '">Edit</a>'; }
+        };
+        var objDelete = {
+            data: null, render: function (data, type, row) {
+                return "<a href='#' class='btn btn-danger' onclick=DeleteData('" + row.Enquiry_ID + "'); >Delete</a>";
+            }
+        };
+        jObj.push(objEdit)
+        jObj.push(objDelete)
+        return jObj;
+    }
+   
+
+</script>
+
+

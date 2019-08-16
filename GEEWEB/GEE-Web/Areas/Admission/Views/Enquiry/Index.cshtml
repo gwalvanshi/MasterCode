@@ -1,0 +1,55 @@
+﻿@model IEnumerable<GEE.Web.ViewModel.EnquiryViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            <strong>Enquiry No</strong>
+        </th>
+        <th>
+            <strong>EnquiryType</strong>
+        </th>
+        <th>
+            <strong>Status</strong>
+        </th>
+        <th>
+            <strong>Session year</strong>
+        </th>
+        <th>
+            <strong>Created Date</strong>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnquiryNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnquiryType_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sessionyear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Enquiry_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Enquiry_ID })
+            </td>
+        </tr>
+
+    }
+</table>

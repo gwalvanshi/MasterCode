@@ -1,0 +1,128 @@
+﻿@using GEE_Web
+@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid border">
+    <div class="row">
+        <div id="toastmsg"><p class="yellow">fill all mandatory feilds (*)..</p></div>
+
+        <div class="col-md-12 border-left p-3 bg-light">
+            <h5 class=" pb-2 text-center text-uppercase font-weight-bold">@Resource.GEE1120GRPhdrRoomMaster</h5>
+            <div class="mb-3">
+                <div class="mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">@Resource.Enquiry1002lblLibrary</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">@Resource.Enquiry1002lblData</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row bg-white mx-auto py-2 mb-2">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="master-table-title"><i class="fa fa-plus-circle" aria-hidden="true"> </i> Add Subject Master data</h4>
+                        <hr />
+                        <label hidden="hidden" id="SubjectMaster_ID"></label>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">
+                                @Resource.GEE1120LBLcode
+                            </label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1120LBLcode" id="GEE1120mdcode">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">
+                                @Resource.GEE1120LBLName
+                            </label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1120LBLName" id="GEE1120mdName">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1120LBLSubjectType</label>
+                            <select class="form-control form-control-sm" placeholder="@Resource.GEE1120LBLSubjectType" id="GEE1120mdSubjectType">
+                                <option>@Resource.Enquiry1002lblSelect</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1120LBLAssessmentStructure</label>
+                            <select class="form-control form-control-sm" placeholder="@Resource.GEE1120LBLAssessmentStructure" id="GEE1120mdAssessmentStructure">
+                                <option>@Resource.Enquiry1002lblSelect</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1120LBLGradeStructure</label>
+                            <select class="form-control form-control-sm" placeholder="@Resource.GEE1120LBLGradeStructure" id="GEE1120mdGradeStructure">
+                                <option>@Resource.Enquiry1002lblSelect</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">@Resource.GEE1120LBLSubjectGroup</label>
+                            <select class="form-control form-control-sm" placeholder="GEE1120LBLSubjectGroup" id="GEE1120mdSubjectGroup">
+                                <option>@Resource.Enquiry1002lblSelect</option>
+                            </select>
+                        </div>
+
+
+                        <div class="row form-group form-group-sm">
+                            <div class="col-md-4">
+                                <label class="check1">@Resource.GEE1120LBLisOptional</label>
+                                <input class="form-check-input ml-2 k-checkbox" type="checkbox" id="GEE1120mdisOptional" value="false">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="check1">@Resource.GEE1120LBLisScholastic</label>
+                                <input class="form-check-input ml-2 k-checkbox" type="checkbox" id="GEE1120mdisScholastic" value="false">
+                            </div>
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">
+                                @Resource.GEE1120LBLIncludedInCGPA
+                            </label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1120LBLIncludedInCGPA" id="GEE1120mdIncludedInCGPA">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label class="control-label">
+                                @Resource.GEE1120LBLGriExculdedfromAtt
+                            </label>
+                            <input class="form-control form-control-sm" type="text" placeholder="@Resource.GEE1120LBLGriExculdedfromAtt" id="GEE1120mdGriExculdedfromAtt">
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <button class="mybtndark" id="Add"><i class="far fa-plus-circle mr-2"></i>@Resource.GEE1120LBLbtnAdd</button>
+                                <button class="mybtndark" id="Save"><i class="far fa-save mr-2"></i>@Resource.GEE1120LBLbtnSave</button>
+                                <button class="mybtndark" id="Update" hidden="hidden"><i class="fas fa-check mr-2"></i></i>@Resource.GEE1120LBLbtnedit</button>
+                                <button class="mybtndark" id="Delete" hidden="hidden"><i class="fas fa-check mr-2"></i></i>@Resource.GEE1120LBLbtnDelete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12 col-xs-12">
+                                <div class="form-group form-group-sm">
+                                    <select class="form-control form-control-sm" placeholder="">
+                                        <option>Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-1 col-sm-1 col-xs-12">
+                                <button class="btn btn-primary btn-sm"><i class="fa fa-refresh" aria-hidden="true" id="btnsearch"></i></button>
+                            </div>
+                        </div>
+                        <hr />
+
+                        <div class="table-responsive">
+                            <table id="tblSubjectMasterdetails" class="table table-striped table-bordered table-sm table-hover" style="width:100%"></table>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/DevScripts/AdminUser/SubjectMaster.js"></script>
+<script src="~/Scripts/DevScripts/Common/Common.js"></script>
+

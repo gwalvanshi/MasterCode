@@ -1,0 +1,4218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Collegename" xml:space="preserve">
+    <value>Oberoi School</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>FirstNameFirstNameFirstNameFirstName</value>
+  </data>
+  <data name="lblWelcomeMsz" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="Enquiry10002lblAdmissionClass" xml:space="preserve">
+    <value>Admission Class</value>
+  </data>
+  <data name="Enquiry10002lblDateofBirth" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="Enquiry1002lblAddress1" xml:space="preserve">
+    <value>Address1</value>
+  </data>
+  <data name="Enquiry1002lblAddress2" xml:space="preserve">
+    <value>Address2</value>
+  </data>
+  <data name="Enquiry1002lblAdmissionClass_id" xml:space="preserve">
+    <value>Student Type</value>
+  </data>
+  <data name="Enquiry1002lblApplicaitonNo" xml:space="preserve">
+    <value>Applcaiton Number</value>
+  </data>
+  <data name="Enquiry1002LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Enquiry1002LBLBTNSendemail" xml:space="preserve">
+    <value>Send Mail</value>
+  </data>
+  <data name="Enquiry1002LBLbtnsendSMS" xml:space="preserve">
+    <value>Send SMS</value>
+  </data>
+  <data name="Enquiry1002lblCandidateInformation" xml:space="preserve">
+    <value>Candidate Information</value>
+  </data>
+  <data name="Enquiry1002lblCity_ID" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Enquiry1002lblCommonInformation" xml:space="preserve">
+    <value>Common Information</value>
+  </data>
+  <data name="Enquiry1002lblContactMobileNo" xml:space="preserve">
+    <value>Phone Number
+</value>
+  </data>
+  <data name="Enquiry1002lblCountry_ID" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Enquiry1002lblData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Enquiry1002lblDOB" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="Enquiry1002lblEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Enquiry1002lblEnquiryInformation" xml:space="preserve">
+    <value>Enquiry Information</value>
+  </data>
+  <data name="Enquiry1002lblEnquiryType_ID" xml:space="preserve">
+    <value>Enquiry Type</value>
+  </data>
+  <data name="Enquiry1002lblFatheFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1002lblFatherInformation" xml:space="preserve">
+    <value>Father Information</value>
+  </data>
+  <data name="Enquiry1002lblFatherLasttName" xml:space="preserve">
+    <value>Last Name
+</value>
+  </data>
+  <data name="Enquiry1002lblFatherMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1002lblFatherPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1002lblFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1002lblHasSibiling" xml:space="preserve">
+    <value>Has Sibiling</value>
+  </data>
+  <data name="Enquiry1002lblLastname" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Enquiry1002lblLibrary" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Enquiry1002lblMarketSource_ID" xml:space="preserve">
+    <value>Marketing Source</value>
+  </data>
+  <data name="Enquiry1002lblMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1002lblMotherFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1002lblMotherInformation" xml:space="preserve">
+    <value>Mother Information</value>
+  </data>
+  <data name="Enquiry1002lblMotherLasttName" xml:space="preserve">
+    <value>Last Name
+</value>
+  </data>
+  <data name="Enquiry1002lblMotherMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1002lblMotherPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1002lblPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1002LBlScreenTitle" xml:space="preserve">
+    <value>Enquiry Information</value>
+  </data>
+  <data name="Enquiry1002lblSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Enquiry1002lblSellApplication" xml:space="preserve">
+    <value>Sell Application</value>
+  </data>
+  <data name="Enquiry1002lblSiblingAdmNumber_ID" xml:space="preserve">
+    <value>Sibling Adm. No</value>
+  </data>
+  <data name="Enquiry1002lblState_ID" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Enquiry1002lblStudentType" xml:space="preserve">
+    <value>Student Type</value>
+  </data>
+  <data name="Enquiry1002lblSubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Enquiry1002lbStream" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Enquiry1002mbStream" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002mdAddress1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdAddress2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdAdmissionClass_id" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdApplicaitonNo" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdCity_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdContactMobileNo" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdCountry_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdDOB" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdDOB1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdEmail" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdEmail1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdEnquiryType_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdFatheFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdFatherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdFatherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdFatherPhoneNumber" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdLastname" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMarketSource_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMotherFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdMotherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMotherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdMotherPhoneNumber" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002mdSellApplication" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdSiblingAdmNumber_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1002mdState_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1002ttAddress1" xml:space="preserve">
+    <value>Current Address</value>
+  </data>
+  <data name="Enquiry1002ttAddress2" xml:space="preserve">
+    <value>Current Address</value>
+  </data>
+  <data name="Enquiry1002ttAdmissionClass_id" xml:space="preserve">
+    <value>admission for  which class</value>
+  </data>
+  <data name="Enquiry1002ttApplicaitonNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttCity_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttContactMobileNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttCountry_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttDOB" xml:space="preserve">
+    <value>Enter Student Date of Birth</value>
+  </data>
+  <data name="Enquiry1002ttEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttEnquiryType_ID" xml:space="preserve">
+    <value>Type of Enquiry id</value>
+  </data>
+  <data name="Enquiry1002ttFatheFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttFatherLas1002ttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttFatherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttFirstName" xml:space="preserve">
+    <value>student First Name </value>
+  </data>
+  <data name="Enquiry1002ttLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMarketSource_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMotherFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMotherLas1002ttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttMotherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttSellApplication" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttSiblingAdmNumber_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttState_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002ttStream" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKAddress1" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKAddress2" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKAdmissionClass_id" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKApplicaitonNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKCity_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKContactMobileNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKCountry_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKDOB" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKEnquiryType_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKFatheFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKFatherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKFatherPhoneNumber" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMarketSource_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMotherFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKMotherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKMotherPhoneNumber" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKSellApplication" xml:space="preserve">
+    <value>this is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKSiblingAdmNumber_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1002VKState_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1002VKSubject" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lblconfirmpassword" xml:space="preserve">
+    <value>confirmpassword</value>
+  </data>
+  <data name="UserGroup1401lblEmailID" xml:space="preserve">
+    <value>Email ID</value>
+  </data>
+  <data name="UserGroup1401lblFirstName" xml:space="preserve">
+    <value>FirstName</value>
+  </data>
+  <data name="UserGroup1401lblGroup" xml:space="preserve">
+    <value>Copy Permission from Group</value>
+  </data>
+  <data name="UserGroup1401lblheaderaccountInformation" xml:space="preserve">
+    <value>Account Information</value>
+  </data>
+  <data name="UserGroup1401lblheaderLoginInformation" xml:space="preserve">
+    <value>Login Information</value>
+  </data>
+  <data name="UserGroup1401lblheaderPermission" xml:space="preserve">
+    <value>Permission</value>
+  </data>
+  <data name="UserGroup1401lblLastName" xml:space="preserve">
+    <value>LastName</value>
+  </data>
+  <data name="UserGroup1401lblLoginID" xml:space="preserve">
+    <value>LoginID</value>
+  </data>
+  <data name="UserGroup1401lblPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="UserGroup1401lblPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="UserGroup1401lblScreenHeading" xml:space="preserve">
+    <value>User Management</value>
+  </data>
+  <data name="UserGroup1401lblStaff_ID_OR_Student_ID" xml:space="preserve">
+    <value>Staff_ID/Student ID</value>
+  </data>
+  <data name="UserGroup1401lblUserType" xml:space="preserve">
+    <value>UserType</value>
+  </data>
+  <data name="UserGroup1401lmdconfirmpassword" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lmdEmailID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lmdFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lmdGroup" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lmdLastName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lmdLoginID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lmdPassword" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lmdPhoneNumber" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lmdStaff_ID_OR_Student_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lmdUserType" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1401lttEmailID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lttFirstName" xml:space="preserve">
+    <value>User First Name</value>
+  </data>
+  <data name="UserGroup1401lttGroup" xml:space="preserve">
+    <value>this will copy permission to new group</value>
+  </data>
+  <data name="UserGroup1401lttLastName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lttLoginID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lttPassword" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lttPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lttStaff_ID_OR_StudentID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lttUserType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lVKEmailID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lVKFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lVKGroup" xml:space="preserve">
+    <value>if null, group members will have no permisison</value>
+  </data>
+  <data name="UserGroup1401lVKLastName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lVKLoginID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lVKPassword" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lVKPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lVKStaff_ID_OR_StudentID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lVKUserType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1401lblscreendeading" xml:space="preserve">
+    <value>CREATEUSERGROUP</value>
+  </data>
+  <data name="UserGroup1410lblChkisgrpdefault" xml:space="preserve">
+    <value>Default group</value>
+  </data>
+  <data name="UserGroup1410lblGroupCode" xml:space="preserve">
+    <value>GroupCode</value>
+  </data>
+  <data name="UserGroup1410lblGroupDescription" xml:space="preserve">
+    <value>Group Description</value>
+  </data>
+  <data name="UserGroup1410lblGroupList" xml:space="preserve">
+    <value>GroupName</value>
+  </data>
+  <data name="UserGroup1410lblGroupName" xml:space="preserve">
+    <value>GroupName</value>
+  </data>
+  <data name="UserGroup1410lblheaderaccountInformation" xml:space="preserve">
+    <value>Account Information</value>
+  </data>
+  <data name="UserGroup1410MDGroupDescription" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1410mdheaderaccountInformation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1410mdUserGroupCode" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1410mdUserGroupName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1410mdUserGroupName1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="UserGroup1410ttGroupCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1410ttGroupDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1410ttGroupList" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1410ttGroupName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1410ttheaderaccountInformation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1410VKGroupCode" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="UserGroup1410VKGroupDescription" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="UserGroup1410VKGroupList" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="UserGroup1410VKGroupName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="UserGroup1410VKheaderaccountInformation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserGroup1410btnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="UserGroup1410btnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="GEE1505lblbtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GEE1505lblbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1505lblbtnUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="GEE1505LBLcode" xml:space="preserve">
+    <value>code</value>
+  </data>
+  <data name="GEE1505LBLisDefault" xml:space="preserve">
+    <value>isDefault</value>
+  </data>
+  <data name="GEE1505LBLMasterName" xml:space="preserve">
+    <value>Master Name</value>
+  </data>
+  <data name="GEE1505LBLName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1505LBLParentName" xml:space="preserve">
+    <value>ParentName</value>
+  </data>
+  <data name="GEE1505LBLParentName1" xml:space="preserve">
+    <value>ParentName</value>
+  </data>
+  <data name="GEE1505lblScreenheading" xml:space="preserve">
+    <value>Master Table Data</value>
+  </data>
+  <data name="GEE1505MDcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505MDisDefault" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505MDMasterName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1505MDName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1505MDParentName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505MDParentName1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505TTcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505TTisDefault" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505TTMasterName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505TTName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505TTParentName" xml:space="preserve">
+    <value>This table will have parent record</value>
+  </data>
+  <data name="GEE1505TTParentName1" xml:space="preserve">
+    <value>this is Parent of Name</value>
+  </data>
+  <data name="GEE1505VKcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505VKisDefault" xml:space="preserve">
+    <value>only one record can be default</value>
+  </data>
+  <data name="GEE1505VKMasterName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505VKName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505VKParentName" xml:space="preserve">
+    <value>This can be null</value>
+  </data>
+  <data name="GEE1505VKParentName1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010LBLEnquiry_ID	Enquiry ID&#xD;&#xA;GEE1010LBLAdmissionClass_id	Admission Class ID&#xD;&#xA;GEE1010LBLSubjectId	Subject&#xD;&#xA;GEE1010LBLLastPassClass_ID	Last Pass Class ID&#xD;&#xA;GEE1010LBLFirstName	First Name&#xD;&#xA;GEE1010LBLMiddleName	Middle Name&#xD;&#xA;GEE1010LBLLastname	Last Name&#xD;&#xA;GEE1010LBLDOB	Date of Birth&#xD;&#xA;GEE1010LBLEmail	Email&#xD;&#xA;GEE1010LBLStudentType_ID	Student Type ID&#xD;&#xA;GEE1010LBLContactMobileNo	Contact Mobile No&#xD;&#xA;GEE1010LBLHomePhone	Home Phone&#xD;&#xA;GEE1010LBLGender	Gender&#xD;&#xA;GEE1010LBLNationality	Nationality&#xD;&#xA;GEE1010LBLhasSibiling	Has Sibiling&#xD;&#xA;GEE1010LBLSiblingAdmNumber_ID	Sibling Adm. No&#xD;&#xA;GEE1010LBLAddress1	Address 1&#xD;&#xA;GEE1010LBLAddress2	Address 2&#xD;&#xA;GEE1010LBLCity_ID	City&#xD;&#xA;GEE1010LBLState_ID	State&#xD;&#xA;GEE1010LBLCountry_ID	Country&#xD;&#xA;GEE1010LBLPinCode	PinCode&#xD;&#xA;GEE1010LBLLandmark	Landmark&#xD;&#xA;GEE1010LBLDistanceFromSchool	Distance From School&#xD;&#xA;GEE1010LBLCaste_ID	Caste*&#xD;&#xA;GEE1010LBLReligon_ID	Religon*&#xD;&#xA;GEE1010LBLFatheFirstName	Father First Name&#xD;&#xA;GEE1010LBLFatherMiddleName	Father Middle Name&#xD;&#xA;GEE1010LBLFatherLasttName	Father Last Name&#xD;&#xA;GEE1010LBLFatherQualificaiton_ID	Father Qualificaiton ID&#xD;&#xA;GEE1010LBLFatherQualificaitonText	Father Qualificaiton&#xD;&#xA;GEE1010LBLFatherOccupation	Father Occupation&#xD;&#xA;GEE1010LBLFatherOfficeAddres	Father Office Address&#xD;&#xA;GEE1010LBLFatherPhoneNumber	Father Phone Number&#xD;&#xA;GEE1010LBLFatherOrgnisation	Father Orgnisation&#xD;&#xA;GEE1010LBLFatherDesignation	Father Designation&#xD;&#xA;GEE1010LBLMotherFirstName	Mother First Name&#xD;&#xA;GEE1010LBLMotherMiddleName	Mother Middle Name&#xD;&#xA;GEE1010LBLMotherLasttName	Mother Last Name&#xD;&#xA;GEE1010LBLMotherQualificaiton_Id	Mother Qualificaiton ID&#xD;&#xA;GEE1010LBLMotherQualificaitonText	Mother Qualificaiton&#xD;&#xA;GEE1010LBLMotherOccupation	Mother Occupation&#xD;&#xA;GEE1010LBLMotherOfficeAddres	Mother Office Address&#xD;&#xA;GEE1010LBLMotherPhoneNumber	Mother Phone Number&#xD;&#xA;GEE1010LBLMotherOrgnisation	Mother Orgnisation&#xD;&#xA;GEE1010LBLMotherDesignation	Mother Designation&#xD;&#xA;GEE1010LBLCurrentSchool	Current School&#xD;&#xA;GEE1010LBLCurrentSchoolCity	Current School City&#xD;&#xA;GEE1010LBLIsGovtTransfer	Is Govt Transfer&#xD;&#xA;GEE1010LBLRemarks	Remarks&#xD;&#xA;GEE1010LBLCommunicationMode	Communication Mode&#xD;&#xA;GEE1010SCRhdr	Fill Candidate Screen&#xD;&#xA;GEE1010GRPhdr	Search Panel&#xD;&#xA;GEE1010GRPhdr	Sibiling Information &#xD;&#xA;GEE1010GRPhdr	Personal Information &#xD;&#xA;GEE1010GRPhdr	Address Information &#xD;&#xA;GEE1010GRPhdr	Father Information &#xD;&#xA;GEE1010GRPhdr	Mother Information &#xD;&#xA;GEE1010GRPhdr	Religon Information &#xD;&#xA;GEE1010GRPhdr	Other Information &#xD;&#xA;GEE1010LBLbtnSave	Save&#xD;&#xA;GEE1010mdEnquiry_ID	0&#xD;&#xA;GEE1010mdAdmissionClass_id	0&#xD;&#xA;GEE1010mdSubjectId	1&#xD;&#xA;GEE1010mdLastPassClass_ID	0&#xD;&#xA;GEE1010mdFirstName	0&#xD;&#xA;GEE1010mdMiddleName	0&#xD;&#xA;GEE1010mdLastname	0&#xD;&#xA;GEE1010mdDOB	1&#xD;&#xA;GEE1010mdEmail	0&#xD;&#xA;GEE1010mdStudentType_ID	0&#xD;&#xA;GEE1010mdContactMobileNo	0&#xD;&#xA;GEE1010mdHomePhone	0&#xD;&#xA;GEE1010mdGender	0&#xD;&#xA;GEE1010mdNationality	0&#xD;&#xA;GEE1010mdhasSibiling	0&#xD;&#xA;GEE1010mdSiblingAdmNumber_ID	0&#xD;&#xA;GEE1010mdAddress1	0&#xD;&#xA;GEE1010mdAddress2	0&#xD;&#xA;GEE1010mdCity_ID	0&#xD;&#xA;GEE1010mdState_ID	0&#xD;&#xA;GEE1010mdCountry_ID	0&#xD;&#xA;GEE1010mdPinCode	0&#xD;&#xA;GEE1010mdLandmark	0&#xD;&#xA;GEE1010mdDistanceFromSchool	0&#xD;&#xA;GEE1010mdCaste_ID	1&#xD;&#xA;GEE1010mdReligon_ID	1&#xD;&#xA;GEE1010mdFatheFirstName	0&#xD;&#xA;GEE1010mdFatherMiddleName	0&#xD;&#xA;GEE1010mdFatherLasttName	0&#xD;&#xA;GEE1010mdFatherQualificaiton_ID	0&#xD;&#xA;GEE1010mdFatherQualificaitonText	0&#xD;&#xA;GEE1010mdFatherOccupation	0&#xD;&#xA;GEE1010mdFatherOfficeAddres	0&#xD;&#xA;GEE1010mdFatherPhoneNumber	0&#xD;&#xA;GEE1010mdFatherOrgnisation	0&#xD;&#xA;GEE1010mdFatherDesignation	0&#xD;&#xA;GEE1010mdMotherFirstName	0&#xD;&#xA;GEE1010mdMotherMiddleName	0&#xD;&#xA;GEE1010mdMotherLasttName	0&#xD;&#xA;GEE1010mdMotherQualificaiton_Id	0&#xD;&#xA;GEE1010mdMotherQualificaitonText	0&#xD;&#xA;GEE1010mdMotherOccupation	0&#xD;&#xA;GEE1010mdMotherOfficeAddres	0&#xD;&#xA;GEE1010mdMotherPhoneNumber	0&#xD;&#xA;GEE1010mdMotherOrgnisation	0&#xD;&#xA;GEE1010mdMotherDesignation	0&#xD;&#xA;GEE1010mdCurrentSchool	0&#xD;&#xA;GEE1010mdCurrentSchoolCity	0&#xD;&#xA;GEE1010mdIsGovtTransfer	0&#xD;&#xA;GEE1010mdRemarks	0&#xD;&#xA;GEE1010mdCommunicationMode	0&#xD;&#xA;GEE1010ttEnquiry_ID	&#xD;&#xA;GEE1010ttAdmissionClass_id	&#xD;&#xA;GEE1010ttSubjectId	&#xD;&#xA;GEE1010ttLastPassClass_ID	which was last class&#xD;&#xA;GEE1010ttFirstName	&#xD;&#xA;GEE1010ttMiddleName	&#xD;&#xA;GEE1010ttLastname	&#xD;&#xA;GEE1010ttDOB	&#xD;&#xA;GEE1010ttEmail	&#xD;&#xA;GEE1010ttStudentType_ID	&#xD;&#xA;GEE1010ttContactMobileNo	&#xD;&#xA;GEE1010ttHomePhone	&#xD;&#xA;GEE1010ttGender	&#xD;&#xA;GEE1010ttNationality	what is your nationality &#xD;&#xA;GEE1010tthasSibiling	&#xD;&#xA;GEE1010ttSiblingAdmNumber_ID	&#xD;&#xA;GEE1010ttAddress1	&#xD;&#xA;GEE1010ttAddress2	&#xD;&#xA;GEE1010ttCity_ID	&#xD;&#xA;GEE1010ttState_ID	&#xD;&#xA;GEE1010ttCountry_ID	&#xD;&#xA;GEE1010ttPinCode	&#xD;&#xA;GEE1010ttLandmark	&#xD;&#xA;GEE1010ttDistanceFromSchool	&#xD;&#xA;GEE1010ttCaste_ID	&#xD;&#xA;GEE1010ttReligon_ID	&#xD;&#xA;GEE1010ttFatheFirstName	&#xD;&#xA;GEE1010ttFatherMiddleName	&#xD;&#xA;GEE1010ttFatherLasttName	&#xD;&#xA;GEE1010ttFatherQualificaiton_ID	&#xD;&#xA;GEE1010ttFatherQualificaitonText	&#xD;&#xA;GEE1010ttFatherOccupation	&#xD;&#xA;GEE1010ttFatherOfficeAddres	&#xD;&#xA;GEE1010ttFatherPhoneNumber	&#xD;&#xA;GEE1010ttFatherOrgnisation	&#xD;&#xA;GEE1010ttFatherDesignation	&#xD;&#xA;GEE1010ttMotherFirstName	&#xD;&#xA;GEE1010ttMotherMiddleName	&#xD;&#xA;GEE1010ttMotherLasttName	&#xD;&#xA;GEE1010ttMotherQualificaiton_Id	&#xD;&#xA;GEE1010ttMotherQualificaitonText	&#xD;&#xA;GEE1010ttMotherOccupation	&#xD;&#xA;GEE1010ttMotherOfficeAddres	&#xD;&#xA;GEE1010ttMotherPhoneNumber	&#xD;&#xA;GEE1010ttMotherOrgnisation	&#xD;&#xA;GEE1010ttMotherDesignation	&#xD;&#xA;GEE1010ttCurrentSchool	&#xD;&#xA;GEE1010ttCurrentSchoolCity	&#xD;&#xA;GEE1010ttIsGovtTransfer	&#xD;&#xA;GEE1010ttRemarks	&#xD;&#xA;GEE1010ttCommunicationMode	&#xD;&#xA;GEE1010VMEnquiry_ID	&#xD;&#xA;GEE1010VMAdmissionClass_id	&#xD;&#xA;GEE1010VMSubjectId	This is mandatory to fill &#xD;&#xA;GEE1010VMLastPassClass_ID	&#xD;&#xA;GEE1010VMFirstName	&#xD;&#xA;GEE1010VMMiddleName	&#xD;&#xA;GEE1010VMLastname	&#xD;&#xA;GEE1010VMDOB	This is mandatory to fill &#xD;&#xA;GEE1010VMEmail	&#xD;&#xA;GEE1010VMStudentType_ID	&#xD;&#xA;GEE1010VMContactMobileNo	&#xD;&#xA;GEE1010VMHomePhone	&#xD;&#xA;GEE1010VMGender	&#xD;&#xA;GEE1010VMNationality	&#xD;&#xA;GEE1010VMhasSibiling	&#xD;&#xA;GEE1010VMSiblingAdmNumber_ID	&#xD;&#xA;GEE1010VMAddress1	&#xD;&#xA;GEE1010VMAddress2	&#xD;&#xA;GEE1010VMCity_ID	&#xD;&#xA;GEE1010VMState_ID	&#xD;&#xA;GEE1010VMCountry_ID	&#xD;&#xA;GEE1010VMPinCode	&#xD;&#xA;GEE1010VMLandmark	&#xD;&#xA;GEE1010VMDistanceFromSchool	&#xD;&#xA;GEE1010VMCaste_ID	This is mandatory to fill &#xD;&#xA;GEE1010VMReligon_ID	This is mandatory to fill &#xD;&#xA;GEE1010VMFatheFirstName	&#xD;&#xA;GEE1010VMFatherMiddleName	&#xD;&#xA;GEE1010VMFatherLasttName	&#xD;&#xA;GEE1010VMFatherQualificaiton_ID	&#xD;&#xA;GEE1010VMFatherQualificaitonText	&#xD;&#xA;GEE1010VMFatherOccupation	&#xD;&#xA;GEE1010VMFatherOfficeAddres	&#xD;&#xA;GEE1010VMFatherPhoneNumber	&#xD;&#xA;GEE1010VMFatherOrgnisation	&#xD;&#xA;GEE1010VMFatherDesignation	&#xD;&#xA;GEE1010VMMotherFirstName	&#xD;&#xA;GEE1010VMMotherMiddleName	&#xD;&#xA;GEE1010VMMotherLasttName	&#xD;&#xA;GEE1010VMMotherQualificaiton_Id	&#xD;&#xA;GEE1010VMMotherQualificaitonText	&#xD;&#xA;GEE1010VMMotherOccupation	&#xD;&#xA;GEE1010VMMotherOfficeAddres	&#xD;&#xA;GEE1010VMMotherPhoneNumber	&#xD;&#xA;GEE1010VMMotherOrgnisation	&#xD;&#xA;GEE1010VMMotherDesignation	&#xD;&#xA;GEE1010VMCurrentSchool	&#xD;&#xA;GEE1010VMCurrentSchoolCity	&#xD;&#xA;GEE1010VMIsGovtTransfer	&#xD;&#xA;GEE1010VMRemarks	&#xD;&#xA;GEE1010VMCommunicationMode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010GRPhdr" xml:space="preserve">
+    <value>Search Panel</value>
+  </data>
+  <data name="GEE1010GRPhdr1" xml:space="preserve">
+    <value>Sibiling Information </value>
+  </data>
+  <data name="GEE1010GRPhdr2" xml:space="preserve">
+    <value>Personal Information </value>
+  </data>
+  <data name="GEE1010GRPhdr3" xml:space="preserve">
+    <value>Address Information </value>
+  </data>
+  <data name="GEE1010GRPhdr4" xml:space="preserve">
+    <value>Father Information </value>
+  </data>
+  <data name="GEE1010GRPhdr5" xml:space="preserve">
+    <value>Mother Information </value>
+  </data>
+  <data name="GEE1010GRPhdr6" xml:space="preserve">
+    <value>Religon Information </value>
+  </data>
+  <data name="GEE1010GRPhdr7" xml:space="preserve">
+    <value>Other Information </value>
+  </data>
+  <data name="GEE1010LBLAddress1" xml:space="preserve">
+    <value>Address 1</value>
+  </data>
+  <data name="GEE1010LBLAddress2" xml:space="preserve">
+    <value>Address 2</value>
+  </data>
+  <data name="GEE1010LBLAdmissionClass_id" xml:space="preserve">
+    <value>Admission Class ID</value>
+  </data>
+  <data name="GEE1010LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1010LBLCaste_ID" xml:space="preserve">
+    <value>Caste*</value>
+  </data>
+  <data name="GEE1010LBLCity_ID" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="GEE1010LBLCommunicationMode" xml:space="preserve">
+    <value>Communication Mode</value>
+  </data>
+  <data name="GEE1010LBLContactMobileNo" xml:space="preserve">
+    <value>Contact Mobile No</value>
+  </data>
+  <data name="GEE1010LBLCountry_ID" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="GEE1010LBLCurrentSchool" xml:space="preserve">
+    <value>Current School</value>
+  </data>
+  <data name="GEE1010LBLCurrentSchoolCity" xml:space="preserve">
+    <value>Current School City</value>
+  </data>
+  <data name="GEE1010LBLDistanceFromSchool" xml:space="preserve">
+    <value>Distance From School</value>
+  </data>
+  <data name="GEE1010LBLDOB" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="GEE1010LBLEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="GEE1010LBLEnquiry_ID" xml:space="preserve">
+    <value>Enquiry ID</value>
+  </data>
+  <data name="GEE1010LBLFatheFirstName" xml:space="preserve">
+    <value>Father First Name</value>
+  </data>
+  <data name="GEE1010LBLFatherDesignation" xml:space="preserve">
+    <value>Father Designation</value>
+  </data>
+  <data name="GEE1010LBLFatherLasttName" xml:space="preserve">
+    <value>Father Last Name</value>
+  </data>
+  <data name="GEE1010LBLFatherMiddleName" xml:space="preserve">
+    <value>Father Middle Name</value>
+  </data>
+  <data name="GEE1010LBLFatherOccupation" xml:space="preserve">
+    <value>Father Occupation</value>
+  </data>
+  <data name="GEE1010LBLFatherOfficeAddres" xml:space="preserve">
+    <value>Father Office Address</value>
+  </data>
+  <data name="GEE1010LBLFatherOrgnisation" xml:space="preserve">
+    <value>Father Orgnisation</value>
+  </data>
+  <data name="GEE1010LBLFatherPhoneNumber" xml:space="preserve">
+    <value>Father Phone Number</value>
+  </data>
+  <data name="GEE1010LBLFatherQualificaitonText" xml:space="preserve">
+    <value>Father Qualificaiton</value>
+  </data>
+  <data name="GEE1010LBLFatherQualificaiton_ID" xml:space="preserve">
+    <value>Father Qualificaiton ID</value>
+  </data>
+  <data name="GEE1010LBLFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="GEE1010LBLGender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="GEE1010LBLhasSibiling" xml:space="preserve">
+    <value>Has Sibiling</value>
+  </data>
+  <data name="GEE1010LBLHomePhone" xml:space="preserve">
+    <value>Home Phone</value>
+  </data>
+  <data name="GEE1010LBLIsGovtTransfer" xml:space="preserve">
+    <value>Is Govt Transfer</value>
+  </data>
+  <data name="GEE1010LBLLandmark" xml:space="preserve">
+    <value>Landmark</value>
+  </data>
+  <data name="GEE1010LBLLastname" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="GEE1010LBLLastPassClass_ID" xml:space="preserve">
+    <value>Last Pass Class ID</value>
+  </data>
+  <data name="GEE1010LBLMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="GEE1010LBLMotherDesignation" xml:space="preserve">
+    <value>Mother Designation</value>
+  </data>
+  <data name="GEE1010LBLMotherFirstName" xml:space="preserve">
+    <value>Mother First Name</value>
+  </data>
+  <data name="GEE1010LBLMotherLasttName" xml:space="preserve">
+    <value>Mother Last Name</value>
+  </data>
+  <data name="GEE1010LBLMotherMiddleName" xml:space="preserve">
+    <value>Mother Middle Name</value>
+  </data>
+  <data name="GEE1010LBLMotherOccupation" xml:space="preserve">
+    <value>Mother Occupation</value>
+  </data>
+  <data name="GEE1010LBLMotherOfficeAddres" xml:space="preserve">
+    <value>Mother Office Address</value>
+  </data>
+  <data name="GEE1010LBLMotherOrgnisation" xml:space="preserve">
+    <value>Mother Orgnisation</value>
+  </data>
+  <data name="GEE1010LBLMotherPhoneNumber" xml:space="preserve">
+    <value>Mother Phone Number</value>
+  </data>
+  <data name="GEE1010LBLMotherQualificaitonText" xml:space="preserve">
+    <value>Mother Qualificaiton</value>
+  </data>
+  <data name="GEE1010LBLMotherQualificaiton_Id" xml:space="preserve">
+    <value>Mother Qualificaiton ID</value>
+  </data>
+  <data name="GEE1010LBLNationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="GEE1010LBLPinCode" xml:space="preserve">
+    <value>PinCode</value>
+  </data>
+  <data name="GEE1010LBLReligon_ID" xml:space="preserve">
+    <value>Religon*</value>
+  </data>
+  <data name="GEE1010LBLRemarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="GEE1010LBLSiblingAdmNumber_ID" xml:space="preserve">
+    <value>Sibling Adm. No</value>
+  </data>
+  <data name="GEE1010LBLState_ID" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="GEE1010LBLStudentType_ID" xml:space="preserve">
+    <value>Student Type ID</value>
+  </data>
+  <data name="GEE1010LBLSubjectId" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="GEE1010mdAddress1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdAddress2" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdAdmissionClass_id" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdCaste_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1010mdCity_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdCommunicationMode" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdContactMobileNo" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdCountry_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdCurrentSchool" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdCurrentSchoolCity" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdDistanceFromSchool" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdDOB" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1010mdEmail" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdEnquiry_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatheFirstName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherDesignation" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherOccupation" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherOfficeAddres" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherOrgnisation" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherPhoneNumber" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherQualificaitonText" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFatherQualificaiton_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdFirstName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdGender" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdhasSibiling" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdHomePhone" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdIsGovtTransfer" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdLandmark" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdLastname" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdLastPassClass_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherDesignation" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherFirstName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherOccupation" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherOfficeAddres" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherOrgnisation" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherPhoneNumber" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherQualificaitonText" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdMotherQualificaiton_Id" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdNationality" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdPinCode" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdReligon_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1010mdRemarks" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdSiblingAdmNumber_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdState_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdStudentType_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1010mdSubjectId" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1010SCRhdr" xml:space="preserve">
+    <value>Fill Candidate Screen</value>
+  </data>
+  <data name="GEE1010ttAddress1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttAddress2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttAdmissionClass_id" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttCaste_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttCity_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttCommunicationMode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttContactMobileNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttCountry_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttCurrentSchool" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttCurrentSchoolCity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttDistanceFromSchool" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttDOB" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttEnquiry_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatheFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherDesignation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherOccupation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherOfficeAddres" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherOrgnisation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherQualificaitonText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFatherQualificaiton_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttGender" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010tthasSibiling" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttHomePhone" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttIsGovtTransfer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttLandmark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttLastPassClass_ID" xml:space="preserve">
+    <value>which was last class</value>
+  </data>
+  <data name="GEE1010ttMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherDesignation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherOccupation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherOfficeAddres" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherOrgnisation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherQualificaitonText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttMotherQualificaiton_Id" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttNationality" xml:space="preserve">
+    <value>what is your nationality </value>
+  </data>
+  <data name="GEE1010ttPinCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttReligon_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttRemarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttSiblingAdmNumber_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttState_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttStudentType_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010ttSubjectId" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMAddress1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMAddress2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMAdmissionClass_id" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMCaste_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="GEE1010VMCity_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMCommunicationMode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMContactMobileNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMCountry_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMCurrentSchool" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMCurrentSchoolCity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMDistanceFromSchool" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMDOB" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="GEE1010VMEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMEnquiry_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatheFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherDesignation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherOccupation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherOfficeAddres" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherOrgnisation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherQualificaitonText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFatherQualificaiton_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMGender" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMhasSibiling" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMHomePhone" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMIsGovtTransfer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMLandmark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMLastPassClass_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherDesignation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherOccupation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherOfficeAddres" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherOrgnisation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherQualificaitonText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMMotherQualificaiton_Id" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMNationality" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMPinCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMReligon_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="GEE1010VMRemarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMSiblingAdmNumber_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMState_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMStudentType_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1010VMSubjectId" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="GEE1510GRPhdr" xml:space="preserve">
+    <value>Document Type</value>
+  </data>
+  <data name="GEE1510GRPhdr1" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="GEE1510LBLbtnAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="GEE1510LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1510LBLDigitalAllowed" xml:space="preserve">
+    <value>Digital Allowed</value>
+  </data>
+  <data name="GEE1510LBLDocumentCategory" xml:space="preserve">
+    <value>Document Category</value>
+  </data>
+  <data name="GEE1510LBLDocumentCode" xml:space="preserve">
+    <value>Document Code</value>
+  </data>
+  <data name="GEE1510LBLDocumentName" xml:space="preserve">
+    <value>Document Name</value>
+  </data>
+  <data name="GEE1510LBLfollowType" xml:space="preserve">
+    <value>follow Type</value>
+  </data>
+  <data name="GEE1510LBLIsmadatory" xml:space="preserve">
+    <value>Is Mandetory</value>
+  </data>
+  <data name="GEE1510LBLRemark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1510LBLToFollow" xml:space="preserve">
+    <value>To Follow</value>
+  </data>
+  <data name="GEE1510mdDigitalAllowed" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1510mdDocumentCategory" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1510mdDocumentCode" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1510mdDocumentName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1510mdfollowType" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1510mdIsMandetory" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1510mdRemark" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1510mdToFollow" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1510ttDigitalAllowed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510ttDocumentCategory" xml:space="preserve">
+    <value>What Type of Document</value>
+  </data>
+  <data name="GEE1510ttDocumentCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510ttDocumentName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510ttfollowType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510ttIsMandetory" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510ttRemark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510ttTo Follow" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510VMDigital Allowed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510VMDocument Category" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510VMDocument Code" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510VMDocument Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510VMfollow Type" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510VMIs Mandetory" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510VMRemark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1510VMTo Follow" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1505LBLAllType" xml:space="preserve">
+    <value>All Type</value>
+  </data>
+  <data name="GEE1505LBLRemark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1110LBLClassClassification	ClassClassification&#xD;&#xA;GEE1110LBLCode	Code&#xD;&#xA;GEE1110LBLName	Name&#xD;&#xA;GEE1110LBLSequence	Sequence&#xD;&#xA;GEE1110LBLTotal Sections	Total Sections&#xD;&#xA;GEE1110LBLGriClassClassification	ClassClassification&#xD;&#xA;GEE1110LBLGriCode	Code&#xD;&#xA;GEE1110LBLGriName	Name&#xD;&#xA;GEE1110LBLGriSequence	Sequence&#xD;&#xA;GEE1110LBLGriTotal Sections	Total Sections&#xD;&#xA;GEE1110LBLbtnAdd	Add&#xD;&#xA;GEE1110LBLbtnSave	Save&#xD;&#xA;GEE1110GRPhdrClassMaster	ClassMaster&#xD;&#xA;GEE1110mdClassClassification	0&#xD;&#xA;GEE1110mdCode	0&#xD;&#xA;GEE1110mdName	0&#xD;&#xA;GEE1110mdSequence	0&#xD;&#xA;GEE1110mdTotal Sections	0&#xD;&#xA;GEE1110ttClassClassification	&#xD;&#xA;GEE1110ttCode	&#xD;&#xA;GEE1110ttName	&#xD;&#xA;GEE1110ttSequence	what is sequence number&#xD;&#xA;GEE1110ttTotal Sections	&#xD;&#xA;GEE1110VMClassClassification	&#xD;&#xA;GEE1110VMCode	&#xD;&#xA;GEE1110VMName	&#xD;&#xA;GEE1110VMSequence	&#xD;&#xA;GEE1110VMTotal Sections" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110GRPhdrClassMaster" xml:space="preserve">
+    <value>ClassMaster</value>
+  </data>
+  <data name="GEE1110LBLbtnAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="GEE1110LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1110LBLClassClassification" xml:space="preserve">
+    <value>ClassClassification</value>
+  </data>
+  <data name="GEE1110LBLCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="GEE1110LBLGriClassClassification" xml:space="preserve">
+    <value>ClassClassification</value>
+  </data>
+  <data name="GEE1110LBLGriCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="GEE1110LBLGriName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1110LBLGriSequence" xml:space="preserve">
+    <value>Sequence</value>
+  </data>
+  <data name="GEE1110LBLGriTotalSections" xml:space="preserve">
+    <value>Total Sections</value>
+  </data>
+  <data name="GEE1110LBLName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1110LBLSequence" xml:space="preserve">
+    <value>Sequence</value>
+  </data>
+  <data name="GEE1110LBLTotalSections" xml:space="preserve">
+    <value>Total Sections</value>
+  </data>
+  <data name="GEE1110mdClassClassification" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1110mdCode" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1110mdName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1110mdSequence" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1110mdTotalSections" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1110ttClassClassification" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110ttCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110ttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110ttSequence" xml:space="preserve">
+    <value>what is sequence number</value>
+  </data>
+  <data name="GEE1110ttTotalSections" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110VMClassClassification" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110VMCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110VMName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110VMSequence" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1110VMTotalSections" xml:space="preserve">
+    <value />
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115GRPhdrRoomMaster" xml:space="preserve">
+    <value>Room Master</value>
+  </data>
+  <data name="GEE1115LBLbtnAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="GEE1115LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1115LBLBuidingID" xml:space="preserve">
+    <value>Buiding ID</value>
+  </data>
+  <data name="GEE1115LBLCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="GEE1115LBLGeoCoordinates" xml:space="preserve">
+    <value>GeoCoordinates</value>
+  </data>
+  <data name="GEE1115LBLGriBuidingID" xml:space="preserve">
+    <value>Buiding ID</value>
+  </data>
+  <data name="GEE1115LBLGriCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="GEE1115LBLGriGeoCoordinates" xml:space="preserve">
+    <value>GeoCoordinates</value>
+  </data>
+  <data name="GEE1115LBLGriName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1115LBLGriRemark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1115LBLGriSeatingCapacity" xml:space="preserve">
+    <value>Seating Capacity</value>
+  </data>
+  <data name="GEE1115LBLName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1115LBLRemark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1115LBLSeatingCapacity" xml:space="preserve">
+    <value>Seating Capacity</value>
+  </data>
+  <data name="GEE1115mdBuidingID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115mdCode" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1115mdGeoCoordinates" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115mdName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1115mdRemark" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115mdSeatingCapacity" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115ttBuidingID" xml:space="preserve">
+    <value>This is Building ID</value>
+  </data>
+  <data name="GEE1115ttCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115ttGeoCoordinates" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115ttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115ttRemark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115ttSeatingCapacity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMBuidingID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMGeoCoordinates" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMRemark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMSeatingCapacity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120GRPhdrRoomMaster" xml:space="preserve">
+    <value>SubjectMaster</value>
+  </data>
+  <data name="GEE1120LBLAssessmentStructure" xml:space="preserve">
+    <value>AssessmentStructure</value>
+  </data>
+  <data name="GEE1120LBLbtnAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="GEE1120LBLbtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GEE1120LBLbtnedit" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="GEE1120LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1120LBLcode" xml:space="preserve">
+    <value>Subject Code</value>
+  </data>
+  <data name="GEE1120LBLExculdedfromAtt" xml:space="preserve">
+    <value>Exculded from Att</value>
+  </data>
+  <data name="GEE1120LBLGradeStructure" xml:space="preserve">
+    <value>GradeStructure</value>
+  </data>
+  <data name="GEE1120LBLGriAssessmentStructure" xml:space="preserve">
+    <value>AssessmentStructure</value>
+  </data>
+  <data name="GEE1120LBLGricode" xml:space="preserve">
+    <value>code</value>
+  </data>
+  <data name="GEE1120LBLGriExculdedfromAtt" xml:space="preserve">
+    <value>ExculdedfromAtt</value>
+  </data>
+  <data name="GEE1120LBLGriGradeStructure" xml:space="preserve">
+    <value>GradeStructure</value>
+  </data>
+  <data name="GEE1120LBLGriIncludedInCGPA" xml:space="preserve">
+    <value>IncludedInCGPA</value>
+  </data>
+  <data name="GEE1120LBLGriisOptional" xml:space="preserve">
+    <value>isOptional</value>
+  </data>
+  <data name="GEE1120LBLGriisScholastic" xml:space="preserve">
+    <value>isScholastic </value>
+  </data>
+  <data name="GEE1120LBLGriName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1120LBLGriSubjectType" xml:space="preserve">
+    <value>SubjectType</value>
+  </data>
+  <data name="GEE1120LBLIncludedInCGPA" xml:space="preserve">
+    <value>Included In CGPA</value>
+  </data>
+  <data name="GEE1120LBLisOptional" xml:space="preserve">
+    <value>Is Optional</value>
+  </data>
+  <data name="GEE1120LBLisScholastic" xml:space="preserve">
+    <value>IsScholastic </value>
+  </data>
+  <data name="GEE1120LBLName" xml:space="preserve">
+    <value>Subject Name</value>
+  </data>
+  <data name="GEE1120LBLSubjectType" xml:space="preserve">
+    <value>SubjectType</value>
+  </data>
+  <data name="GEE1120mdAssessmentStructure" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1120mdcode" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1120mdExculdedfromAtt" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1120mdGradeStructure" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1120mdIncludedInCGPA" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1120mdisOptional" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1120mdisScholastic" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1120mdName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1120mdSubjectType" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1120ttAssessmentStructure" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120ttcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120ttExculdedfromAtt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120ttGradeStructure" xml:space="preserve">
+    <value>This is GradeStructure ID</value>
+  </data>
+  <data name="GEE1120ttIncludedInCGPA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120ttisOptional" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120ttisScholastic" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120ttName" xml:space="preserve">
+    <value>Please insert Name</value>
+  </data>
+  <data name="GEE1120ttSubjectType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMAssessmentStructure" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMExculdedfromAtt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMGradeStructure" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMIncludedInCGPA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMisOptional" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMisScholastic" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1120VMSubjectType" xml:space="preserve">
+    <value>this is mandatory</value>
+  </data>
+  <data name="GEE1125GRPhdrRoomMaster" xml:space="preserve">
+    <value>SubjectMaster</value>
+  </data>
+  <data name="GEE1125LBLbtnAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="GEE1125LBLbtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GEE1125LBLbtnedit" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="GEE1125LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1125LBLcode" xml:space="preserve">
+    <value>code</value>
+  </data>
+  <data name="GEE1125LBLGricode" xml:space="preserve">
+    <value>code</value>
+  </data>
+  <data name="GEE1125LBLGriName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1125LBLGriRemark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1125LBLName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1125LBLRemark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1125mdcode" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1125mdName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1125mdRemark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1125ttcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1125ttName" xml:space="preserve">
+    <value>Pleas instert name </value>
+  </data>
+  <data name="GEE1125ttRemark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1125VMcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1125VMName" xml:space="preserve">
+    <value>this is mandatory</value>
+  </data>
+  <data name="GEE1125VMRemark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130GRPhdrBookMaster" xml:space="preserve">
+    <value>Book Master</value>
+  </data>
+  <data name="GEE1130LBLbtnAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="GEE1130LBLbtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GEE1130LBLbtnedit" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="GEE1130LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1130LBLcode" xml:space="preserve">
+    <value>Book Code</value>
+  </data>
+  <data name="GEE1130LBLDiscount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="GEE1130LBLGricode" xml:space="preserve">
+    <value>code</value>
+  </data>
+  <data name="GEE1130LBLGriDiscount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="GEE1130LBLGriISBN" xml:space="preserve">
+    <value>ISBN</value>
+  </data>
+  <data name="GEE1130LBLGriMRP" xml:space="preserve">
+    <value>MRP</value>
+  </data>
+  <data name="GEE1130LBLGriName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1130LBLGriPublisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="GEE1130LBLGriVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="GEE1130LBLISBN" xml:space="preserve">
+    <value>ISBN</value>
+  </data>
+  <data name="GEE1130LBLMRP" xml:space="preserve">
+    <value>MRP</value>
+  </data>
+  <data name="GEE1130LBLName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1130LBLPublisher" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="GEE1130LBLVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="GEE1130mdcode" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1130mdDiscount" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1130mdISBN" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1130mdMRP" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1130mdName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1130mdPublisher" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1130mdVersion" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1130ttcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130ttDiscount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130ttISBN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130ttMRP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130ttName" xml:space="preserve">
+    <value>Please insert name</value>
+  </data>
+  <data name="GEE1130ttPublisher" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130ttVersion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130VMcode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130VMDiscount" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130VMISBN" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130VMMRP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130VMName" xml:space="preserve">
+    <value>this is mandatory field</value>
+  </data>
+  <data name="GEE1130VMPublisher" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1130VMVersion" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605btnAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="GEE1605btnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1605GRDAssessmentTypeCode" xml:space="preserve">
+    <value>AssessmentTypeCode</value>
+  </data>
+  <data name="GEE1605GRDAssessmentTypeName" xml:space="preserve">
+    <value>AssessmentTypeName</value>
+  </data>
+  <data name="GEE1605GRDMaxMarks" xml:space="preserve">
+    <value>MaxMarks</value>
+  </data>
+  <data name="GEE1605GRDMinMarks" xml:space="preserve">
+    <value>MinMarks</value>
+  </data>
+  <data name="GEE1605GRDPassingMarks" xml:space="preserve">
+    <value>PassingMarks</value>
+  </data>
+  <data name="GEE1605GRDWeightage" xml:space="preserve">
+    <value>Weightage</value>
+  </data>
+  <data name="GEE1605LBLAssessmentTypeCode" xml:space="preserve">
+    <value>AssessmentTypeCode</value>
+  </data>
+  <data name="GEE1605LBLAssessmentTypeName" xml:space="preserve">
+    <value>AssessmentTypeName</value>
+  </data>
+  <data name="GEE1605LBLMaxMarks" xml:space="preserve">
+    <value>MaxMarks</value>
+  </data>
+  <data name="GEE1605LBLMinMarks" xml:space="preserve">
+    <value>MinMarks</value>
+  </data>
+  <data name="GEE1605LBLPassingMarks" xml:space="preserve">
+    <value>PassingMarks</value>
+  </data>
+  <data name="GEE1605LBLWeightage" xml:space="preserve">
+    <value>Weightage%</value>
+  </data>
+  <data name="GEE1605MDAssessmentTypeCode" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1605MDAssessmentTypeName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1605MDMaxMarks" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1605MDMinMarks" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1605MDPassingMarks" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1605MDWeightage" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1605GRPHDRAssessmentType" xml:space="preserve">
+    <value>Assessment Types </value>
+  </data>
+  <data name="GEE1605TTAssessmentTypeCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605TTAssessmentTypeName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605TTMaxMarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605TTMinMarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605TTPassingMarks" xml:space="preserve">
+    <value>This is Passing marks</value>
+  </data>
+  <data name="GEE1605TTWeightage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605VMAssessmentTypeCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605VMAssessmentTypeName" xml:space="preserve">
+    <value>Name is mandatory</value>
+  </data>
+  <data name="GEE1605VMMaxMarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605VMMinMarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605VMPassingMarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605VMWeightage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1605btnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GEE1605btnUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="GEE14001POPFatherName" xml:space="preserve">
+    <value>FatherName</value>
+  </data>
+  <data name="GEE14001POPID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="GEE14001POPLastName" xml:space="preserve">
+    <value>LastName</value>
+  </data>
+  <data name="GEE14001POPName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE14001POPPhonenum" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="GEE1135lblbtncancel" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="GEE1135lblbtnedit" xml:space="preserve">
+    <value>EDIT</value>
+  </data>
+  <data name="GEE1135lblbtnmoveall" xml:space="preserve">
+    <value>Move All Selected</value>
+  </data>
+  <data name="GEE1135lblbtnsave" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="GEE1135Lblclass" xml:space="preserve">
+    <value>Classes</value>
+  </data>
+  <data name="GEE1135Lblcourses" xml:space="preserve">
+    <value>Courses</value>
+  </data>
+  <data name="GEE1135lblgrdaction" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="GEE1135lblgrdatt" xml:space="preserve">
+    <value>Excl Att</value>
+  </data>
+  <data name="GEE1135lblgrdclass" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="GEE1135lblgrdcoursecode" xml:space="preserve">
+    <value>CourseCode</value>
+  </data>
+  <data name="GEE1135lblgrdName" xml:space="preserve">
+    <value>CourseName</value>
+  </data>
+  <data name="GEE1135lblgrdoptional" xml:space="preserve">
+    <value>Is optional</value>
+  </data>
+  <data name="GEE1135lblgrdstream" xml:space="preserve">
+    <value>Stream</value>
+  </data>
+  <data name="GEE1135lblgrdsubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="GEE1135lblgrdtype" xml:space="preserve">
+    <value>Subject Type</value>
+  </data>
+  <data name="GEE1135LblScrheader" xml:space="preserve">
+    <value>CREATE COURSES</value>
+  </data>
+  <data name="GEE1135Lnlsubject" xml:space="preserve">
+    <value>Subjects</value>
+  </data>
+  <data name="GEE1135lblbtnbacktocreate" xml:space="preserve">
+    <value>Back To Create</value>
+  </data>
+  <data name="GEE1135LblEditScrheader" xml:space="preserve">
+    <value>EDIT COURSES</value>
+  </data>
+  <data name="GEE1615GrphdrAssessmentStructure" xml:space="preserve">
+    <value>Create Assessment Structure </value>
+  </data>
+  <data name="GEE1615lblbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1615lblgriAssesmentCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="GEE1615lblgriAssesmentName" xml:space="preserve">
+    <value>Assessment Name</value>
+  </data>
+  <data name="GEE1615lblgricheckbox" xml:space="preserve">
+    <value>Select </value>
+  </data>
+  <data name="GEE1615lblgriMaxMarks" xml:space="preserve">
+    <value>Max Marks</value>
+  </data>
+  <data name="GEE1615lblgriPassingMarks" xml:space="preserve">
+    <value>Passing marks</value>
+  </data>
+  <data name="GEE1615lblgriTerms" xml:space="preserve">
+    <value>Temrs</value>
+  </data>
+  <data name="GEE1615lblgriWeightage" xml:space="preserve">
+    <value>Weightage</value>
+  </data>
+  <data name="GEE1615lblStructureName" xml:space="preserve">
+    <value>Structure Name</value>
+  </data>
+  <data name="GEE1615lblbtnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="GEE1615lblgriAction" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="IsValidContactNumber" xml:space="preserve">
+    <value>Please enter valid contact number.</value>
+  </data>
+  <data name="IsValidEmail" xml:space="preserve">
+    <value>Please enter valid email.</value>
+  </data>
+  <data name="UserGroup1401MsgPassword" xml:space="preserve">
+    <value>Passwords and confirmation passwords do not match.</value>
+  </data>
+  <data name="GEE1120LBLSubjectGroup" xml:space="preserve">
+    <value>Subject Group</value>
+  </data>
+  <data name="GEE1120mdSubjectGroup" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1115LBLbtnAdd1" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="GEE1115LBLbtnAdd11" xml:space="preserve">
+    <value>ADD</value>
+  </data>
+  <data name="GEE1115LBLbtnCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="GEE1115lblbtnDelete" xml:space="preserve">
+    <value>DELETE</value>
+  </data>
+  <data name="GEE1115LBLbtnSave1" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1115LBLbtnSave11" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="GEE1115lblbtnUpdate" xml:space="preserve">
+    <value>UPDATE</value>
+  </data>
+  <data name="GEE1115LBLBuidingID1" xml:space="preserve">
+    <value>Buiding ID</value>
+  </data>
+  <data name="GEE1115LBLBuildingsinfo" xml:space="preserve">
+    <value>Buildings info</value>
+  </data>
+  <data name="GEE1115LBLBuildingsinfo1" xml:space="preserve">
+    <value>Buildings info</value>
+  </data>
+  <data name="GEE1115LBLCode1" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="GEE1115LBLCode11" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="GEE1115LBLGeoCoordinates1" xml:space="preserve">
+    <value>GeoCoordinates</value>
+  </data>
+  <data name="GEE1115LBLGeoCoordinates11" xml:space="preserve">
+    <value>Geo Coordinates</value>
+  </data>
+  <data name="GEE1115LBLGriBuidingID1" xml:space="preserve">
+    <value>Buiding ID</value>
+  </data>
+  <data name="GEE1115LBLGriCode1" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="GEE1115LBLGriGeoCoordinates1" xml:space="preserve">
+    <value>GeoCoordinates</value>
+  </data>
+  <data name="GEE1115LBLGriName1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1115LBLGriRemark1" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1115LBLGriSeatingCapacity1" xml:space="preserve">
+    <value>Seating Capacity</value>
+  </data>
+  <data name="GEE1115LBLHeading" xml:space="preserve">
+    <value>Add room table data</value>
+  </data>
+  <data name="GEE1115LBLHeading1" xml:space="preserve">
+    <value>Add room table data</value>
+  </data>
+  <data name="GEE1115LBLName1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1115LBLName11" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="GEE1115LBLRemark1" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1115LBLRemark11" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="GEE1115LBLSeatingCapacity1" xml:space="preserve">
+    <value>Seating Capacity</value>
+  </data>
+  <data name="GEE1115LBLSeatingCapacity11" xml:space="preserve">
+    <value>Seating Capacity</value>
+  </data>
+  <data name="GEE1115LBLSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="GEE1115mdBuidingID1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115mdCode1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115mdGeoCoordinates1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115mdName1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115mdRemark1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115mdSeatingCapacity1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1115ttBuidingID1" xml:space="preserve">
+    <value>This is Building ID</value>
+  </data>
+  <data name="GEE1115ttCode1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115ttGeoCoordinates1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115ttName1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115ttRemark1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115ttSeatingCapacity1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMBuidingID1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMCode1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMGeoCoordinates1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMName1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMRemark1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1115VMSeatingCapacity1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1401POPFatherName" xml:space="preserve">
+    <value>Fathe Name</value>
+  </data>
+  <data name="GEE1401POPLastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="GEE1401POPName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="GEE1401POPPhonenum" xml:space="preserve">
+    <value>Contact No</value>
+  </data>
+  <data name="GEE1910GRphdrContactInfo" xml:space="preserve">
+    <value>Contact Info </value>
+  </data>
+  <data name="GEE1910GRphdrEducationDetail" xml:space="preserve">
+    <value>Education Detail </value>
+  </data>
+  <data name="GEE1910GRphdrEmployeeInfo" xml:space="preserve">
+    <value>Employee Info </value>
+  </data>
+  <data name="GEE1910GRphdrExperienceDetail" xml:space="preserve">
+    <value>Experience Detail </value>
+  </data>
+  <data name="GEE1910GRphdrIDentityDetail" xml:space="preserve">
+    <value>Identity Detail </value>
+  </data>
+  <data name="GEE1910GRphdrParentInfo" xml:space="preserve">
+    <value>Parent Info </value>
+  </data>
+  <data name="GEE1910GRphdrPermanentAddress" xml:space="preserve">
+    <value>Permanent Address </value>
+  </data>
+  <data name="GEE1910GRphdrPersonal" xml:space="preserve">
+    <value>Personal </value>
+  </data>
+  <data name="GEE1910GRphdrReligion" xml:space="preserve">
+    <value>Religion </value>
+  </data>
+  <data name="GEE1910GRphdrSecurity" xml:space="preserve">
+    <value>Security </value>
+  </data>
+  <data name="GEE1910LBLbtnAddNew" xml:space="preserve">
+    <value>AddNew</value>
+  </data>
+  <data name="GEE1910LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1910LBLCaste" xml:space="preserve">
+    <value>Caste</value>
+  </data>
+  <data name="GEE1910LBLCity" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="GEE1910LBLCompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="GEE1910LBLCreateLogin" xml:space="preserve">
+    <value>CreateLogin</value>
+  </data>
+  <data name="GEE1910LBLCurrentAddress" xml:space="preserve">
+    <value>CurrentAddress</value>
+  </data>
+  <data name="GEE1910LBLCurrentCity" xml:space="preserve">
+    <value>CurrentCity</value>
+  </data>
+  <data name="GEE1910LBLCurrentCountry" xml:space="preserve">
+    <value>CurrentCountry</value>
+  </data>
+  <data name="GEE1910LBLCurrentLandmark" xml:space="preserve">
+    <value>CurrentLandmark</value>
+  </data>
+  <data name="GEE1910LBLCurrentPinCode" xml:space="preserve">
+    <value>CurrentPinCode</value>
+  </data>
+  <data name="GEE1910LBLCurrentState" xml:space="preserve">
+    <value>CurrentState</value>
+  </data>
+  <data name="GEE1910LBLDegreeID" xml:space="preserve">
+    <value>Degree </value>
+  </data>
+  <data name="GEE1910LBLDegreeMode" xml:space="preserve">
+    <value>Degree Mode</value>
+  </data>
+  <data name="GEE1910LBLDepartmentID" xml:space="preserve">
+    <value>Department </value>
+  </data>
+  <data name="GEE1910LBLDivision" xml:space="preserve">
+    <value>Division </value>
+  </data>
+  <data name="GEE1910LBLDOB" xml:space="preserve">
+    <value>DOB</value>
+  </data>
+  <data name="GEE1910LBLEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="GEE1910LBLEmployeeCategoryID" xml:space="preserve">
+    <value>Employee Category </value>
+  </data>
+  <data name="GEE1910LBLEmployeeCode" xml:space="preserve">
+    <value>Employee Code</value>
+  </data>
+  <data name="GEE1910LBLFatheFirstName" xml:space="preserve">
+    <value>FatheFirstName</value>
+  </data>
+  <data name="GEE1910LBLFatherLasttName" xml:space="preserve">
+    <value>FatherLasttName</value>
+  </data>
+  <data name="GEE1910LBLFatherMIDdleName" xml:space="preserve">
+    <value>FatherMiddleName</value>
+  </data>
+  <data name="GEE1910LBLFirstName" xml:space="preserve">
+    <value>FirstName</value>
+  </data>
+  <data name="GEE1910LBLFromDate" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="GEE1910LBLFromDate1" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="GEE1910LBLGenderID" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="GEE1910LBLHomePhone" xml:space="preserve">
+    <value>HomePhone</value>
+  </data>
+  <data name="GEE1910LBLIDcardType" xml:space="preserve">
+    <value>IDcardType</value>
+  </data>
+  <data name="GEE1910LBLIDNumber" xml:space="preserve">
+    <value>ID Number</value>
+  </data>
+  <data name="GEE1910LBLInstituteName" xml:space="preserve">
+    <value>Institute Name</value>
+  </data>
+  <data name="GEE1910LBLIsalsoPermanent" xml:space="preserve">
+    <value>IS also Permanent</value>
+  </data>
+  <data name="GEE1910LBLIsRelevant" xml:space="preserve">
+    <value>Is Relevant </value>
+  </data>
+  <data name="GEE1910LBLIssueCityID" xml:space="preserve">
+    <value>Issue City </value>
+  </data>
+  <data name="GEE1910LBLjoiningDesignation" xml:space="preserve">
+    <value>joining Designation</value>
+  </data>
+  <data name="GEE1910LBLLastDesignation" xml:space="preserve">
+    <value>Last Designation</value>
+  </data>
+  <data name="GEE1910LBLLastname" xml:space="preserve">
+    <value>Lastname</value>
+  </data>
+  <data name="GEE1910LBLLastsalary" xml:space="preserve">
+    <value>Last salary</value>
+  </data>
+  <data name="GEE1910LBLMarried" xml:space="preserve">
+    <value>Married</value>
+  </data>
+  <data name="GEE1910LBLMIDdleName" xml:space="preserve">
+    <value>MiddleName</value>
+  </data>
+  <data name="GEE1910LBLMobileno." xml:space="preserve">
+    <value>Mobile no. </value>
+  </data>
+  <data name="GEE1910LBLMotherFirstName" xml:space="preserve">
+    <value>MotherFirstName </value>
+  </data>
+  <data name="GEE1910LBLMotherLastName" xml:space="preserve">
+    <value>MotherLastName </value>
+  </data>
+  <data name="GEE1910LBLMotherMIDdleName" xml:space="preserve">
+    <value>MotherMiddleName </value>
+  </data>
+  <data name="GEE1910LBLNationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="GEE1910LBLPercentMarks" xml:space="preserve">
+    <value>Percent Marks</value>
+  </data>
+  <data name="GEE1910LBLPermenantAddress" xml:space="preserve">
+    <value>PermenantAddress</value>
+  </data>
+  <data name="GEE1910LBLPermenantCity" xml:space="preserve">
+    <value>PermenantCity</value>
+  </data>
+  <data name="GEE1910LBLPermenantCountry" xml:space="preserve">
+    <value>PermenantCountry</value>
+  </data>
+  <data name="GEE1910LBLPermenantLandmark" xml:space="preserve">
+    <value>PermenantLandmark</value>
+  </data>
+  <data name="GEE1910LBLPermenantPinCode" xml:space="preserve">
+    <value>PermenantPinCode</value>
+  </data>
+  <data name="GEE1910LBLPermenantState" xml:space="preserve">
+    <value>PermenantState</value>
+  </data>
+  <data name="GEE1910LBLReasontoleave" xml:space="preserve">
+    <value>Reason to leave</value>
+  </data>
+  <data name="GEE1910LBLReligon" xml:space="preserve">
+    <value>Religon</value>
+  </data>
+  <data name="GEE1910LBLRemarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="GEE1910LBLRemarks1" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="GEE1910LBLSelectUserGroup" xml:space="preserve">
+    <value>SelectUserGroup</value>
+  </data>
+  <data name="GEE1910LBLStaffDesignationID" xml:space="preserve">
+    <value>StaffDesignation</value>
+  </data>
+  <data name="GEE1910LBLSubjects" xml:space="preserve">
+    <value>Subjects</value>
+  </data>
+  <data name="GEE1910LBLToDate" xml:space="preserve">
+    <value>To Date </value>
+  </data>
+  <data name="GEE1910LBLToDate1" xml:space="preserve">
+    <value>To Date</value>
+  </data>
+  <data name="GEE1910LBLvalIDFrom" xml:space="preserve">
+    <value>validFrom</value>
+  </data>
+  <data name="GEE1910LBLValIDTo" xml:space="preserve">
+    <value>Valid To</value>
+  </data>
+  <data name="GEE1910LBLVendorID" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="GEE1910LBLWorkCity" xml:space="preserve">
+    <value>Work City</value>
+  </data>
+  <data name="GEE1910mdCaste" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdCity" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdCompany Name" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdCreateLogin" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdCurrentAddress" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdCurrentCity" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdCurrentCountry" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdCurrentLandmark" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdCurrentPinCode" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdCurrentState" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdDegree ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdDegree Mode" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdDepartment ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdDivision" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdDOB" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdEmail" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdEmployee Category ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdEmployee Code" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdFatheFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdFatherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdFatherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdFrom Date" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdFrom Date1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdGenderID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdHomePhone" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdID Number" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdIDcardType" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdInstitute Name" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdIs Relevant" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdIsalsoPermanent" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdIssue CityI D" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdjoining Designation" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdLast Designation" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdLast salary" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdLastname" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdMarried" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdMobile no." xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdMotherFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdMotherLastName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdMotherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdNationality" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdPercent Marks" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdPermenantAddress" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdPermenantCity" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdPermenantCountry" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdPermenantLandmark" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdPermenantPinCode" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdPermenantState" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdReason to leave" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdReligon" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdRemarks" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdRemarks1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdSelectUserGroup" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdStaffDesignationID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdSubjects" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdTo Date" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdTo Date1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdValid To" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdvalidFrom" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910mdVendorID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1910mdWork City" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1910SCRhdrEmployeeMaster" xml:space="preserve">
+    <value>EmployeeMaster</value>
+  </data>
+  <data name="GEE1910ttCaste" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttCity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttCompany Name" xml:space="preserve">
+    <value>This is Name of a Company</value>
+  </data>
+  <data name="GEE1910ttCreateLogin" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttCurrentAddress" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttCurrentCity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttCurrentCountry" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttCurrentLandmark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttCurrentPinCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttCurrentState" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttDegree ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttDegree Mode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttDepartment ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttDivision" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttDOB" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttEmployee Category ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttEmployee Code" xml:space="preserve">
+    <value>This is Employese Code</value>
+  </data>
+  <data name="GEE1910ttFatheFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttFatherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttFrom Date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttFrom Date1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttGenderID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttHomePhone" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttID Number" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttIDcardType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttInstitute Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttIs Relevant" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttIsalsoPermanent" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttIssue CityI D" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttjoining Designation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttLast Designation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttLast salary" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttMarried" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttMobile no." xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttMotherFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttMotherLastName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttNationality" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttPercent Marks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttPermenantAddress" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttPermenantCity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttPermenantCountry" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttPermenantLandmark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttPermenantPinCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttPermenantState" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttReason to leave" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttReligon" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttRemarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttRemarks1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttSelectUserGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttStaffDesignationID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttSubjects" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttTo Date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttTo Date1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttValid To" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttvalidFrom" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttVendorID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910ttWork City" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCaste" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCompany Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCreateLogin" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCurrentAddress" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCurrentCity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCurrentCountry" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCurrentLandmark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCurrentPinCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMCurrentState" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMDegree ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMDegree Mode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMDepartment ID" xml:space="preserve">
+    <value>This is Mandatory</value>
+  </data>
+  <data name="GEE1910VMDivision" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMDOB" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMEmployee Category ID" xml:space="preserve">
+    <value>This is Mandatory</value>
+  </data>
+  <data name="GEE1910VMEmployee Code" xml:space="preserve">
+    <value>This is Mandatory</value>
+  </data>
+  <data name="GEE1910VMFatheFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMFatherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMFirstName" xml:space="preserve">
+    <value>This is Mandatory</value>
+  </data>
+  <data name="GEE1910VMFrom Date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMFrom Date1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMGenderID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMHomePhone" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMID Number" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMIDcardType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMInstitute Name" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMIs Relevant" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMIsalsoPermanent" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMIssue CityI D" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMjoining Designation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMLast Designation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMLast salary" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMMarried" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMMobile no." xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMMotherFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMMotherLastName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMNationality" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMPercent Marks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMPermenantAddress" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMPermenantCity" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMPermenantCountry" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMPermenantLandmark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMPermenantPinCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMPermenantState" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMReason to leave" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMReligon" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMRemarks" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMRemarks1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMSelectUserGroup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMStaffDesignationID" xml:space="preserve">
+    <value>This is Mandatory</value>
+  </data>
+  <data name="GEE1910VMSubjects" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMTo Date" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMTo Date1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMValid To" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMvalidFrom" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1910VMVendorID" xml:space="preserve">
+    <value>This is Mandatory</value>
+  </data>
+  <data name="GEE1910VMWork City" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1520btnDownloadAll" xml:space="preserve">
+    <value>Download All</value>
+  </data>
+  <data name="GEE1520btnReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="GEE1520btnSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="GEE1520GRDCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="GEE1520GRDDocName" xml:space="preserve">
+    <value>DocName</value>
+  </data>
+  <data name="GEE1520GRDDownload" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="GEE1520GRDReportCorrect" xml:space="preserve">
+    <value>ReportCorrect</value>
+  </data>
+  <data name="GEE1520GRDReportIncorrect" xml:space="preserve">
+    <value>ReportIncorrect</value>
+  </data>
+  <data name="GEE1520GRDSubCategory" xml:space="preserve">
+    <value>SubCategory</value>
+  </data>
+  <data name="GEE1520GRDType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="GEE1520LBLDocCategory" xml:space="preserve">
+    <value>DocCategory</value>
+  </data>
+  <data name="GEE1520LBLID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="GEE1520LBLSubCategory" xml:space="preserve">
+    <value>SubCategory</value>
+  </data>
+  <data name="GEE1520LBLType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="GEE1520SCRHDRDocumentPortal" xml:space="preserve">
+    <value>DocumentPortal</value>
+  </data>
+  <data name="Enquiry1001lblAddress1" xml:space="preserve">
+    <value>Address1</value>
+  </data>
+  <data name="Enquiry1001lblAddress2" xml:space="preserve">
+    <value>Address2</value>
+  </data>
+  <data name="Enquiry1001lblAdmissionClass" xml:space="preserve">
+    <value>Admission Class</value>
+  </data>
+  <data name="Enquiry1001lblAdmissionClass_id" xml:space="preserve">
+    <value>Student Type</value>
+  </data>
+  <data name="Enquiry1001lblApplicaitonNo" xml:space="preserve">
+    <value>Applcaiton Number</value>
+  </data>
+  <data name="Enquiry1001LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Enquiry1001LBLBTNSendemail" xml:space="preserve">
+    <value>Send Mail</value>
+  </data>
+  <data name="Enquiry1001LBLbtnsendSMS" xml:space="preserve">
+    <value>Send SMS</value>
+  </data>
+  <data name="Enquiry1001lblCandidateInformation" xml:space="preserve">
+    <value>Candidate Information</value>
+  </data>
+  <data name="Enquiry1001lblCity_ID" xml:space="preserve">
+    <value>City </value>
+  </data>
+  <data name="Enquiry1001lblCommonInformation" xml:space="preserve">
+    <value>Common Information</value>
+  </data>
+  <data name="Enquiry1001lblContactMobileNo" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1001lblCountry_ID" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Enquiry1001lblData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Enquiry1001lblDateofBirth" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="Enquiry1001lblDOB" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="Enquiry1001lblEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Enquiry1001lblEnquiryInformation" xml:space="preserve">
+    <value>Enquiry Information</value>
+  </data>
+  <data name="Enquiry1001lblEnquiryType_ID" xml:space="preserve">
+    <value>Enquiry Type</value>
+  </data>
+  <data name="Enquiry1001lblFatheFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1001lblFatherInformation" xml:space="preserve">
+    <value>Father Information</value>
+  </data>
+  <data name="Enquiry1001lblFatherLasttName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Enquiry1001lblFatherMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1001lblFatherPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1001lblFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1001lblHasSibiling" xml:space="preserve">
+    <value>Has Sibiling</value>
+  </data>
+  <data name="Enquiry1001lblLastname" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Enquiry1001lblLibrary" xml:space="preserve">
+    <value>Library</value>
+  </data>
+  <data name="Enquiry1001lblMarketSource_ID" xml:space="preserve">
+    <value>Marketing Source</value>
+  </data>
+  <data name="Enquiry1001lblMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1001lblMotherFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Enquiry1001lblMotherInformation" xml:space="preserve">
+    <value>Mother Information</value>
+  </data>
+  <data name="Enquiry1001lblMotherLasttName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Enquiry1001lblMotherMiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Enquiry1001lblMotherPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1001lblPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Enquiry1001LBlScreenTitle" xml:space="preserve">
+    <value>Enquiry Information</value>
+  </data>
+  <data name="Enquiry1001lblSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Enquiry1001lblSellApplication" xml:space="preserve">
+    <value>Sell Application</value>
+  </data>
+  <data name="Enquiry1001lblSiblingAdmNumber_ID" xml:space="preserve">
+    <value>Sibling Adm. No</value>
+  </data>
+  <data name="Enquiry1001lblState_ID" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Enquiry1001lblStudentType" xml:space="preserve">
+    <value>Student Type</value>
+  </data>
+  <data name="Enquiry1001lblSubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Enquiry1001lbStream" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Enquiry1001mbStream" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001mdAddress1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdAddress2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdAdmissionClass_id" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdApplicaitonNo" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdCity_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdContactMobileNo" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdCountry_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdDOB" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdDOB1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdEmail" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdEmail1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdEnquiryType_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdFatheFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdFatherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdFatherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdFatherPhoneNumber" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdLastname" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdMarketSource_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdMotherFirstName" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdMotherLasttName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdMotherMiddleName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdMotherPhoneNumber" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001mdSellApplication" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdSiblingAdmNumber_ID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Enquiry1001mdState_ID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Enquiry1001ttAddress1" xml:space="preserve">
+    <value>Current Address</value>
+  </data>
+  <data name="Enquiry1001ttAddress2" xml:space="preserve">
+    <value>Current Address</value>
+  </data>
+  <data name="Enquiry1001ttAdmissionClass_id" xml:space="preserve">
+    <value>admission for  which class</value>
+  </data>
+  <data name="Enquiry1001ttApplicaitonNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttCity_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttContactMobileNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttCountry_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttDOB" xml:space="preserve">
+    <value>Enter Student Date of Birth</value>
+  </data>
+  <data name="Enquiry1001ttEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttEnquiryType_ID" xml:space="preserve">
+    <value>Type of Enquiry id</value>
+  </data>
+  <data name="Enquiry1001ttFatheFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttFatherLas1002ttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttFatherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttFirstName" xml:space="preserve">
+    <value>student First Name </value>
+  </data>
+  <data name="Enquiry1001ttLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttMarketSource_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttMotherFirstName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttMotherLas1002ttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttMotherPhoneNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttSellApplication" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttSiblingAdmNumber_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttState_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001ttStream" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKAddress1" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKAddress2" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKAdmissionClass_id" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKApplicaitonNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKCity_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKContactMobileNo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKCountry_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKDOB" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKEmail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKEnquiryType_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKFatheFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKFatherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKFatherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKFatherPhoneNumber" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKLastname" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKMarketSource_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKMotherFirstName" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKMotherLasttName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKMotherMiddleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKMotherPhoneNumber" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKSellApplication" xml:space="preserve">
+    <value>this is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKSiblingAdmNumber_ID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enquiry1001VKState_ID" xml:space="preserve">
+    <value>This is mandatory to fill </value>
+  </data>
+  <data name="Enquiry1001VKSubject" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720LBLbtnDelete" xml:space="preserve">
+    <value>Delete </value>
+  </data>
+  <data name="GEE1720LBLbtnEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="GEE1720LBLbtnGraph" xml:space="preserve">
+    <value>Graph</value>
+  </data>
+  <data name="GEE1720LBLGeoCoordinates" xml:space="preserve">
+    <value>GeoCoordinates</value>
+  </data>
+  <data name="GEE1720LBLGriLocality" xml:space="preserve">
+    <value>Locality</value>
+  </data>
+  <data name="GEE1720LBLGriPinCode" xml:space="preserve">
+    <value>PinCode</value>
+  </data>
+  <data name="GEE1720LBLGriStopName" xml:space="preserve">
+    <value>StopName</value>
+  </data>
+  <data name="GEE1720LBLLocality" xml:space="preserve">
+    <value>Locality</value>
+  </data>
+  <data name="GEE1720LBLPinCode" xml:space="preserve">
+    <value>PinCode</value>
+  </data>
+  <data name="GEE1720LBLStopAddress" xml:space="preserve">
+    <value>StopAddress</value>
+  </data>
+  <data name="GEE1720LBLStopCode" xml:space="preserve">
+    <value>StopCode</value>
+  </data>
+  <data name="GEE1720LBLStopMasterID" xml:space="preserve">
+    <value>StopMasterID</value>
+  </data>
+  <data name="GEE1720LBLStopName" xml:space="preserve">
+    <value>StopName</value>
+  </data>
+  <data name="GEE1720mdGeoCoordinates" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1720mdLocality" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1720mdPinCode" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1720mdStopAddress" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1720mdStopCode" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1720mdStopMasterID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1720mdStopName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1720SCRhdrStopMaster" xml:space="preserve">
+    <value>Stop Master</value>
+  </data>
+  <data name="GEE1720ttGeoCoordinates" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720ttLocality" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720ttPinCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720ttStopAddress" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720ttStopCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720ttStopMasterID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720ttStopName" xml:space="preserve">
+    <value>This is Stop Name</value>
+  </data>
+  <data name="GEE1720VMGeoCoordinates" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720VMLocality" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720VMPinCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720VMStopAddress" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720VMStopCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1720VMStopMasterID" xml:space="preserve">
+    <value>This is Manditory</value>
+  </data>
+  <data name="GEE1720VMStopName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710LBLbtndelete" xml:space="preserve">
+    <value>delete </value>
+  </data>
+  <data name="GEE1710LBLbtnedit" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="GEE1710LBLFuelType" xml:space="preserve">
+    <value>FuelType</value>
+  </data>
+  <data name="GEE1710LBLGriManufacturer" xml:space="preserve">
+    <value>Manufacturer</value>
+  </data>
+  <data name="GEE1710LBLGriOwner" xml:space="preserve">
+    <value>Owner </value>
+  </data>
+  <data name="GEE1710LBLGriRegistrationNumber" xml:space="preserve">
+    <value>Registration Number</value>
+  </data>
+  <data name="GEE1710LBLGriVendor" xml:space="preserve">
+    <value>Vendor </value>
+  </data>
+  <data name="GEE1710LBLMake" xml:space="preserve">
+    <value>Make</value>
+  </data>
+  <data name="GEE1710LBLManufacturer" xml:space="preserve">
+    <value>Manufacturer</value>
+  </data>
+  <data name="GEE1710LBLModel" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="GEE1710LBLRCImagepath" xml:space="preserve">
+    <value>RCImageIDpath</value>
+  </data>
+  <data name="GEE1710LBLRegisteredOwner" xml:space="preserve">
+    <value>Registered Owner</value>
+  </data>
+  <data name="GEE1710LBLRegistrationNumber" xml:space="preserve">
+    <value>RegistrationNumber</value>
+  </data>
+  <data name="GEE1710LBLTotalSeats" xml:space="preserve">
+    <value>Total Seats</value>
+  </data>
+  <data name="GEE1710LBLVechicleImagePath" xml:space="preserve">
+    <value>Vechicle Image ID Path</value>
+  </data>
+  <data name="GEE1710LBLVechicleStatusID" xml:space="preserve">
+    <value>VechicleStatusID</value>
+  </data>
+  <data name="GEE1710LBLVendor" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="GEE1710LBLYear" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="GEE1710mdFuelType" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1710mdMake" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1710mdManufacturer" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1710mdModel" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1710mdRCImagepath" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1710mdRegisteredOwner" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1710mdRegistrationNumber" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1710mdTotalSeats" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1710mdVechicleImagePath" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1710mdVechicleStatusID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1710mdVendor" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1710mdYear" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1710SCRhdrVehicleMaster" xml:space="preserve">
+    <value>Vehicle Master</value>
+  </data>
+  <data name="GEE1710ttFuelType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttMake" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttManufacturer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttModel" xml:space="preserve">
+    <value>This is Model of Vehicle</value>
+  </data>
+  <data name="GEE1710ttRCImagepath" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttRegisteredOwner" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttRegistrationNumber" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttTotalSeats" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttVechicleImagePath" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttVechicleStatusID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttVendor" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710ttYear" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMFuelType" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMMake" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMManufacturer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMModel" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMRCImagepath" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMRegisteredOwner" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMRegistrationNumber" xml:space="preserve">
+    <value>This is Manditory </value>
+  </data>
+  <data name="GEE1710VMTotalSeats" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMVechicleImagePath" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMVechicleStatusID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMVendor" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1710VMYear" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1520btnDownloadAll1" xml:space="preserve">
+    <value>Download All</value>
+  </data>
+  <data name="GEE1520btnReport1" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="GEE1520btnSearch1" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="GEE1520GRDCategory1" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="GEE1520GRDDocumentType" xml:space="preserve">
+    <value>Document Type</value>
+  </data>
+  <data name="GEE1520GRDDownload1" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="GEE1520GRDReportCorrect1" xml:space="preserve">
+    <value>ReportCorrect</value>
+  </data>
+  <data name="GEE1520GRDReportIncorrect1" xml:space="preserve">
+    <value>ReportIncorrect</value>
+  </data>
+  <data name="GEE1520GRDSubCategory1" xml:space="preserve">
+    <value>SubCategory</value>
+  </data>
+  <data name="GEE1520GRDView" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="GEE1520LBLDocCategory1" xml:space="preserve">
+    <value>DocCategory</value>
+  </data>
+  <data name="GEE1520LBLDocumentType" xml:space="preserve">
+    <value>Document Type</value>
+  </data>
+  <data name="GEE1520LBLSubCategory1" xml:space="preserve">
+    <value>SubCategory</value>
+  </data>
+  <data name="GEE1520SCRHDRDocumentPortal1" xml:space="preserve">
+    <value>DocumentPortal</value>
+  </data>
+  <data name="GEE1520ttDocCategory" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1520ttDocumentType" xml:space="preserve">
+    <value>This is Type of Document</value>
+  </data>
+  <data name="GEE1520ttSubCategory" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1730LBLbtnAddRoute" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="GEE1730LBLbtnAssignStops" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="GEE1730LBLbtnDeleteStops" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="GEE1730LBLDDDropdown1" xml:space="preserve">
+    <value>Dropdown 1</value>
+  </data>
+  <data name="GEE1730LBLDDDropdown2" xml:space="preserve">
+    <value>Dropdown 2</value>
+  </data>
+  <data name="GEE1730LBLDDDropdown3" xml:space="preserve">
+    <value>Dropdown 3</value>
+  </data>
+  <data name="GEE1730LBLDDDropdown4" xml:space="preserve">
+    <value>Dropdown 4</value>
+  </data>
+  <data name="GEE1730LBLGribtnDeleteRoute" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="GEE1730LBLGribtnEditRoute" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="GEE1730LBLGriDeleteRoute" xml:space="preserve">
+    <value>Delete Route</value>
+  </data>
+  <data name="GEE1730LBLGriEditRoute" xml:space="preserve">
+    <value>Edit Route</value>
+  </data>
+  <data name="GEE1730LBLGriRouteCode" xml:space="preserve">
+    <value>Route Code</value>
+  </data>
+  <data name="GEE1730LBLGriRouteName" xml:space="preserve">
+    <value>Route Name</value>
+  </data>
+  <data name="GEE1730LBLGriRouteTrip" xml:space="preserve">
+    <value>Route Trip</value>
+  </data>
+  <data name="GEE1730LBLGriTotalKM" xml:space="preserve">
+    <value>Total KM</value>
+  </data>
+  <data name="GEE1730LBLGriTotalTriptime" xml:space="preserve">
+    <value>Total Trip time</value>
+  </data>
+  <data name="GEE1730LBLSearchPanel" xml:space="preserve">
+    <value>Search Panel</value>
+  </data>
+  <data name="GEE1730SCRhdrRouteManagement" xml:space="preserve">
+    <value>Route Management</value>
+  </data>
+  <data name="GEE1731LBLAfternoonEndtime" xml:space="preserve">
+    <value>Afternoon End time</value>
+  </data>
+  <data name="GEE1731LBLAfternoonStarttime" xml:space="preserve">
+    <value>Afternoon Start time</value>
+  </data>
+  <data name="GEE1731LBLbtnEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="GEE1731LBLbtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1731LBLISAC" xml:space="preserve">
+    <value>IS AC</value>
+  </data>
+  <data name="GEE1731LBLMorningEndTime" xml:space="preserve">
+    <value>Morning End Time</value>
+  </data>
+  <data name="GEE1731LBLMorningStateTime" xml:space="preserve">
+    <value>Morning State Time</value>
+  </data>
+  <data name="GEE1731LBLRouteCode" xml:space="preserve">
+    <value>Route Code</value>
+  </data>
+  <data name="GEE1731LBLRouteCoordinator" xml:space="preserve">
+    <value>Route Coordinator </value>
+  </data>
+  <data name="GEE1731LBLRouteName" xml:space="preserve">
+    <value>Route Name </value>
+  </data>
+  <data name="GEE1731LBLTotaldistance" xml:space="preserve">
+    <value>Totaldistance</value>
+  </data>
+  <data name="GEE1731LBLTripID" xml:space="preserve">
+    <value>TripID  </value>
+  </data>
+  <data name="GEE1731LBLVechicleID" xml:space="preserve">
+    <value>Vechicle ID </value>
+  </data>
+  <data name="GEE1731mdAfternoonEndtime" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1731mdAfternoonStarttime" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1731mdISAC" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1731mdMorningEndTime" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1731mdMorningStartTime" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1731mdRouteCode" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1731mdRouteCoordinator" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1731mdRouteName" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1731mdTotaldistance" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1731mdTripID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GEE1731mdVechicleID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GEE1731SCRhdrAddRoute" xml:space="preserve">
+    <value>Add Route</value>
+  </data>
+  <data name="GEE1731ttAfternoonEndtime" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731ttAfternoonStarttime" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731ttISAC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731ttMorningEndTime" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731ttMorningStateTime" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731ttRouteCode" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731ttRouteCoordinator" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731ttRouteName" xml:space="preserve">
+    <value>This is Route Name</value>
+  </data>
+  <data name="GEE1731ttTotaldistance" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731ttTripID" xml:space="preserve">
+    <value>Default will be 1</value>
+  </data>
+  <data name="GEE1731ttVechicleID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMAfternoonEndtime" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMAfternoonStarttime" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMISAC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMMorningEndTime" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMMorningStateTime" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMRouteCode" xml:space="preserve">
+    <value>This is Manditory</value>
+  </data>
+  <data name="GEE1731VMRouteCoordinator" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMRouteName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMTotaldistance" xml:space="preserve">
+    <value>this has to be numberic</value>
+  </data>
+  <data name="GEE1731VMTripID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1731VMVechicleID" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GEE1732LBLCoordinator" xml:space="preserve">
+    <value>Coordinator </value>
+  </data>
+  <data name="GEE1732LBLGribtnAddStops" xml:space="preserve">
+    <value>Add Stops</value>
+  </data>
+  <data name="GEE1732LBLGribtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="GEE1732LBLGriDDDropdown" xml:space="preserve">
+    <value>drop down</value>
+  </data>
+  <data name="GEE1732LBLGriDeleterow" xml:space="preserve">
+    <value>Delete row</value>
+  </data>
+  <data name="GEE1732LBLGriDistance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="GEE1732LBLGriDropSequece" xml:space="preserve">
+    <value>Drop Sequece</value>
+  </data>
+  <data name="GEE1732LBLGriDropTime" xml:space="preserve">
+    <value>Drop Time</value>
+  </data>
+  <data name="GEE1732LBLGriMonthlyFees" xml:space="preserve">
+    <value>Monthly Fees</value>
+  </data>
+  <data name="GEE1732LBLGriPickUPSequence" xml:space="preserve">
+    <value>Pick UP Sequence</value>
+  </data>
+  <data name="GEE1732LBLGriPickupTime" xml:space="preserve">
+    <value>Pickup Time</value>
+  </data>
+  <data name="GEE1732LBLGriStopID" xml:space="preserve">
+    <value>StopID</value>
+  </data>
+  <data name="GEE1732LBLGriStopname" xml:space="preserve">
+    <value>Stop name </value>
+  </data>
+  <data name="GEE1732SCRhdrAddStops" xml:space="preserve">
+    <value>Add Stops</value>
+  </data>
+</root>

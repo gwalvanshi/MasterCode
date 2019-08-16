@@ -1,0 +1,16 @@
+                   --------------------- Error(2018-09-07 11:38:35.6213)FCN16265-L-------------------- 
+                   
+                   Exception Type:System.NullReferenceException
+                   Exception Message:Object reference not set to an instance of an object.
+                   Stack Trace:   at GEE.Business.Manager.Admission.EnquiryManager.Save(EnquiryModel entity) in D:\gg\GlobalEduERP\GEE.Business.Manager\Admission\EnquiryManager.cs:line 21
+   at Web.Controllers.Admission.EnquiryController.Get() in D:\gg\GlobalEduERP\GEE.API\Controllers\Admission\EnquiryController.cs:line 32
+                   Additional Info:Error Occured
+                   
+                   --------------------- Error(2018-09-07 15:05:57.6623)FCN16265-L-------------------- 
+                   
+                   Exception Type:System.NullReferenceException
+                   Exception Message:Object reference not set to an instance of an object.
+                   Stack Trace:   at GEE.Business.Manager.Admission.EnquiryManager.Save(EnquiryModel entity) in D:\gg\GlobalEduERP\GEE.Business.Manager\Admission\EnquiryManager.cs:line 24
+   at GEE.API.Controllers.Admission.EnquiryController.Get() in D:\gg\GlobalEduERP\GEE.API\Controllers\Admission\EnquiryController.cs:line 34
+                   Additional Info:Error Occured
+                   

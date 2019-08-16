@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4153C85E-6739-443D-8573-6BC7E9EA2974}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEE.Web.Service</RootNamespace>
+    <AssemblyName>GEE.Web.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\ClassMasterService.cs" />
+    <Compile Include="Admin\MasterTableService.cs" />
+    <Compile Include="Admin\UserGroupService.cs" />
+    <Compile Include="Admin\UserService.cs" />
+    <Compile Include="Admission\AssessmentTypeService.cs" />
+    <Compile Include="Admission\SellSubmitService.cs" />
+    <Compile Include="Admission\StartAdmissionService.cs" />
+    <Compile Include="BaseAuthorizationToken.cs" />
+    <Compile Include="CommonWebService\Common.cs" />
+    <Compile Include="Admission\CandidateDetailService.cs" />
+    <Compile Include="CommonWebService\MenuViewService.cs" />
+    <Compile Include="Configuration\IndexScreenDetailService.cs" />
+    <Compile Include="Configuration\SchoolConfigService.cs" />
+    <Compile Include="DocumentLibrary\DocumentPortalService.cs" />
+    <Compile Include="DocumentLibrary\DocumentSubmissionService.cs" />
+    <Compile Include="DocumentLibrary\DocumentTypeService.cs" />
+    <Compile Include="CommonWebService\LookupService.cs" />
+    <Compile Include="Admission\EnquiryService.cs" />
+    <Compile Include="HR\EmployeeMasterService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolSetup\AssessmentStructureAssessmentTypeMappingService.cs" />
+    <Compile Include="SchoolSetup\BookMasterService.cs" />
+    <Compile Include="SchoolSetup\CourseMasterService.cs" />
+    <Compile Include="SchoolSetup\RoomService.cs" />
+    <Compile Include="SchoolSetup\SubjectMasterService.cs" />
+    <Compile Include="Security\NavigationPermissionService.cs" />
+    <Compile Include="Security\UserLoginDetailService.cs" />
+    <Compile Include="Transport\StopMasterService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GEE.Web.Utility\GEE.Web.Common.csproj">
+      <Project>{FC2804B9-FCDC-4486-B9FA-936D6CD01262}</Project>
+      <Name>GEE.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GEE.Web.ViewModel\GEE.Web.ViewModel.csproj">
+      <Project>{211f2471-00b5-4049-b1c2-aaf35e335d83}</Project>
+      <Name>GEE.Web.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

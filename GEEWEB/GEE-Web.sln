@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE-Web", "GEE-Web\GEE-Web.csproj", "{891E38D8-69F3-4859-8C80-6545E4F5F9C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.Web.ViewModel", "GEE.Web.ViewModel\GEE.Web.ViewModel.csproj", "{211F2471-00B5-4049-B1C2-AAF35E335D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.Web.Common", "GEE.Web.Utility\GEE.Web.Common.csproj", "{FC2804B9-FCDC-4486-B9FA-936D6CD01262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GEE.Web.Service", "GEE.Web.Service\GEE.Web.Service.csproj", "{4153C85E-6739-443D-8573-6BC7E9EA2974}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{891E38D8-69F3-4859-8C80-6545E4F5F9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891E38D8-69F3-4859-8C80-6545E4F5F9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891E38D8-69F3-4859-8C80-6545E4F5F9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891E38D8-69F3-4859-8C80-6545E4F5F9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211F2471-00B5-4049-B1C2-AAF35E335D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211F2471-00B5-4049-B1C2-AAF35E335D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211F2471-00B5-4049-B1C2-AAF35E335D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211F2471-00B5-4049-B1C2-AAF35E335D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC2804B9-FCDC-4486-B9FA-936D6CD01262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2804B9-FCDC-4486-B9FA-936D6CD01262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2804B9-FCDC-4486-B9FA-936D6CD01262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2804B9-FCDC-4486-B9FA-936D6CD01262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4153C85E-6739-443D-8573-6BC7E9EA2974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4153C85E-6739-443D-8573-6BC7E9EA2974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4153C85E-6739-443D-8573-6BC7E9EA2974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4153C85E-6739-443D-8573-6BC7E9EA2974}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CAF6C50-38A0-409A-9952-08F335750674}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,183 @@
+﻿<!doctype html>
+@{ Layout = null;}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!--<link rel="stylesheet" type="text/css" href="maincss.css">-->
+    <link rel="stylesheet" type="text/css" href="~/AdminLTE/bootstrap/css/maincss.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,600" rel="stylesheet">
+
+
+
+
+
+
+    <title>IMS</title>
+</head>
+<body style="background: url(../../../../img/login-bg.jpg) no-repeat;">
+
+    
+
+    <div class="wc-msg">Welcome to Oberoi International School, Please Login to continue</div>
+
+    <div class="row mr-auto mb-5">
+        <div class="col-sm-2 py-5"></div>
+
+        <div class="border-right col-sm-4 text-center py-5 ">
+            
+            <img src="~/img/erp.png">
+            <p id="divErrorText" class="text-light">Message will appear here...</p>
+        </div>
+
+        <div class="col-sm-4 login text-center ">
+
+            <img src="~/img/oislogo.png">
+            <h5>Oberoi International School</h5>
+            <div class="text-left" style="padding: 10px 10%;">
+                <label><i class="fas fa-user-lock mr-2"></i>User ID</label>
+                <input class="" type="text" placeholder="User ID" id="txtEmail">
+                <label><i class="fas fa-unlock-alt mr-2"></i>Password</label>
+                <input class="" type="Password" placeholder="Password" id="txtPassword">
+                <a href="#">Forget Password?</a>
+            </div>
+            <button type="button" id="btnLogin" class="btn btn-primary">Login</button>
+        </div>
+
+        <div class="col-sm-2 py-5"></div>
+
+    </div>
+
+    <footer>Design & Developed By Globaleduerp</footer>
+
+
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script>
+          $('#selectAll').click(function (e) {
+              var table = $(e.target).closest('table');
+              $('td input:checkbox', table).prop('checked', this.checked);
+          });
+    </script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+          $(document).ready(function () {
+              $('#lnkClose').click(function () {
+                  $('#divError').hide('fade');
+              });
+
+              $('#btnLogin').click(function () {
+
+
+                  $.ajax({
+                      url: '/Security/UserSecurity/GetAll',
+                      type: 'GET',
+                      headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken') },
+
+                      success: function (data) {
+
+                          $.each(data, function (index, val) {
+                              sessionStorage.setItem('UserLastLoginTime', val.LoginTime)
+                              alert(val.LoginTime);
+                          });
+
+                      },
+                      error: function (jqXHR) {
+                          if (jqXHR.status == "401") {
+                              $('#errorModal').modal('show');
+                          }
+                          else {
+                              $('#divErrorText').text(jqXHR.responseText);
+                              $('#divError').show('fade');
+                          }
+                      }
+                  });
+
+
+
+
+
+                  $.ajax({
+                      url: '/Security/UserSecurity/Token',
+                      method: 'POST',
+                      data: {
+                          username: $('#txtEmail').val(),
+                          password: $('#txtPassword').val(),
+                          grant_type: 'password'
+                      },
+                      success: function (response) {
+                          //$('#successModal').modal('show');
+                         
+                          if (response.status == null || response.status == false) {
+                              $('#divErrorText').text("The user name or password is incorrect");
+                              $('#divError').show('fade');
+                          }
+                          else {                            
+                              GetUserId(response);
+                          }
+
+                          //$('#divErrorText').text(jqXHR.responseText);
+                          //$('#divError').show('fade');
+                      },
+                      error: function (jqXHR) {
+                          $('#divErrorText').text(jqXHR.responseText);
+                          $('#divError').show('fade');
+                      }
+                  });
+
+
+                  
+
+
+              });
+
+          });
+
+        function GetUserId(response) {
+            $.ajax({
+                type: 'GET',
+                url: '/UserCreation/GetUserDetailByUserId',
+                data: { id: response.status.Id },
+                dataType: "json",
+                success: function (data) {
+
+                    
+                    //Token-Demo -what all is being set and read
+                    //Below keys will set in session 
+                    sessionStorage.setItem('accessToken', response.status.Access_Token)
+                    sessionStorage.setItem('userName', response.status.UserName)
+                    sessionStorage.setItem('refreshToken', response.status.Refresh_Token)
+                    sessionStorage.setItem('schoolId', response.status.SchoolId)
+                    sessionStorage.setItem('groupId', response.status.GroupId)
+                    sessionStorage.setItem('sessionYear', response.status.SessionYear)
+                    sessionStorage.setItem('UserId', response.status.Id)
+                    sessionStorage.setItem('CUserId', data)
+
+                    window.location.href = "/Admin/Login/Dashboard";
+
+                },
+                error: function () {
+                    alert(" An error occurred while login");
+                },
+            })
+        }
+    </script>
+
+
+</body>
+</html>

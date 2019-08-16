@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @RenderSection("styles", required: false)
+
+    @Styles.Render("~/AdminLTE/plugins/font-awesome/css")
+    @Styles.Render("~/AdminLTE/plugins/ionicons/css")
+    @Styles.Render("~/AdminLTE/bootstrap/css")
+    @Styles.Render("~/AdminLTE/dist/css")
+    @Styles.Render("~/AdminLTE/dist/css/skins")
+    @Scripts.Render("~/AdminLTE/plugins/jquery/js")
+    @Scripts.Render("~/AdminLTE/plugins/jquery-ui/js")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-warning font-weight-bold" href="#">IMS</a>
+        <a class="navbar-brand text-light">|</a>
+        <a class="navbar-brand text-info" href="#">Mumbai School</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a class="nav-link text-light" href="#"><i class="far fa-envelope-open"></i><span class="badge badge-pill badge-danger ml-1">2</span></a>
+                <a class="nav-link text-light" href="#"></i><i class="fas fa-user-circle mr-2"></i>Login</a>
+                <a class="navbar-brand text-light">|</a>
+                <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid border ">
+        <div class="row">
+            <div class="col-md-2 p-3 bg-light">
+                <h5 class="border-bottom pb-2">Quick Links</h5>
+                <nav class="nav flex-column font-weight-bold">
+                    <a class="nav-link text-info" href="#"><i class="fas fa-sliders-h mr-2"></i>Dashboard</a>
+                    <a class="nav-link active text-info" href="#"><i class="far fa-address-card mr-2"></i>Admission</a>
+                    <a class="nav-link text-info" href="#"><i class="fas fa-users mr-2"></i>Classes</a>
+                    <a class="nav-link text-info" href="#"><i class="fas fa-user mr-2"></i>Students</a>
+                    <a class="nav-link text-info" href="#"><i class="fas fa-cogs mr-2"></i>Settings</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </nav>
+            </div>
+            <div class="col-md-10 border-left p-3 bg-light">
+                @RenderBody()
+            </div>
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </footer>
+            </div>
+        </div>
+
+    @Scripts.Render("~/AdminLTE/plugins/jquery/js")
+    @RenderSection("menu", required: false)
+    @Scripts.Render("~/AdminLTE/bootstrap/js")
+    @Scripts.Render("~/AdminLTE/plugins/slimscroll/js")
+    @Scripts.Render("~/AdminLTE/plugins/fastclick/js")
+    @Scripts.Render("~/Scripts/Shared/_Layout")
+    @Scripts.Render("~/AdminLTE/dist/js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

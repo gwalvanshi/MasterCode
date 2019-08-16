@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "~/Areas/Admission/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Create";
+}
+
+@section styles{
+    <style type="text/css">
+        .form-control-sm {
+            height: 30px !important;
+        }
+
+        input[type=text]:disabled {
+            background: #dddddd;
+        }
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="~/AdminLTE/plugins/jquery/js/jQuery-2.1.4.min.js"></script>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/AdminLTE/bootstrap/css/maincss.css" rel="stylesheet" />
+
+    <title>IMS</title>
+}
+
+
+<div class="container-fluid border">
+    <div class="row">
+        <div id="toastmsg"><p class="yellow">Fill all mandatory feilds (*)..</p></div>
+
+        <div class="col-md-12 border-left p-3 bg-light">
+            <h5 class=" pb-2 text-center text-uppercase font-weight-bold">@Resource.GEE1505lblScreenheading</h5>
+
+            <div class="mb-3">
+                <div class="mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <h6 class="py-1"><i class="fas fa-table mr-2"></i>Master Table</h6>
+                <label hidden="hidden" id="MasterTableId" val="@ViewBag.MasterTableId">@ViewBag.MasterTableId</label>
+
+                <div class="row bg-white border mx-auto py-2 mb-2">
+                    <div class="input-div">
+                        <label class="input-header">@Resource.GEE1505LBLMasterName</label>
+                        <select class="form-control-sm input-value" placeholder="@Resource.GEE1505LBLMasterName" id="GEE1505MDMasterName">
+                            <option>@Resource.Enquiry1002lblSelect</option>
+                        </select>
+                    </div>
+                    <div class="input-div">
+                        <label class="input-header">@Resource.GEE1505LBLParentName</label>
+                        <select class="form-control-sm input-value" placeholder="@Resource.GEE1505LBLParentName" id="GEE1505MDParentName">
+                            <option>@Resource.Enquiry1002lblSelect</option>
+                        </select>
+                    </div>
+                    <div class="input-div">
+                        <label class="input-header">@Resource.GEE1505LBLcode</label>
+                        <input class="input-value" type="text" placeholder="@Resource.GEE1505LBLcode" id="GEE1505MDcode">
+                    </div>
+                    <div class="input-div">
+                        <label class="input-header">@Resource.GEE1505LBLName</label>
+                        <input class="input-value" type="text" placeholder="@Resource.GEE1505LBLName" id="GEE1505MDName">
+                    </div>
+                    <div class="input-div">
+                        <label class="input-header">Parent Value</label>
+                        <select class="form-control form-control-sm input-value" id="GEE1505MDParentValue">
+                            <option>@Resource.Enquiry1002lblSelect</option>
+                        </select>
+                    </div>
+                    <div class="input-div">
+                        <label class="input-header">@Resource.GEE1505LBLisDefault</label>
+                        <input class="form-check-input ml-2" type="checkbox" id="GEE1505MDisDefault" value="false">
+                    </div>
+                </div>
+
+                <div class="">
+                    <button class="mybtndark" id="Update"><i class="fas fa-check mr-2"></i></i>@Resource.GEE1505lblbtnSave</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Scripts/DevScripts/AdminUser/MasterTableUpdat.js"></script>
+
+<script src="~/Scripts/DevScripts/Common/SetSession.js"></script>
+<script src="~/Scripts/DevScripts/Common/Navigation.js"></script>
+<script src="~/Scripts/DevScripts/Common/Headerinfo.js"></script>

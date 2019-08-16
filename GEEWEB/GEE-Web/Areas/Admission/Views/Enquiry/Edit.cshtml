@@ -1,0 +1,267 @@
+﻿@model GEE.Web.ViewModel.EnquiryViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Create";
+}
+
+@section styles{
+    <style type="text/css">
+        .form-control-sm {
+            height: 30px !important;
+        }
+
+        input[type=text]:disabled {
+            background: #dddddd;
+        }
+    </style>
+
+    <title>IMS</title>
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid border ">
+        <div class="row">
+            <div id="toastmsg"><p class="yellow">Some text some message..</p></div>
+
+            <div class="col-md-12 border-left p-3 bg-light">
+                <h5 class=" pb-2 text-center text-uppercase font-weight-bold">@Resource.Enquiry1001lblEnquiryInformation</h5>
+
+                <div class="mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">@Resource.Enquiry1001lblLibrary</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">@Resource.Enquiry1001lblData</li>
+                        </ol>
+                    </nav>
+                </div>
+
+
+                <div class="bg-white border mb-3">
+
+                    <div class="form-header" data-toggle="collapse" href="#enquiryinfo" role="button" aria-expanded="false" aria-controls="enquiryinfo">
+                        <span class="">@Resource.Enquiry1001lblEnquiryInformation</span>
+                    </div>
+                    @*<label hidden="hidden" id="EnquiryId" val="@ViewBag.EnquiryId">@ViewBag.EnquiryId</label>*@
+                    <input type="hidden" id="EnquiryId" value="@TempData["EnquiryId"]" />
+                    <div class="pb-3 collapse show" id="enquiryinfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblHasSibiling<span class="text-danger ml-1">*</span></label>
+                                <input class="form-check-input ml-2" type="checkbox" id="cbHasSibiling" value="false">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblSiblingAdmNumber_ID</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblSiblingAdmNumber_ID" id="Enquiry1001mdSiblingAdmNumber_ID">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblSellApplication<span class="text-danger ml-1">*</span></label>
+                                <input class="form-check-input ml-2" type="checkbox" id="cbSellApplication" value="false">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblApplicaitonNo</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblApplicaitonNo" id="Enquiry1001mdApplicaitonNo">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblStudentType<span class="text-danger ml-1">*</span></label>
+                                <select class="form-control-sm input-value" id="ddlStudentType">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="bg-white border mb-3">
+
+                    <div class="form-header" data-toggle="collapse" href="#studentinfo" role="button" aria-expanded="false" aria-controls="studentinfo">
+                        <span class="">@Resource.Enquiry1001lblCandidateInformation</span>
+                    </div>
+
+                    <div class="pb-3 collapse show" id="studentinfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblFirstName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblFirstName" id="Enquiry1001mdFirstName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblMiddleName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblMiddleName" id="Enquiry1001mdMiddleName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblLastname</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblLastname" id="Enquiry1001mdLastname">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblAdmissionClass</label>
+                                <select class="form-control-sm input-value" id="Enquiry1001mdAdmissionClass_id">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblDateofBirth</label>
+                                @*<form action="/action_page.php">
+        </form>*@
+                                <input type="text" name="bday" class="input-value" id="Enquiry1001mdDOB" readonly="readonly">
+
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblSubject</label>
+                                <select class="form-control-sm input-value" id="ddlSubject">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblPhoneNumber</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblPhoneNumber" id="Enquiry1001mdContactMobileNo">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblEmail</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblEmail" id="Enquiry1001mdEmail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border mb-3">
+
+                    <div class="form-header collapsed" data-toggle="collapse" data-patent="#accordion" href="#motherinfo" role="button" aria-expanded="false" aria-controls="motherinfo">
+                        <span class="">@Resource.Enquiry1001lblMotherInformation</span>
+                    </div>
+
+                    <div class="pb-3 collapse" id="motherinfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblMotherFirstName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblMotherFirstName" id="Enquiry1001mdMotherFirstName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblMotherMiddleName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblMotherMiddleName" id="Enquiry1001mdMotherMiddleName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblMotherLasttName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblMotherLasttName" id="Enquiry1001mdMotherLasttName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblMotherPhoneNumber</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblMotherPhoneNumber" id="Enquiry1001mdMotherPhoneNumber">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bg-white border mb-3">
+
+                    <div class="form-header collapsed" data-toggle="collapse" data-patent="#accordion" href="#fatherinfo" role="button" aria-expanded="false" aria-controls="fatherinfo">
+                        <span class="">@Resource.Enquiry1001lblFatherInformation</span>
+                    </div>
+
+                    <div class="pb-3 collapse" id="fatherinfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblFatheFirstName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblFatheFirstName" id="Enquiry1001mdFatheFirstName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblFatherMiddleName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblFatherMiddleName" id="Enquiry1001mdFatherMiddleName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblFatherLasttName</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblFatherLasttName" id="Enquiry1001mdFatherLasttName">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblFatherPhoneNumber</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblFatherPhoneNumber" id="Enquiry1001mdFatherPhoneNumber">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="bg-white border mb-3">
+
+                    <div class="form-header collapsed" data-toggle="collapse" data-patent="#accordion" href="#commoninfo" role="button" aria-expanded="false" aria-controls="commoninfo">
+                        <span class="">@Resource.Enquiry1001lblCommonInformation</span>
+                    </div>
+
+                    <div class="pb-3 collapse" id="commoninfo">
+                        <div class="row mx-auto">
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblMarketSource_ID</label>
+                                <select class="form-control-sm input-value" id="Enquiry1001mdMarketSource_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblEnquiryType_ID</label>
+                                <select class="form-control-sm input-value" id="Enquiry1001mdEnquiryType_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblAddress1</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblAddress1" id="Enquiry1001mdAddress1">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblAddress2</label>
+                                <input class="input-value" type="text" placeholder="@Resource.Enquiry1001lblAddress2" id="Enquiry1001mdAddress2">
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblCity_ID</label>
+                                <select class="form-control-sm input-value" id="Enquiry1001mdCity_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblState_ID</label>
+                                <select class="form-control-sm input-value" id="Enquiry1001mdState_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <label class="input-header">@Resource.Enquiry1001lblCountry_ID</label>
+                                <select class="form-control-sm input-value" id="Enquiry1001mdCountry_ID">
+                                    <option>@Resource.Enquiry1001lblSelect</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <button class="btn btn-dark mr-3" type="button" id="Update">@Resource.Enquiry1001LBLbtnSave</button>
+                <button class="btn btn-dark mr-3">@Resource.Enquiry1001LBLbtnsendSMS</button>
+                <button class="btn btn-dark mr-3">@Resource.Enquiry1001LBLBTNSendemail</button>
+
+
+
+            </div>
+
+        </div>
+    </div>
+}
+
+
+
+<script src="~/Scripts/DevScripts/Transactions/EnquiryEditUpdate.js"></script>
+<script src="~/Scripts/DevScripts/Common/Common.js"></script>

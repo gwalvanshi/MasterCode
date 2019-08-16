@@ -1,0 +1,240 @@
+﻿@using GEE.Web.ViewModel.Admin
+@using GEE.Web.ViewModel.SchoolSetup
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<ClassWithCourceViewModel> _classList = new List<ClassWithCourceViewModel>();
+    List<SubjectMasterViewModel> _subjectList = new List<SubjectMasterViewModel>();
+    List<CourseMasterModel> _courseList = new List<CourseMasterModel>();
+
+    SelectList _gradeStructureList = (SelectList)ViewData["GradeStructureList"]; ;
+    SelectList _streamsList = (SelectList)ViewData["StreamsList"];
+
+    _classList = (List<ClassWithCourceViewModel>)ViewBag.ClassList;
+    _courseList = (List<CourseMasterModel>)ViewBag.CourseList;
+    _subjectList = (List<SubjectMasterViewModel>)ViewBag.SubjectList;
+}
+<style>
+    .clshide {
+        display: none;
+    }
+
+    .clsshow {
+        display: none;
+    }
+
+    .del {
+        display: none;
+    }
+</style>
+
+<div class="container-fluid border">
+    <div class="row">
+        <div id="toastmsg"><p class="yellow">Fill all mandatory feilds (*)..</p></div>
+        <div class="col-md-12 border-left p-3 bg-light">
+            <h5 class=" pb-2 text-center text-uppercase font-weight-bold">@Resource.GEE1135LblEditScrheader</h5>
+
+            <div class="mb-3">
+                <div class="mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="row bg-white mx-auto py-2 mb-2">
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                        <h5 class="master-table-title"><i class="fa fa-list-ul" aria-hidden="true"></i>  @Resource.GEE1135Lblclass</h5>
+
+                        <input type="hidden" id="hdnId" value="@ViewBag.Id" />
+                        <ul class="list-group course-list">
+                            @if (_classList != null && _classList.Count() > 0)
+                            {
+                                foreach (var item in _classList)
+                                {
+                                    <li class="list-group-item list-group-item-action">
+                                        <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" type="radio" id="class_@item.ClassMaster_ID" name="classlist" rel="@item.Name" value="@item.ClassMaster_ID" onchange="onChangeClass(@item.ClassMaster_ID)" />
+                                            <label class="custom-control-label" for="class_@item.ClassMaster_ID">
+                                                @item.Name
+                                            </label>
+                                        </div>
+                                    </li>
+                                }
+                            }
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                        <h5 class="master-table-title"><i class="fa fa-list" aria-hidden="true"></i>  @Resource.GEE1135Lnlsubject</h5>
+                        <ul class="list-group course-list" id="checkboxes" style="min-height:70px;">
+
+                            @if (_subjectList != null && _subjectList.Count() > 0)
+                            {
+                                foreach (var item in _subjectList)
+                                {
+                                    var _curse = _courseList.Where(w => w.SubjectMaster_ID == item.SubjectMaster_ID);
+                                    if (_curse != null && _curse.Count() > 0)
+                                    {
+                                        <li class="list-group-item list-group-item-action clssublist clshide" id="sbjli_@item.SubjectMaster_ID">
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input chksujitm" type="checkbox" id="Sub_@item.SubjectMaster_ID" value="@item.SubjectMaster_ID" rel="@item.Name" />
+                                                <label class="custom-control-label" for="Sub_@item.SubjectMaster_ID">
+                                                    @item.Name
+                                                </label>
+                                                <button class="btn btn-xs btn-primary float-right" onclick="MoveToCourse(@item.SubjectMaster_ID)"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                                            </div>
+                                        </li>
+                                    }
+                                    else
+                                    {
+
+                                        <li class="list-group-item list-group-item-action clssublist" id="sbjli_@item.SubjectMaster_ID">
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input chksujitm" type="checkbox" id="Sub_@item.SubjectMaster_ID" value="@item.SubjectMaster_ID" rel="@item.Name" />
+                                                <label class="custom-control-label" for="Sub_@item.SubjectMaster_ID">
+                                                    @item.Name
+                                                </label>
+                                                <button class="btn btn-xs btn-primary float-right" onclick="MoveToCourse(@item.SubjectMaster_ID)"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                                            </div>
+                                        </li>
+                                    }
+                                }
+                            }
+
+                        </ul>
+                        <div class="form-group  float-right mt-2">
+                            <button class="btn btn-xs btn-primary" type="submit" id="btnMoveall"><i class="fa fa-arrow-circle-right mr-2" aria-hidden="true"></i>@Resource.GEE1135lblbtnmoveall</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-5 col-sm-5 col-xs-12">
+                                <h5 class="master-table-title"><i class="fa fa-table" aria-hidden="true"></i>  @Resource.GEE1135Lblcourses</h5>
+                            </div>
+                            <div class="col-lg-1 col-sm-1 col-xs-3 text-center">
+                                <label class="checkbox">
+                                    <input name="Optional" id="chkAllOtp" type="checkbox" value="" style="height: 33px; width: 30px;" />
+                                </label>
+                            </div>
+                            <div class="col-lg-2 col-sm-2 col-xs-4">
+                                <div class="form-group form-group-sm">
+                                    <select class="select form-control form-control-sm" id="ddlGradeStructure" name="GradeStructure">
+                                        <option value="alltype">
+                                            All Type
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-2 col-xs-4 pl-0">
+                                <div class="form-group form-group-sm">
+                                    <select class="select form-control form-control-sm" id="ddlStreams" name="Streams">
+                                        <option value="alltype">
+                                            Select All
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-sm-1 col-xs-3 pl-0">
+                                <label class="checkbox">
+                                    <input name="att" id="chkAllAtt" type="checkbox" value="" style="height: 33px; width: 30px;" />
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-sm table-hover" style="width:100%" id="_tblcource">
+                                <thead class="bg-blue text-white">
+                                    <tr>
+                                        <th>@Resource.GEE1135lblgrdclass</th>
+                                        <th>@Resource.GEE1135lblgrdsubject</th>
+                                        <th>@Resource.GEE1135lblgrdcoursecode</th>
+                                        <th>@Resource.GEE1135lblgrdName</th>
+                                        <th>@Resource.GEE1135lblgrdoptional</th>
+                                        <th>@Resource.GEE1135lblgrdtype</th>
+                                        <th>@Resource.GEE1135lblgrdstream</th>
+                                        <th>@Resource.GEE1135lblgrdatt</th>
+                                        <th>@Resource.GEE1135lblgrdaction</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (_courseList != null && _courseList.Count() > 0)
+                                    {
+                                        foreach (var itm in _courseList)
+                                        {
+                                            var claName = _classList.Where(w => w.ClassMaster_ID == itm.ClassMaster_ID);
+                                            var subName = _subjectList.Where(w => w.SubjectMaster_ID == itm.SubjectMaster_ID);
+                                            <tr id="tr_@itm.SubjectMaster_ID" rel="@itm.SubjectMaster_ID" class="edit">
+                                                <td>
+                                                    <input type="hidden" id="hdn_@itm.SubjectMaster_ID" value="@itm.CourseMaster_ID" /> 
+                                                    @if (claName != null && claName.Count() > 0)
+                                                    {
+                                                        <text>@claName.FirstOrDefault().Name </text>
+                                                    }
+                                                </td>                                                 
+                                                <td style="width: 12%">
+                                                    @if (subName != null && subName.Count() > 0)
+                                                    {
+                                                        <text>@subName.FirstOrDefault().Name </text>
+                                                    }
+                                                </td>
+                                                <td style="width: 10%"><input class="form-control form-control-sm" type="text" value="@itm.Code" placeholder="Code" id="txtCode_@itm.SubjectMaster_ID"></td>
+                                                <td style="width: 10%"><input class="form-control form-control-sm" type="text" value="@itm.Name" placeholder="Name" id="txtName_@itm.SubjectMaster_ID"></td>
+                                                <td class="text-center" style="width: 9%">
+                                                    <label class="checkbox"><input name="Optional" type="checkbox" value="" id="chkOpt_@itm.SubjectMaster_ID" class="chkOpt" @(itm.ISoptional == true ? "checked" : string.Empty ) /></label>
+                                                </td>
+                                                <td style="width: 15%">
+                                                    <select class="select form-control form-control-sm clsddlGradeStructure" id="ddlGradeStructure_@itm.SubjectMaster_ID" name="type">
+                                                        <option value="0">Select</option>
+                                                        @foreach (var _item in _gradeStructureList)
+                                                        {
+                                                            <option value="@_item.Value" @(_item.Value == itm.GradeStructure.ToString() ? "selected='selected'" : "")>@_item.Text</option>
+                                                        }
+                                                    </select>
+                                                </td>
+                                                <td style="width: 15%">
+
+                                                    <select class="select form-control form-control-sm clsddlStreams" id="ddlStreams_@itm.SubjectMaster_ID" name="type">
+                                                        <option value="0">Select</option>
+                                                        @foreach (var _item in _streamsList)
+                                                        {
+                                                            <option value="@_item.Value" @(_item.Value == itm.Streams.ToString() ? "selected='selected'" : "")>@_item.Text</option>
+                                                        }
+                                                    </select>
+                                                </td>
+                                                <td class="text-center" style="width: 9%">
+                                                    <label class="checkbox"><input name="att" type="checkbox" value="" id="chkAtt_@itm.SubjectMaster_ID" class="chkAtt" @(itm.ExcfromAtt == true ? "checked" : string.Empty ) /></label>
+                                                </td>
+                                                <td class="text-center"><button class="btn btn-danger btn-xs" onclick="delTableRow(@itm.SubjectMaster_ID)"><i class="fa fa-times" aria-hidden="true"></i></button></td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-5">
+                        <div class="form-group">
+                            <div>
+                                <button class="mybtndark" type="submit" id="Add"><i class="far fa-save mr-2"></i>@Resource.GEE1505lblbtnUpdate</button>
+                                <a class="mybtndark" href="@Url.Action("Edit","CourseMaster",new { id= 0})"><i class="fa fa-times mr-2"></i>@Resource.GEE1135lblbtncancel</a>
+                                <button class="mybtndark" type="submit" onclick="onclickBack()"><i class="far fa-eye mr-2"></i>@Resource.GEE1135lblbtnbacktocreate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var header1= "@Resource.Collegename";
+</script>
+<script src="~/Scripts/DevScripts/Common/Common.js"></script>
+<script src="~/Scripts/DevScripts/AdminUser/EditCourseMaster.js"></script>
+
